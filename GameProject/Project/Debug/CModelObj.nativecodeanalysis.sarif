@@ -1,0 +1,1800 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CMeshObj::m_vao' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                },
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 11,
+                  "endLine": 6,
+                  "endColumn": 11
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CMeshObj::{ctor}",
+                  "decoratedName": "??0CMeshObj@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CMeshObj::m_vao"
+          }
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "演算のオーバーフロー: 4 バイトの値に演算子 '+' を使用し、結果を 8 バイトの値にキャストしています。オーバーフローを避けるため、演算子 '+' を呼び出す前に値を幅の広い型にキャストしてください (io.2)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                },
+                "region": {
+                  "startLine": 64,
+                  "startColumn": 33,
+                  "endLine": 64,
+                  "endColumn": 49
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CMeshObj::CreatCollsionIndex",
+                  "decoratedName": "?CreatCollsionIndex@CMeshObj@@QEAAXVCVector3D@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelObj::m_material' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                },
+                "region": {
+                  "startLine": 481,
+                  "startColumn": 12,
+                  "endLine": 481,
+                  "endColumn": 12
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelObj::{ctor}",
+                  "decoratedName": "??0CModelObj@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelObj::m_material"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelObj::m_materialCnt' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                },
+                "region": {
+                  "startLine": 481,
+                  "startColumn": 12,
+                  "endLine": 481,
+                  "endColumn": 12
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelObj::{ctor}",
+                  "decoratedName": "??0CModelObj@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelObj::m_materialCnt"
+          }
+        },
+        {
+          "ruleId": "C6386",
+          "message": {
+            "text": "'data' への書き込み中にバッファー オーバーランが発生しました。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                },
+                "region": {
+                  "startLine": 642,
+                  "startColumn": 4,
+                  "endLine": 642,
+                  "endColumn": 21
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelObj::Load",
+                  "decoratedName": "?Load@CModelObj@@QEAA_NPEBDHHH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 509,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 510,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 511,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 512,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 513,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 513,
+                            "startColumn": 46
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 515,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 516,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 518,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 523,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 525,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 527,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 529,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 531,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 533,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 534,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 578,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 580,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 582,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 584,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 584,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 591,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 592,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 593,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 595,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 597,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 599,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 601,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 603,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 605,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 618,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 623,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 629,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 638,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 640,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 641,
+                            "startColumn": 9
+                          }
+                        },
+                        "message": {
+                          "text": "'data' は 128 要素の配列です (128 バイト)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 642,
+                            "startColumn": 9
+                          }
+                        },
+                        "message": {
+                          "text": "'data[254]' への書き込みは無効です (書き込み可能な範囲は 0 から 127 まで)"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "NULL ポインター 'm' を逆参照しています。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                },
+                "region": {
+                  "startLine": 670,
+                  "startColumn": 4,
+                  "endLine": 670,
+                  "endColumn": 69
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelObj::Load",
+                  "decoratedName": "?Load@CModelObj@@QEAA_NPEBDHHH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 509,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 510,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 511,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 512,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 513,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 513,
+                            "startColumn": 46
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 515,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 516,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 518,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 523,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 525,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 527,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 529,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 531,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 533,
+                            "startColumn": 12
+                          }
+                        },
+                        "message": {
+                          "text": "'m' は NULL です"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 534,
+                            "startColumn": 8
+                          }
+                        },
+                        "message": {
+                          "text": "このループをスキップする ('!feof(fp)' が false と仮定)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 578,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 580,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 582,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 584,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 584,
+                            "startColumn": 15
+                          }
+                        },
+                        "message": {
+                          "text": "このループをスキップする ('i<m_materialCnt' が false と仮定)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 591,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 592,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 593,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 595,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 597,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 599,
+                            "startColumn": 8
+                          }
+                        },
+                        "message": {
+                          "text": "このループに入る ('!feof(fp)' と仮定)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 601,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 603,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 605,
+                            "startColumn": 21
+                          }
+                        },
+                        "message": {
+                          "text": "この分岐をスキップする ('strcmp(key, \"v\")==0' が false と仮定)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 618,
+                            "startColumn": 22
+                          }
+                        },
+                        "message": {
+                          "text": "この分岐をスキップする ('strcmp(key, \"vn\")==0' が false と仮定)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 623,
+                            "startColumn": 22
+                          }
+                        },
+                        "message": {
+                          "text": "この分岐をスキップする ('strcmp(key, \"vt\")==0' が false と仮定)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 629,
+                            "startColumn": 26
+                          }
+                        },
+                        "message": {
+                          "text": "この分岐をスキップする ('strcmp(key, \"usemtl\")==0' が false と仮定)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 638,
+                            "startColumn": 21
+                          }
+                        },
+                        "message": {
+                          "text": "この分岐に入る ('strcmp(key, \"f\")==0' と仮定)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 640,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 641,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 642,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 643,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 644,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 645,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 646,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 646,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 647,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 648,
+                            "startColumn": 11
+                          }
+                        },
+                        "message": {
+                          "text": "このループをスキップする ('*p' が false と仮定)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 670,
+                            "startColumn": 41
+                          }
+                        },
+                        "message": {
+                          "text": "'m' は逆参照されますが、NULL のままである可能性があります"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6001",
+          "message": {
+            "text": "初期化されていないメモリ '*m_material' を使用しています。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                },
+                "region": {
+                  "startLine": 743,
+                  "startColumn": 13,
+                  "endLine": 743,
+                  "endColumn": 31
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelObj::LoadMaterial",
+                  "decoratedName": "?LoadMaterial@CModelObj@@AEAA_NPEAD@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 724,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 725,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 726,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 728,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 733,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 734,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 739,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 740,
+                            "startColumn": 13
+                          }
+                        },
+                        "message": {
+                          "text": "'*m_material' が初期化されていません"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 741,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 742,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+                          },
+                          "region": {
+                            "startLine": 743,
+                            "startColumn": 13
+                          }
+                        },
+                        "message": {
+                          "text": "'*m_material' が使用されますが、初期化されていない可能性があります"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.35.32217.1",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelObj.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "a90f668ae9b8873b92bcc842eea126c4bdd0d235b4f6cc6e0cad11fbfcbf3e0c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/cmodelobj.h"
+          },
+          "hashes": {
+            "sha-256": "56e44f268dc83d621a3a61a2feb6c58e487a1b144e97522cd2461e7fbec864a2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/gl.h"
+          },
+          "hashes": {
+            "sha-256": "561e80c274a9e188997c4dd1d0213378860301c8148f514332d307c36a6267bb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/include/glew.h"
+          },
+          "hashes": {
+            "sha-256": "9a683cf56a1ba3a04e209cdc42ef71dc17e0c570474bb4dfe7e14d50845a9740"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/include/glfw/glfw3.h"
+          },
+          "hashes": {
+            "sha-256": "58cb6576c30b9a4d67f4041ab713da850eabafafb2c14d23e1c5a500654788dd"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/include/al/alut.h"
+          },
+          "hashes": {
+            "sha-256": "4d3b62360dc11b57af6003acc457d0d2f384f6a4a4bc69ce76e9c446d35b2bf4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/include/al/alc.h"
+          },
+          "hashes": {
+            "sha-256": "2ee998f214c2222a24bcc886e8665de6a72a4258cae1f99269bcfd5406199492"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/include/al/al.h"
+          },
+          "hashes": {
+            "sha-256": "5032c6dbdb6186bbf2c45b1287d677b4f37cc24dcc9eece49083b08088d2eb6d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/ctexture.h"
+          },
+          "hashes": {
+            "sha-256": "b001ef3f675cb6a31e3c19264b66083c1265b247fd0b77baca42c808dfb355a5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/cresource.h"
+          },
+          "hashes": {
+            "sha-256": "75ea19f6878f864bb5bf7d2150018db3af3bbc42abfe270a429e20907db49206"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/cmodel.h"
+          },
+          "hashes": {
+            "sha-256": "1ea8155884a7d3c54c54181f2b219aef3554932ee58e18cf1663d30aa2cd1f09"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/cmatrix.h"
+          },
+          "hashes": {
+            "sha-256": "2ce542becc6c3150dac2d9d58c83f3ceff3f620ee83402b271eec78a370216eb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/cvector.h"
+          },
+          "hashes": {
+            "sha-256": "f98729f9cc14666850566b88284b3f7f03eee052344d1679e313530b2595d9c0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/cshader.h"
+          },
+          "hashes": {
+            "sha-256": "a426e1f849011bcf68b47c04282d9598bf27ed262617336d26de7c158dd294d7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/vertex.h"
+          },
+          "hashes": {
+            "sha-256": "25f33e6684d1fe98bc216ed26d4313e19092dc898bfd2cd3681568cd63702f5e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/ccollision.h"
+          },
+          "hashes": {
+            "sha-256": "6bdc8b8d0489cc4afe1e9422bb61b37e13f540e2a069d53637dae55736c894d5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/crect.h"
+          },
+          "hashes": {
+            "sha-256": "8d56bb095766c4a71efa659131c375fb2aab7102c37d346420e36edd11be33d3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/ccamera.h"
+          },
+          "hashes": {
+            "sha-256": "b109e793c450fb32120ccaf1f69fd9c4064039807c60a92d261bca526df0803c"
+          }
+        }
+      ]
+    }
+  ]
+}

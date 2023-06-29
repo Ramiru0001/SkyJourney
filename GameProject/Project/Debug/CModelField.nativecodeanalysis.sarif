@@ -1,0 +1,2762 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CFieldPoly::m_materialIdx' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 13,
+                  "endLine": 13,
+                  "endColumn": 13
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CFieldPoly::{ctor}",
+                  "decoratedName": "??0CFieldPoly@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CFieldPoly::m_materialIdx"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CFieldPoly::m_vertexCnt' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 13,
+                  "endLine": 13,
+                  "endColumn": 13
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CFieldPoly::{ctor}",
+                  "decoratedName": "??0CFieldPoly@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CFieldPoly::m_vertexCnt"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CFieldPoly::m_cut' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 13,
+                  "endLine": 13,
+                  "endColumn": 13
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CFieldPoly::{ctor}",
+                  "decoratedName": "??0CFieldPoly@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CFieldPoly::m_cut"
+          }
+        },
+        {
+          "ruleId": "C6029",
+          "message": {
+            "text": "'fread' への呼び出しでバッファー オーバーランが発生するおそれがあります。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 41,
+                  "startColumn": 41,
+                  "endLine": 41,
+                  "endColumn": 41
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CFieldPoly::Load",
+                  "decoratedName": "?Load@CFieldPoly@@QEAAXPEAU_iobuf@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6385",
+          "message": {
+            "text": "'m_colIdx' から無効なデータを読み取っています。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 56,
+                  "startColumn": 3,
+                  "endLine": 56,
+                  "endColumn": 56
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CFieldPoly::Load",
+                  "decoratedName": "?Load@CFieldPoly@@QEAAXPEAU_iobuf@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 38,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 39,
+                            "startColumn": 18
+                          }
+                        },
+                        "message": {
+                          "text": "この分岐をスキップする ('m_vertexCnt<=0' が false と仮定)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 40,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 41,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 42,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 43,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 45,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 46,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 47,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 47,
+                            "startColumn": 29
+                          }
+                        },
+                        "message": {
+                          "text": "このループをスキップする ('i<m_vertexCnt/3' が false と仮定)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 54,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 54,
+                            "startColumn": 29
+                          }
+                        },
+                        "message": {
+                          "text": "このループに入る ('i<m_cut*m_cut' と仮定)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 56,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 57,
+                            "startColumn": 26
+                          }
+                        },
+                        "message": {
+                          "text": "この分岐をスキップする ('m_colIdx[i].m_size>0' が false と仮定)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 54,
+                            "startColumn": 45
+                          }
+                        },
+                        "message": {
+                          "text": "'i' は 1 と同じである可能性があります"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 54,
+                            "startColumn": 29
+                          }
+                        },
+                        "message": {
+                          "text": "このループを続行する ('i<m_cut*m_cut' と仮定)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 56,
+                            "startColumn": 8
+                          }
+                        },
+                        "message": {
+                          "text": "'i' は 'fread' からの出力です (c:\\program files (x86)\\windows kits\\10\\include\\10.0.19041.0\\ucrt\\stdio.h:239 で宣言)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 56,
+                            "startColumn": 8
+                          }
+                        },
+                        "message": {
+                          "text": "'m_colIdx' からの読み取りは無効です (読み取り可能な範囲外)"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6386",
+          "message": {
+            "text": "'m_colIdx' への書き込み中にバッファー オーバーランが発生しました。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 58,
+                  "startColumn": 4,
+                  "endLine": 58,
+                  "endColumn": 53
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CFieldPoly::Load",
+                  "decoratedName": "?Load@CFieldPoly@@QEAAXPEAU_iobuf@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 38,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 39,
+                            "startColumn": 18
+                          }
+                        },
+                        "message": {
+                          "text": "この分岐をスキップする ('m_vertexCnt<=0' が false と仮定)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 40,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 41,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 42,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 43,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 45,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 46,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 47,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 47,
+                            "startColumn": 29
+                          }
+                        },
+                        "message": {
+                          "text": "このループをスキップする ('i<m_vertexCnt/3' が false と仮定)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 54,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 54,
+                            "startColumn": 29
+                          }
+                        },
+                        "message": {
+                          "text": "このループに入る ('i<m_cut*m_cut' と仮定)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 56,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 57,
+                            "startColumn": 26
+                          }
+                        },
+                        "message": {
+                          "text": "この分岐に入る ('m_colIdx[i].m_size>0' と仮定)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 58,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 59,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 54,
+                            "startColumn": 45
+                          }
+                        },
+                        "message": {
+                          "text": "'i' は 2 と同じである可能性があります"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 54,
+                            "startColumn": 29
+                          }
+                        },
+                        "message": {
+                          "text": "このループを続行する ('i<m_cut*m_cut' と仮定)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 56,
+                            "startColumn": 8
+                          }
+                        },
+                        "message": {
+                          "text": "'i' は 'fread' からの出力です (c:\\program files (x86)\\windows kits\\10\\include\\10.0.19041.0\\ucrt\\stdio.h:239 で宣言)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 57,
+                            "startColumn": 26
+                          }
+                        },
+                        "message": {
+                          "text": "この分岐に入る ('m_colIdx[i].m_size>0' と仮定)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 58,
+                            "startColumn": 22
+                          }
+                        },
+                        "message": {
+                          "text": "'i' は 'new[]' からの出力です (c:\\anabukischool\\gc2_c++\\skyjourney\\gameproject\\project\\gllibrary\\predefined c++ types (compiler internal):58 で宣言)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                          },
+                          "region": {
+                            "startLine": 58,
+                            "startColumn": 22
+                          }
+                        },
+                        "message": {
+                          "text": "'m_colIdx[1]' への書き込みは無効です (書き込み可能な範囲は 0 から 0 まで)"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "演算のオーバーフロー: 4 バイトの値に演算子 '*' を使用し、結果を 8 バイトの値にキャストしています。オーバーフローを避けるため、演算子 '*' を呼び出す前に値を幅の広い型にキャストしてください (io.2)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 43,
+                  "startColumn": 32,
+                  "endLine": 43,
+                  "endColumn": 38
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CFieldPoly::Load",
+                  "decoratedName": "?Load@CFieldPoly@@QEAAXPEAU_iobuf@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "演算のオーバーフロー: 4 バイトの値に演算子 '+' を使用し、結果を 8 バイトの値にキャストしています。オーバーフローを避けるため、演算子 '+' を呼び出す前に値を幅の広い型にキャストしてください (io.2)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 62,
+                  "startColumn": 33,
+                  "endLine": 62,
+                  "endColumn": 49
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CFieldPoly::Load",
+                  "decoratedName": "?Load@CFieldPoly@@QEAAXPEAU_iobuf@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_col' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 433,
+                  "startColumn": 14,
+                  "endLine": 433,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_col"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_length' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 433,
+                  "startColumn": 14,
+                  "endLine": 433,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_length"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_materialCnt' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 433,
+                  "startColumn": 14,
+                  "endLine": 433,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_materialCnt"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_isDestroy' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 433,
+                  "startColumn": 14,
+                  "endLine": 433,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_isDestroy"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_OldmaxZ' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 433,
+                  "startColumn": 14,
+                  "endLine": 433,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_OldmaxZ"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_minX' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 433,
+                  "startColumn": 14,
+                  "endLine": 433,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_minX"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_fileName' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 433,
+                  "startColumn": 14,
+                  "endLine": 433,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_fileName"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_OldminX' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 433,
+                  "startColumn": 14,
+                  "endLine": 433,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_OldminX"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_isLoading' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 433,
+                  "startColumn": 14,
+                  "endLine": 433,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_isLoading"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_minZ' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 433,
+                  "startColumn": 14,
+                  "endLine": 433,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_minZ"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_raw' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 433,
+                  "startColumn": 14,
+                  "endLine": 433,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_raw"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_maxZ' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 433,
+                  "startColumn": 14,
+                  "endLine": 433,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_maxZ"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_fp' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 433,
+                  "startColumn": 14,
+                  "endLine": 433,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_fp"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_offSet' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 433,
+                  "startColumn": 14,
+                  "endLine": 433,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_offSet"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_posZ' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 433,
+                  "startColumn": 14,
+                  "endLine": 433,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_posZ"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_OldminZ' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 433,
+                  "startColumn": 14,
+                  "endLine": 433,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_OldminZ"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_OldmaxX' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 433,
+                  "startColumn": 14,
+                  "endLine": 433,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_OldmaxX"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_posX' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 433,
+                  "startColumn": 14,
+                  "endLine": 433,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_posX"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_maxX' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 433,
+                  "startColumn": 14,
+                  "endLine": 433,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_maxX"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_pLoadThread' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 433,
+                  "startColumn": 14,
+                  "endLine": 433,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_pLoadThread"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'SFieldModelHeader::materialOffset' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.h"
+                },
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 1,
+                  "endLine": 40,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SFieldModelHeader::{ctor}",
+                  "decoratedName": "??0SFieldModelHeader@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "SFieldModelHeader::materialOffset"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'SFieldModelHeader::materialCnt' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.h"
+                },
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 1,
+                  "endLine": 40,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SFieldModelHeader::{ctor}",
+                  "decoratedName": "??0SFieldModelHeader@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "SFieldModelHeader::materialCnt"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'SFieldModelHeader::meshHeaderOffset' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.h"
+                },
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 1,
+                  "endLine": 40,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SFieldModelHeader::{ctor}",
+                  "decoratedName": "??0SFieldModelHeader@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "SFieldModelHeader::meshHeaderOffset"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'SFieldModelHeader::cutLength' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.h"
+                },
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 1,
+                  "endLine": 40,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SFieldModelHeader::{ctor}",
+                  "decoratedName": "??0SFieldModelHeader@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "SFieldModelHeader::cutLength"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'SFieldModelHeader::colCutLength' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.h"
+                },
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 1,
+                  "endLine": 40,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SFieldModelHeader::{ctor}",
+                  "decoratedName": "??0SFieldModelHeader@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "SFieldModelHeader::colCutLength"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'SFieldModelHeader::colCut' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.h"
+                },
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 1,
+                  "endLine": 40,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SFieldModelHeader::{ctor}",
+                  "decoratedName": "??0SFieldModelHeader@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "SFieldModelHeader::colCut"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'SFieldModelHeader::cutZ' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.h"
+                },
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 1,
+                  "endLine": 40,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SFieldModelHeader::{ctor}",
+                  "decoratedName": "??0SFieldModelHeader@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "SFieldModelHeader::cutZ"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'SFieldModelHeader::cutX' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.h"
+                },
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 1,
+                  "endLine": 40,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SFieldModelHeader::{ctor}",
+                  "decoratedName": "??0SFieldModelHeader@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "SFieldModelHeader::cutX"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'SFieldModelHeader::verversion' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.h"
+                },
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 1,
+                  "endLine": 40,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SFieldModelHeader::{ctor}",
+                  "decoratedName": "??0SFieldModelHeader@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "SFieldModelHeader::verversion"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'SFieldModelHeader::fileType' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.h"
+                },
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 1,
+                  "endLine": 40,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SFieldModelHeader::{ctor}",
+                  "decoratedName": "??0SFieldModelHeader@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "SFieldModelHeader::fileType"
+          }
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "演算のオーバーフロー: 4 バイトの値に演算子 '*' を使用し、結果を 8 バイトの値にキャストしています。オーバーフローを避けるため、演算子 '*' を呼び出す前に値を幅の広い型にキャストしてください (io.2)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 470,
+                  "startColumn": 38,
+                  "endLine": 470,
+                  "endColumn": 60
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::Load",
+                  "decoratedName": "?Load@CModelField@@UEAA_NPEBD@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "演算のオーバーフロー: 4 バイトの値に演算子 '*' を使用し、結果を 8 バイトの値にキャストしています。オーバーフローを避けるため、演算子 '*' を呼び出す前に値を幅の広い型にキャストしてください (io.2)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 471,
+                  "startColumn": 48,
+                  "endLine": 471,
+                  "endColumn": 70
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::Load",
+                  "decoratedName": "?Load@CModelField@@UEAA_NPEBD@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "演算のオーバーフロー: 4 バイトの値に演算子 '*' を使用し、結果を 8 バイトの値にキャストしています。オーバーフローを避けるため、演算子 '*' を呼び出す前に値を幅の広い型にキャストしてください (io.2)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 507,
+                  "startColumn": 27,
+                  "endLine": 507,
+                  "endColumn": 49
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::Load",
+                  "decoratedName": "?Load@CModelField@@UEAA_NPEBD@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_pMaterial' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 533,
+                  "startColumn": 14,
+                  "endLine": 533,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@AEBV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_pMaterial"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_col' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 533,
+                  "startColumn": 14,
+                  "endLine": 533,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@AEBV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_col"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_length' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 533,
+                  "startColumn": 14,
+                  "endLine": 533,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@AEBV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_length"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_materialCnt' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 533,
+                  "startColumn": 14,
+                  "endLine": 533,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@AEBV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_materialCnt"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_isDestroy' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 533,
+                  "startColumn": 14,
+                  "endLine": 533,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@AEBV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_isDestroy"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_OldmaxZ' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 533,
+                  "startColumn": 14,
+                  "endLine": 533,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@AEBV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_OldmaxZ"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_minX' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 533,
+                  "startColumn": 14,
+                  "endLine": 533,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@AEBV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_minX"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_fileName' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 533,
+                  "startColumn": 14,
+                  "endLine": 533,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@AEBV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_fileName"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_OldminX' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 533,
+                  "startColumn": 14,
+                  "endLine": 533,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@AEBV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_OldminX"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_isLoading' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 533,
+                  "startColumn": 14,
+                  "endLine": 533,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@AEBV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_isLoading"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_minZ' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 533,
+                  "startColumn": 14,
+                  "endLine": 533,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@AEBV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_minZ"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_raw' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 533,
+                  "startColumn": 14,
+                  "endLine": 533,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@AEBV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_raw"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_maxZ' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 533,
+                  "startColumn": 14,
+                  "endLine": 533,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@AEBV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_maxZ"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_fp' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 533,
+                  "startColumn": 14,
+                  "endLine": 533,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@AEBV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_fp"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_offSet' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 533,
+                  "startColumn": 14,
+                  "endLine": 533,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@AEBV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_offSet"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_posZ' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 533,
+                  "startColumn": 14,
+                  "endLine": 533,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@AEBV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_posZ"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_pMesh' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 533,
+                  "startColumn": 14,
+                  "endLine": 533,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@AEBV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_pMesh"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_OldminZ' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 533,
+                  "startColumn": 14,
+                  "endLine": 533,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@AEBV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_OldminZ"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_OldmaxX' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 533,
+                  "startColumn": 14,
+                  "endLine": 533,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@AEBV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_OldmaxX"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_posX' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 533,
+                  "startColumn": 14,
+                  "endLine": 533,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@AEBV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_posX"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CModelField::m_maxX' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+                },
+                "region": {
+                  "startLine": 533,
+                  "startColumn": 14,
+                  "endLine": 533,
+                  "endColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CModelField::{ctor}",
+                  "decoratedName": "??0CModelField@@QEAA@AEBV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CModelField::m_maxX"
+          }
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.35.32217.1",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "cc00ef209f632f5b8edaf3be76b8a4381faed273826296eaf7f0f99ed8143f22"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CModelField.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "b7000631c2e69a8813e36426faa54c5e8b700a53ddd368ae9c08161a42038bc1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/cmodel.h"
+          },
+          "hashes": {
+            "sha-256": "1ea8155884a7d3c54c54181f2b219aef3554932ee58e18cf1663d30aa2cd1f09"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/cmatrix.h"
+          },
+          "hashes": {
+            "sha-256": "2ce542becc6c3150dac2d9d58c83f3ceff3f620ee83402b271eec78a370216eb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/gl.h"
+          },
+          "hashes": {
+            "sha-256": "561e80c274a9e188997c4dd1d0213378860301c8148f514332d307c36a6267bb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/include/glew.h"
+          },
+          "hashes": {
+            "sha-256": "9a683cf56a1ba3a04e209cdc42ef71dc17e0c570474bb4dfe7e14d50845a9740"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/include/glfw/glfw3.h"
+          },
+          "hashes": {
+            "sha-256": "58cb6576c30b9a4d67f4041ab713da850eabafafb2c14d23e1c5a500654788dd"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/include/al/alut.h"
+          },
+          "hashes": {
+            "sha-256": "4d3b62360dc11b57af6003acc457d0d2f384f6a4a4bc69ce76e9c446d35b2bf4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/include/al/alc.h"
+          },
+          "hashes": {
+            "sha-256": "2ee998f214c2222a24bcc886e8665de6a72a4258cae1f99269bcfd5406199492"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/include/al/al.h"
+          },
+          "hashes": {
+            "sha-256": "5032c6dbdb6186bbf2c45b1287d677b4f37cc24dcc9eece49083b08088d2eb6d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/cvector.h"
+          },
+          "hashes": {
+            "sha-256": "f98729f9cc14666850566b88284b3f7f03eee052344d1679e313530b2595d9c0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/ctexture.h"
+          },
+          "hashes": {
+            "sha-256": "b001ef3f675cb6a31e3c19264b66083c1265b247fd0b77baca42c808dfb355a5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/cresource.h"
+          },
+          "hashes": {
+            "sha-256": "75ea19f6878f864bb5bf7d2150018db3af3bbc42abfe270a429e20907db49206"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/cshader.h"
+          },
+          "hashes": {
+            "sha-256": "a426e1f849011bcf68b47c04282d9598bf27ed262617336d26de7c158dd294d7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/vertex.h"
+          },
+          "hashes": {
+            "sha-256": "25f33e6684d1fe98bc216ed26d4313e19092dc898bfd2cd3681568cd63702f5e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/ccollision.h"
+          },
+          "hashes": {
+            "sha-256": "6bdc8b8d0489cc4afe1e9422bb61b37e13f540e2a069d53637dae55736c894d5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/crect.h"
+          },
+          "hashes": {
+            "sha-256": "8d56bb095766c4a71efa659131c375fb2aab7102c37d346420e36edd11be33d3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/ccamera.h"
+          },
+          "hashes": {
+            "sha-256": "b109e793c450fb32120ccaf1f69fd9c4064039807c60a92d261bca526df0803c"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CShadow::m_screenHeight' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CShadow.cpp"
+                },
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 10,
+                  "endLine": 5,
+                  "endColumn": 10
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CShadow::{ctor}",
+                  "decoratedName": "??0CShadow@@QEAA@MMHH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CShadow::m_screenHeight"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "変数 'CShadow::m_screenWidth' が初期化されていません。メンバー変数は必ず初期化してください (type.6)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CShadow.cpp"
+                },
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 10,
+                  "endLine": 5,
+                  "endColumn": 10
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CShadow::{ctor}",
+                  "decoratedName": "??0CShadow@@QEAA@MMHH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "CShadow::m_screenWidth"
+          }
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.35.32217.1",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CShadow.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "78055ef3399945528e07dd3a9c1729504b1f8d06dace4751c9ef5dde30061e4e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/cshadow.h"
+          },
+          "hashes": {
+            "sha-256": "18bd75676dbd425d2ccf03b530c24a75e2415f752b50c4c001ea7fe3efb74bf5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/cmatrix.h"
+          },
+          "hashes": {
+            "sha-256": "2ce542becc6c3150dac2d9d58c83f3ceff3f620ee83402b271eec78a370216eb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/gl.h"
+          },
+          "hashes": {
+            "sha-256": "561e80c274a9e188997c4dd1d0213378860301c8148f514332d307c36a6267bb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/include/glew.h"
+          },
+          "hashes": {
+            "sha-256": "9a683cf56a1ba3a04e209cdc42ef71dc17e0c570474bb4dfe7e14d50845a9740"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/include/glfw/glfw3.h"
+          },
+          "hashes": {
+            "sha-256": "58cb6576c30b9a4d67f4041ab713da850eabafafb2c14d23e1c5a500654788dd"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/include/al/alut.h"
+          },
+          "hashes": {
+            "sha-256": "4d3b62360dc11b57af6003acc457d0d2f384f6a4a4bc69ce76e9c446d35b2bf4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/include/al/alc.h"
+          },
+          "hashes": {
+            "sha-256": "2ee998f214c2222a24bcc886e8665de6a72a4258cae1f99269bcfd5406199492"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/include/al/al.h"
+          },
+          "hashes": {
+            "sha-256": "5032c6dbdb6186bbf2c45b1287d677b4f37cc24dcc9eece49083b08088d2eb6d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/cvector.h"
+          },
+          "hashes": {
+            "sha-256": "f98729f9cc14666850566b88284b3f7f03eee052344d1679e313530b2595d9c0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/clight.h"
+          },
+          "hashes": {
+            "sha-256": "94b9fa40a563709399548558cd66abf2d6b0724c0267e7fbcae520b48bae563d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/ccamera.h"
+          },
+          "hashes": {
+            "sha-256": "b109e793c450fb32120ccaf1f69fd9c4064039807c60a92d261bca526df0803c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/crect.h"
+          },
+          "hashes": {
+            "sha-256": "8d56bb095766c4a71efa659131c375fb2aab7102c37d346420e36edd11be33d3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/cshader.h"
+          },
+          "hashes": {
+            "sha-256": "a426e1f849011bcf68b47c04282d9598bf27ed262617336d26de7c158dd294d7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/ctextureframe.h"
+          },
+          "hashes": {
+            "sha-256": "0c060f1a755749a7762254c5bcd2cff40198fa5495be170249144a589737c1ac"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/ctexture.h"
+          },
+          "hashes": {
+            "sha-256": "b001ef3f675cb6a31e3c19264b66083c1265b247fd0b77baca42c808dfb355a5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/cresource.h"
+          },
+          "hashes": {
+            "sha-256": "75ea19f6878f864bb5bf7d2150018db3af3bbc42abfe270a429e20907db49206"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/vertex.h"
+          },
+          "hashes": {
+            "sha-256": "25f33e6684d1fe98bc216ed26d4313e19092dc898bfd2cd3681568cd63702f5e"
+          }
+        }
+      ]
+    }
+  ]
+}

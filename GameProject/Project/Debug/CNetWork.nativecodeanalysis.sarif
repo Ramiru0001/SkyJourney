@@ -1,0 +1,273 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C6385",
+          "message": {
+            "text": "'m_sendbuffer' から無効なデータを読み取っています。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CNetWork.cpp"
+                },
+                "region": {
+                  "startLine": 83,
+                  "startColumn": 4,
+                  "endLine": 83,
+                  "endColumn": 65
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CSocket::Send",
+                  "decoratedName": "?Send@CSocket@@QEAA_NPEBDH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CNetWork.cpp"
+                          },
+                          "region": {
+                            "startLine": 73,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CNetWork.cpp"
+                          },
+                          "region": {
+                            "startLine": 73,
+                            "startColumn": 47
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CNetWork.cpp"
+                          },
+                          "region": {
+                            "startLine": 74,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CNetWork.cpp"
+                          },
+                          "region": {
+                            "startLine": 75,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CNetWork.cpp"
+                          },
+                          "region": {
+                            "startLine": 76,
+                            "startColumn": 8
+                          }
+                        },
+                        "message": {
+                          "text": "'m_sendbuffer' は 'memcpy' からの出力です (c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.35.32215\\include\\vcruntime_string.h:43 で宣言)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CNetWork.cpp"
+                          },
+                          "region": {
+                            "startLine": 77,
+                            "startColumn": 8
+                          }
+                        },
+                        "message": {
+                          "text": "'len' は 'memcpy' への入力です (c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.35.32215\\include\\vcruntime_string.h:43 で宣言)"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CNetWork.cpp"
+                          },
+                          "region": {
+                            "startLine": 78,
+                            "startColumn": 6
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CNetWork.cpp"
+                          },
+                          "region": {
+                            "startLine": 79,
+                            "startColumn": 10
+                          }
+                        },
+                        "message": {
+                          "text": "このループに入る ('s<len' と仮定)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CNetWork.cpp"
+                          },
+                          "region": {
+                            "startLine": 80,
+                            "startColumn": 7
+                          }
+                        },
+                        "message": {
+                          "text": "この分岐をスキップする ('m_udp' が false と仮定)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CNetWork.cpp"
+                          },
+                          "region": {
+                            "startLine": 83,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "'len' は 'send' への入力です (c:\\program files (x86)\\windows kits\\10\\include\\10.0.19041.0\\um\\winsock.h:815 で宣言)"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CNetWork.cpp"
+                          },
+                          "region": {
+                            "startLine": 83,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "'m_sendbuffer' からの読み取りは無効です (読み取り可能な範囲外)"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.35.32217.1",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/AnabukiSchool/GC2_C++/SkyJourney/GameProject/Project/GLLibrary/GLLibrary/CNetWork.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "7b314b99ad7a3bea952ae0bc618a700ee620b0a29c7239fcd02fe162bf45bf99"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/anabukischool/gc2_c++/skyjourney/gameproject/project/gllibrary/gllibrary/cnetwork.h"
+          },
+          "hashes": {
+            "sha-256": "ce2047a53873fc8f3e4dbafa1fa85bb3a8b13a513541268448a9622ee2d0e602"
+          }
+        }
+      ]
+    }
+  ]
+}

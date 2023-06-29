@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="Global.h" />
+    <ClInclude Include="TaskSystem\Task.h">
+      <Filter>TaskSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskSystem\TaskManager.h">
+      <Filter>TaskSystem</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="TaskSystem\Task.cpp">
+      <Filter>TaskSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskSystem\TaskManager.cpp">
+      <Filter>TaskSystem</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="TaskSystem">
+      <UniqueIdentifier>{15f89e13-c97f-454c-92ce-6bf5971c1c96}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
