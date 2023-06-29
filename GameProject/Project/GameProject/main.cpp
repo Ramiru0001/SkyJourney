@@ -1,8 +1,8 @@
 //--------------------------------------------
 //グローバル変数領域
 //-------------------------------------------
-#include "TaskSystem/TaskController.h"
-
+#include "TaskSystem/TaskManager.h"
+#include "TaskSystem/Task.h"
 void MainLoop(void) {
 	//--------------------------------------------------------------
 	//ゲーム中の動きはここに書く
