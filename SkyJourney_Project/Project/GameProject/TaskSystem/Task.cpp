@@ -1,6 +1,6 @@
 #include "Task.h"
 #include "TaskManager.h"
-Task::Task(int prio=ETaskPrio::eTaskDefault) : m_prio(prio){
+Task::Task(ETaskPrio prio=ETaskPrio::eTaskDefault) : m_prio(prio){
 
 }
 bool Task::GetKill() {

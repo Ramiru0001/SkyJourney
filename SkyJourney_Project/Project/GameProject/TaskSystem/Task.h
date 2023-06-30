@@ -11,7 +11,7 @@ enum ETaskPrio {
 	eTaskUI,
 };
 class Task {
-private:
+public:
 	/// <summary>
 	/// 削除フラグ
 	/// </summary>
@@ -19,7 +19,7 @@ private:
 	/// <summary>
 	/// タスクの優先度
 	/// </summary>
-	int m_prio= eTaskDefault;
+	ETaskPrio m_prio= eTaskDefault;
 	/// <summary>
 	/// 座標
 	/// </summary>
@@ -33,7 +33,7 @@ private:
 	/// </summary>
 	CVector3D m_ang = CVector3D(0, 0, 0);
 public:
-	Task(int prio=ETaskPrio::eTaskDefault);
+	Task(ETaskPrio prio=ETaskPrio::eTaskDefault);
 	/// <summary>
 	/// 削除フラグの値を入手
 	/// </summary>
