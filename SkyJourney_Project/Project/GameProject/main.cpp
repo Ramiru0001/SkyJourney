@@ -8,12 +8,10 @@ void MainLoop(void) {
 	//ゲーム中の動きはここに書く
 	//ゲーム中はこの関数_を1秒間に60回呼び出している
 	//--------------------------------------------------------------
-
-
-
-
-
-
+	TaskManager::DeleteAll();
+	TaskManager::UpdateAll(); 
+	TaskManager::CollisionAll();
+	TaskManager::RenderAll();
 }
 void Init(void)
 {
@@ -85,7 +83,8 @@ void Init(void)
 	//初期化の命令を書く
 	//ゲーム起動時に一度だけ呼ばれる
 	//-----------------------------------------------------
-
+	//ADD_RESOURCE("Antman", CModel::CreateModel("Charactor/antman/antman.a3m"));
+	ADD_RESOURCE();
 
 
 

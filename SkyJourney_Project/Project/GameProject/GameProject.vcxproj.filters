@@ -8,6 +8,9 @@
     <ClInclude Include="TaskSystem\TaskManager.h">
       <Filter>TaskSystem</Filter>
     </ClInclude>
+    <ClInclude Include="Character\Player.h">
+      <Filter>Character</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -17,10 +20,16 @@
     <ClCompile Include="TaskSystem\TaskManager.cpp">
       <Filter>TaskSystem</Filter>
     </ClCompile>
+    <ClCompile Include="Character\Player.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="TaskSystem">
       <UniqueIdentifier>{15f89e13-c97f-454c-92ce-6bf5971c1c96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character">
+      <UniqueIdentifier>{6764bb85-da02-44ba-b335-a722f212f25d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

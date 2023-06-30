@@ -15,23 +15,23 @@ private:
 	/// <summary>
 	/// 削除フラグ
 	/// </summary>
-	bool m_kill;
+	bool m_kill = false;
 	/// <summary>
 	/// タスクの優先度
 	/// </summary>
-	int m_prio;
+	int m_prio= eTaskDefault;
 	/// <summary>
 	/// 座標
 	/// </summary>
-	CVector3D m_pos;
+	CVector3D m_pos = CVector3D(0, 0, 0);
 	/// <summary>
 	/// 向いている方向
 	/// </summary>
-	CVector3D m_rot;
+	CVector3D m_rot= CVector3D(0, 0, 0);;
 	/// <summary>
 	/// 角度
 	/// </summary>
-	CVector3D m_ang;
+	CVector3D m_ang = CVector3D(0, 0, 0);
 public:
 	Task(int prio=ETaskPrio::eTaskDefault);
 	/// <summary>
@@ -39,4 +39,8 @@ public:
 	/// </summary>
 	/// <returns></returns>
 	virtual bool GetKill();
+	virtual void Render();
+	virtual void Update();
+	virtual void SetKill();
+	virtual void Collision(Task* b);
 };
