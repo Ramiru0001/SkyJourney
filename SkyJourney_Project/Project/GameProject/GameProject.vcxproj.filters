@@ -5,11 +5,11 @@
     <ClInclude Include="TaskSystem\Task.h">
       <Filter>TaskSystem</Filter>
     </ClInclude>
-    <ClInclude Include="TaskSystem\TaskManager.h">
-      <Filter>TaskSystem</Filter>
-    </ClInclude>
     <ClInclude Include="Character\Player.h">
       <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Field.h">
+      <Filter>Game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -17,11 +17,11 @@
     <ClCompile Include="TaskSystem\Task.cpp">
       <Filter>TaskSystem</Filter>
     </ClCompile>
-    <ClCompile Include="TaskSystem\TaskManager.cpp">
-      <Filter>TaskSystem</Filter>
-    </ClCompile>
     <ClCompile Include="Character\Player.cpp">
       <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Field.cpp">
+      <Filter>Game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -30,6 +30,9 @@
     </Filter>
     <Filter Include="Character">
       <UniqueIdentifier>{6764bb85-da02-44ba-b335-a722f212f25d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{4209b7f2-b2cf-42ed-9b63-5ae54686d1e3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

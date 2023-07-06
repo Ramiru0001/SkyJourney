@@ -1,46 +1,67 @@
 #pragma once
-/// <summary>
-/// タスクの優先順位
-/// </summary>
-enum ETaskPrio {
-	eTaskSky,
-	eTaskStage,
-	eTaskDefault,
-	eTaskEnemy,
-	eTaskPlayer,
-	eTaskUI,
-};
+std::list<Task*> m_TaskList;
 class Task {
-public:
-	/// <summary>
-	/// 削除フラグ
-	/// </summary>
+	enum eTaskPrio {
+		eSky,
+		eField,
+		eObject,
+		eDefault,
+		ePlayer,
+		eEnemy,
+	};
+private:
+	//std::list<Task*> m_DrawList;
 	bool m_kill = false;
-	/// <summary>
-	/// タスクの優先度
-	/// </summary>
-	ETaskPrio m_prio= eTaskDefault;
-	/// <summary>
-	/// 座標
-	/// </summary>
-	CVector3D m_pos = CVector3D(0, 0, 0);
-	/// <summary>
-	/// 向いている方向
-	/// </summary>
-	CVector3D m_rot= CVector3D(0, 0, 0);;
-	/// <summary>
-	/// 角度
-	/// </summary>
-	CVector3D m_ang = CVector3D(0, 0, 0);
+	int m_Prio = eDefault;//タスクの優先度
+	CVector3D m_pos = CVector3D(0, 0, 0);//座標
+	CVector3D m_rot = CVector3D(0, 0, 0);//向いている方向
+	CVector3D m_Ang = CVector3D(0, 0, 0);//角度
 public:
-	Task(ETaskPrio prio=ETaskPrio::eTaskDefault);
 	/// <summary>
-	/// 削除フラグの値を入手
+	/// コンストラクタ
 	/// </summary>
-	/// <returns></returns>
-	virtual bool GetKill();
+	/// <param name="m_Prio">タスクの優先度</param>
+	Task(int m_Prio = eDefault);
+	/// <summary>
+	/// タスクの追加
+	/// </summary>
+	/// <param name="">Taskクラスのポインタ</param>
+	void Add(Task*);
+	/// <summary>
+	/// 描画処理
+	/// </summary>
 	virtual void Render();
+	/// <summary>
+	/// Update処理
+	/// </summary>
 	virtual void Update();
+	/// <summary>
+	/// 当たり判定の処理
+	/// </summary>
+	virtual void Collision();
+	/// <summary>
+	/// 削除フラグを立てる
+	/// </summary>
 	virtual void SetKill();
-	virtual void Collision(Task* b);
+	/// <summary>
+	/// キルフラグがonかoffかを確認
+	/// </summary>
+	/// <returns>キルフラグの値</returns>
+	bool CheckKill();
+	/// <summary>
+	/// すべて描画処理
+	/// </summary>
+	static void RenderAll();
+	/// <summary>
+	/// すべてUpdate
+	/// </summary>
+	static void UpdateAll();
+	/// <summary>
+	/// すべての当たり判定処理
+	/// </summary>
+	static void CollisionAll();
+	/// <summary>
+	/// 削除フラグONのタスクをすべて削除
+	/// </summary>
+	static void DeleteAll();
 };

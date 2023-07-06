@@ -1,9 +1,13 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: 中間ディレクトリ (C:\AnabukiSchool\GC2_C++\SkyJourney\GameProject\Project\Debug\) に別のプロジェクト (GLLibrary.vcxproj) と共有されているファイルが含まれています。これにより、クリーンしてリビルド動作が適切に行われない可能性があります。
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: 中間ディレクトリ (C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\Debug\) に別のプロジェクト (GLLibrary.vcxproj) と共有されているファイルが含まれています。これにより、クリーンしてリビルド動作が適切に行われない可能性があります。
+  Player.cpp
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Player.cpp(8,1): error C2059: 構文エラー: '}'
+  Field.cpp
   main.cpp
-C:\AnabukiSchool\GC2_C++\SkyJourney\GameProject\Project\GameProject\main.cpp(113,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\GameProject\Project\GameProject\main.cpp(113,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\main.cpp(90,34): error C2243: '型キャスト': 'Field *' から 'Task *' の変換は存在しますが、アクセスできません。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\main.cpp(114,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\main.cpp(114,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
   Task.cpp
-C:\AnabukiSchool\GC2_C++\SkyJourney\GameProject\Project\GameProject\TaskController.h(2,10): fatal  error C1083: include ファイルを開けません。'../Task.h':No such file or directory
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\TaskSystem\Task.cpp(3,38): error C2572: 'Task::Task' : 既定引数の再定義: パラメーター 1
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\TaskSystem\Task.h(36,2): message : 'Task::Task' の宣言を確認してください
   TaskManager.cpp
-C:\AnabukiSchool\GC2_C++\SkyJourney\GameProject\Project\GameProject\TaskSystem\TaskManager.cpp(14): error C2428: '--': ブール型のオペランドでは許可されていません。
   コードを生成中...

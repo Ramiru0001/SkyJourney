@@ -12,15 +12,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character\Player.h" />
+    <ClInclude Include="Game\Field.h" />
     <ClInclude Include="Global.h" />
     <ClInclude Include="TaskSystem\Task.h" />
-    <ClInclude Include="TaskSystem\TaskManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Character\Player.cpp" />
+    <ClCompile Include="Game\Field.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="TaskSystem\Task.cpp" />
-    <ClCompile Include="TaskSystem\TaskManager.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{FE2CE3B1-49BF-46A5-9DB1-9BD5B52FE1A0}</ProjectGuid>
