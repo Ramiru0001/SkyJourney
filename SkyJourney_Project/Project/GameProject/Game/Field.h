@@ -1,7 +1,5 @@
 #pragma once
-#include "../TaskSystem/TaskManager.h"
-#include "../TaskSystem/Task.h"
-class Field :Task {
+class Field :public Task {
 public:
 	CModelObj m_Field;
 	CModelObj m_Sky;

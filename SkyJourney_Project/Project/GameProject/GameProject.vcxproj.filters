@@ -11,6 +11,9 @@
     <ClInclude Include="Game\Field.h">
       <Filter>Game</Filter>
     </ClInclude>
+    <ClInclude Include="Camera\Camera.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -23,6 +26,9 @@
     <ClCompile Include="Game\Field.cpp">
       <Filter>Game</Filter>
     </ClCompile>
+    <ClCompile Include="Camera\Camera.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="TaskSystem">
@@ -33,6 +39,9 @@
     </Filter>
     <Filter Include="Game">
       <UniqueIdentifier>{4209b7f2-b2cf-42ed-9b63-5ae54686d1e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Camera">
+      <UniqueIdentifier>{ee9285ad-03bc-4d41-88b4-ae57fbe03e90}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

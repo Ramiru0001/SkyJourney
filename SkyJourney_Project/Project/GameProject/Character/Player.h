@@ -1,7 +1,5 @@
 #pragma once
-#include "../TaskSystem/TaskManager.h"
-#include "../TaskSystem/Task.h"
-class Player :Task {
+class Player :public Task {
 public:
 	CModelA3M m_model;
 public:

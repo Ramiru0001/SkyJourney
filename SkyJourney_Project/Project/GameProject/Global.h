@@ -3,5 +3,8 @@
 #include <stdio.h>
 #include <list>
 #include <algorithm>
-#define SCREEN_WIDTH 1920
-#define SCREEN_HEIGHT 1080
+#include <iostream>
+#include "TaskSystem/Task.h"
+#define SCREEN_WIDTH 1280
+#define SCREEN_HEIGHT 720
+#define DEFAULT_POS CVector3D(0,0,0)

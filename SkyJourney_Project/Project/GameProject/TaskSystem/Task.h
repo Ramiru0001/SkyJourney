@@ -1,32 +1,32 @@
 #pragma once
-std::list<Task*> m_TaskList;
+enum class ETaskPrio   {
+	eSky,
+	eField,
+	eObject,
+	eDefault,
+	ePlayer,
+	eEnemy,
+	eCamera,
+};
 class Task {
-	enum eTaskPrio {
-		eSky,
-		eField,
-		eObject,
-		eDefault,
-		ePlayer,
-		eEnemy,
-	};
 private:
-	//std::list<Task*> m_DrawList;
+	static std::list<Task*> m_TaskList;
+public:
+	ETaskPrio m_prio;
 	bool m_kill = false;
-	int m_Prio = eDefault;//タスクの優先度
 	CVector3D m_pos = CVector3D(0, 0, 0);//座標
 	CVector3D m_rot = CVector3D(0, 0, 0);//向いている方向
-	CVector3D m_Ang = CVector3D(0, 0, 0);//角度
+	CVector3D m_ang = CVector3D(0, 0, 0);//角度
 public:
-	/// <summary>
+	ETaskPrio GetPrio();
 	/// コンストラクタ
 	/// </summary>
 	/// <param name="m_Prio">タスクの優先度</param>
-	Task(int m_Prio = eDefault);
+	Task(ETaskPrio prio);
 	/// <summary>
-	/// タスクの追加
 	/// </summary>
 	/// <param name="">Taskクラスのポインタ</param>
-	void Add(Task*);
+	static void Add(Task* a);
 	/// <summary>
 	/// 描画処理
 	/// </summary>
@@ -43,6 +43,7 @@ public:
 	/// 削除フラグを立てる
 	/// </summary>
 	virtual void SetKill();
+	virtual Task* FindObject(ETaskPrio prio);
 	/// <summary>
 	/// キルフラグがonかoffかを確認
 	/// </summary>

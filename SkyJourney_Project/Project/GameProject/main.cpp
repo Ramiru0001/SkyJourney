@@ -1,14 +1,16 @@
 //--------------------------------------------
 //グローバル変数領域
 //-------------------------------------------
-#include "TaskSystem/TaskManager.h"
-#include "TaskSystem/Task.h"
+#include "Character/Player.h"
 #include "Game/Field.h"
+#include "Camera/Camera.h"
 void MainLoop(void) {
 	//--------------------------------------------------------------
 	//ゲーム中の動きはここに書く
 	//ゲーム中はこの関数_を1秒間に60回呼び出している
 	//--------------------------------------------------------------
+
+	std::cout << "mainLoop" << std::endl;
 	Task::DeleteAll();
 	Task::UpdateAll(); 
 	Task::CollisionAll();
@@ -84,12 +86,14 @@ void Init(void)
 	//初期化の命令を書く
 	//ゲーム起動時に一度だけ呼ばれる
 	//-----------------------------------------------------
-	//ADD_RESOURCE("Antman", CModel::CreateModel("Charactor/antman/antman.a3m"));
+	std::cout<< std::endl << "Init" << std::endl;
 	ADD_RESOURCE("FirstIsland", CModel::CreateModel("Field/Island.obj"));
-	ADD_RESOURCE("Sky", CModel::CreateModel("Field/Sky.obj"));
-	TaskManager::AddTask(new Field());
-
-
+	ADD_RESOURCE("Sky", CModel::CreateModel("Field/SkyBox.obj"));
+	ADD_RESOURCE("Player", CModel::CreateModel("Character/Player.a3m"));
+	//Task::Add(new Player(DEFAULT_POS));
+	Task::Add(new Field());
+	Task::Add(new Camera());
+	std::cout << "Initfin" << std::endl;
 }
 
 
