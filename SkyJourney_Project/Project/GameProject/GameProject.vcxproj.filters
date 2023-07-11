@@ -14,6 +14,9 @@
     <ClInclude Include="Camera\Camera.h">
       <Filter>Camera</Filter>
     </ClInclude>
+    <ClInclude Include="Public\PublicFile.h">
+      <Filter>Puglic</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -29,6 +32,9 @@
     <ClCompile Include="Camera\Camera.cpp">
       <Filter>Camera</Filter>
     </ClCompile>
+    <ClCompile Include="Public\PublicFile.cpp">
+      <Filter>Puglic</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="TaskSystem">
@@ -42,6 +48,9 @@
     </Filter>
     <Filter Include="Camera">
       <UniqueIdentifier>{ee9285ad-03bc-4d41-88b4-ae57fbe03e90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Puglic">
+      <UniqueIdentifier>{7d5c5c0c-78a6-4a46-8607-17e64d1803a6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -15,6 +15,7 @@
     <ClInclude Include="Character\Player.h" />
     <ClInclude Include="Game\Field.h" />
     <ClInclude Include="Global.h" />
+    <ClInclude Include="Public\PublicFile.h" />
     <ClInclude Include="TaskSystem\Task.h" />
   </ItemGroup>
   <ItemGroup>
@@ -22,6 +23,7 @@
     <ClCompile Include="Character\Player.cpp" />
     <ClCompile Include="Game\Field.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Public\PublicFile.cpp" />
     <ClCompile Include="TaskSystem\Task.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

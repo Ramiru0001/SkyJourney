@@ -1,10 +1,10 @@
 #pragma once
 class Camera :public Task {
 public :
-	enum {
+	/*enum {
 		FixedPoint,
 		WithPlayer,
-	};
+	};*/
 	CVector3D m_at;//’‹“_
 	float fov = DtoR(60.0f);//‹–ìŠp
 	float m_dist = 10.0f;//’‹“_‚Ü‚Å‚Ì‹——£

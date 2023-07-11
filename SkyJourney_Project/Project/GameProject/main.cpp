@@ -4,12 +4,12 @@
 #include "Character/Player.h"
 #include "Game/Field.h"
 #include "Camera/Camera.h"
+#include "Global.h"
 void MainLoop(void) {
 	//--------------------------------------------------------------
 	//ƒQ[ƒ€’†‚Ì“®‚«‚Í‚±‚±‚É‘‚­
 	//ƒQ[ƒ€’†‚Í‚±‚ÌŠÖ”_‚ğ1•bŠÔ‚É60‰ñŒÄ‚Ño‚µ‚Ä‚¢‚é
 	//--------------------------------------------------------------
-
 	std::cout << "mainLoop" << std::endl;
 	Task::DeleteAll();
 	Task::UpdateAll(); 
@@ -91,6 +91,7 @@ void Init(void)
 	ADD_RESOURCE("Sky", CModel::CreateModel("Field/SkyBox.obj"));
 	ADD_RESOURCE("Player", CModel::CreateModel("Character/Player.a3m"));
 	//Task::Add(new Player(DEFAULT_POS));
+	PublicNum::c_mode = PublicNum::FixedPoint;
 	Task::Add(new Field());
 	Task::Add(new Camera());
 	std::cout << "Initfin" << std::endl;
