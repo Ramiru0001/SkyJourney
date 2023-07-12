@@ -1,19 +1,25 @@
 #include "Camera.h"
 #include "../Global.h"
-Camera::Camera() :Task(ETaskPrio::eCamera){
-	std::cout << "Camera" << std::endl;
+Camera::Camera() :Task(ETaskPrio::eCamera, EType::eCamera){
+	if (PublicNum::d_mode == PublicNum::LogOn) {
+		std::cout << "Camera" << std::endl;
+	}
 	m_pos = CVector3D(-10, 10, 10);
 	m_rot = CVector3D(DtoR(30), DtoR(-125), 0);
-	std::cout << "Camerafin" << std::endl;
+	if (PublicNum::d_mode == PublicNum::LogOn) {
+		std::cout << "Camerafin" << std::endl;
+	}
 }
 void Camera::Update() {
-	std::cout << "CameraUpdate" << std::endl;
+	if (PublicNum::d_mode == PublicNum::LogOn) {
+		std::cout << "CameraUpdate" << std::endl;
+	}
 	switch(PublicNum::c_mode) {
 	case PublicNum::FixedPoint:
-		m_pos = CVector3D(-10, 10, 10);
+		m_pos = CVector3D(-10, 10, 50);
 		m_at= m_pos + CVector3D(0, 1.5, 0);
-		CCamera::GetCurrent()->LookAt(m_pos, m_at, CVector3D(0, 1, 0));
-		m_rot = CVector3D(DtoR(30), DtoR(125), 0);
+		//CCamera::GetCurrent()->LookAt(m_pos, m_at, CVector3D(0, 1, 0));
+		m_rot = CVector3D(DtoR(30), DtoR(180), 0);
 		CCamera::GetCurrent()->SetTranseRot(m_pos, m_rot);
 		CCamera::GetCurrent()->Perspective(fov,
 			(float)SCREEN_WIDTH / (float)SCREEN_HEIGHT,
@@ -21,7 +27,7 @@ void Camera::Update() {
 			z_far);
 		break;
 	case PublicNum::WithPlayer:
-		Task* p = Task::FindObject(ETaskPrio::ePlayer);
+		Task* p = Task::FindObject(EType::ePlayer);
 		CVector3D p_pos = p->m_pos;//プレイヤーの座標
 		mouse_vec = CInput::GetMouseVec();
 		m_rot += CVector3D(mouse_vec.y, -mouse_vec.x, 0) * m_speed;

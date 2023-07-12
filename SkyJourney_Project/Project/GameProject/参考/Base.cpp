@@ -67,7 +67,6 @@ void Base::RenderALL() {
 		b->Render();
 	}
 }
-
 void Base::CollisionALL() {
 	auto itr = m_list.begin();
 	//––”ö‚Ü‚ÅŒJ‚è•Ô‚·

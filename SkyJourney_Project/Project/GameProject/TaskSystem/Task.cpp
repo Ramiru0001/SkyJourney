@@ -1,6 +1,6 @@
 #include "Task.h"
 std::list<Task*> Task::m_TaskList;
-Task::Task(ETaskPrio prio):m_prio(prio) {
+Task::Task(ETaskPrio prio,EType type):m_prio(prio),m_type(type) {
 
 }
 void Task::Add(Task* a) {
@@ -16,7 +16,9 @@ void Task::Add(Task* a) {
 }
 void Task::Render(){}
 void Task::Update(){}
-void Task::Collision(){}
+void Task::Collision(Task* a){
+
+}
 void Task::SetKill() {
 	m_kill = true;
 }
@@ -32,7 +34,24 @@ void Task::UpdateAll(){
 	//std::cout << Task::m_TaskList.size() << std::endl;
 }
 void Task::CollisionAll() {
-
+	auto itr = m_TaskList.begin();
+	//末尾まで繰り返す
+	while (itr != m_TaskList.end()) {
+		if (!(*itr)->m_kill) {
+			auto ct = itr;
+			ct++;
+			while (ct != m_TaskList.end()) {
+				if (!(*ct)->m_kill) {
+					(*itr)->Collision(*ct);
+					(*ct)->Collision(*itr);
+				}
+				//次のオブジェクト
+				ct++;
+			}
+		}
+		//次のオブジェクト
+		itr++;
+	}
 }
 void Task::DeleteAll() {
 	//auto itr = m_TaskList.begin();
@@ -64,13 +83,19 @@ bool Task::CheckKill() {
 ETaskPrio Task::GetPrio() {
 	return m_prio;
 }
-Task* Task::FindObject(ETaskPrio prio) {
+Task::EType Task::GetType() {
+	return m_type;
+}
+Task* Task::FindObject(EType type) {
 	auto itr = m_TaskList.begin();
 	while (itr != m_TaskList.end()) {
-		if ((*itr)->GetPrio() == prio) {
+		if ((*itr)->GetType() == type) {
 			return *itr;
 		}
 		itr++;
 	}
+	return nullptr;
+}
+CModel* Task::GetModel() {
 	return nullptr;
 }

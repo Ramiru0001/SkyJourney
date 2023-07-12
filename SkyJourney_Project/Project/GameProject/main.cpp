@@ -10,7 +10,9 @@ void MainLoop(void) {
 	//ゲーム中の動きはここに書く
 	//ゲーム中はこの関数_を1秒間に60回呼び出している
 	//--------------------------------------------------------------
-	std::cout << "mainLoop" << std::endl;
+	if (PublicNum::d_mode == PublicNum::LogOn) {
+		std::cout << "mainLoop" << std::endl;
+	}
 	Task::DeleteAll();
 	Task::UpdateAll(); 
 	Task::CollisionAll();
@@ -86,18 +88,21 @@ void Init(void)
 	//初期化の命令を書く
 	//ゲーム起動時に一度だけ呼ばれる
 	//-----------------------------------------------------
-	std::cout<< std::endl << "Init" << std::endl;
+	PublicNum::c_mode = PublicNum::WithPlayer;
+	PublicNum::d_mode = PublicNum::LogOn;
+	if (PublicNum::d_mode== PublicNum::LogOn) {
+		std::cout << std::endl << "Init" << std::endl;
+	}
 	ADD_RESOURCE("FirstIsland", CModel::CreateModel("Field/Island.obj"));
 	ADD_RESOURCE("Sky", CModel::CreateModel("Field/SkyBox.obj"));
 	ADD_RESOURCE("Player", CModel::CreateModel("Character/Player.a3m"));
-	//Task::Add(new Player(DEFAULT_POS));
-	PublicNum::c_mode = PublicNum::FixedPoint;
+	Task::Add(new Player(DEFAULT_POS));
 	Task::Add(new Field());
 	Task::Add(new Camera());
-	std::cout << "Initfin" << std::endl;
+	if (PublicNum::d_mode == PublicNum::LogOn) {
+		std::cout << "Initfin" << std::endl;
+	}
 }
-
-
 void Release()
 {
 	CShader::ClearInstance();
@@ -106,7 +111,6 @@ void Release()
 	CSound::ClearInstance();
 	CResourceManager::ClearInstance();
 }
-
 static void ResizeCallback(GLFWwindow* window, int w, int h)
 {
 	glViewport(0, 0, w, h);

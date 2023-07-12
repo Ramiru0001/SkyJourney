@@ -7,4 +7,5 @@ public:
 	Field();
 	void Render();
 	void Update();
+	CModel* GetModel();
 };
