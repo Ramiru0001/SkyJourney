@@ -32,7 +32,7 @@ void Camera::Update() {
 		mouse_vec = CInput::GetMouseVec();
 		m_rot += CVector3D(mouse_vec.y, -mouse_vec.x, 0) * m_speed;
 		//è„â∫äpêßå¿
-		m_rot.x = min(DtoR(60), max(DtoR(-35), m_rot.x));
+		m_rot.x = min(DtoR(80), max(DtoR(-80), m_rot.x));
 		//180Å`-180Ç…ê≥ãKâª
 		m_rot.y = Utility::NormalizeAngle(m_rot.y);
 		m_at = p_pos + CVector3D(0, 1.5, 0);

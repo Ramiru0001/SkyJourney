@@ -96,7 +96,7 @@ void Init(void)
 	ADD_RESOURCE("FirstIsland", CModel::CreateModel("Field/Island.obj",10,3,5));
 	ADD_RESOURCE("Sky", CModel::CreateModel("Field/SkyBox.obj"));
 	ADD_RESOURCE("Player", CModel::CreateModel("Character/Player.a3m"));
-	Task::Add(new Player(DEFAULT_POS));
+	Task::Add(new Player(CVector3D(88.5f,1.7f,4.37f)));
 	Task::Add(new Field());
 	Task::Add(new Camera());
 	if (PublicNum::d_mode == PublicNum::LogOn) {

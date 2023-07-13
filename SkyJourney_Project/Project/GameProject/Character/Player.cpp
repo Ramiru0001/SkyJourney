@@ -49,6 +49,7 @@ void Player::Update() {
 	m_rot.y = c_rot.y;
 	m_pos.y += m_vec.y;
 	m_vec.y -= GRAVITY;
+	std::cout << "m_pos.x : " << m_pos.x << "m_pos.y : " << m_pos.y << "m_pos.z : " << m_pos.z << std::endl;
 
 }
 void Player::Collision(Task* a) {

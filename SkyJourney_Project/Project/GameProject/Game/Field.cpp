@@ -11,7 +11,7 @@ void Field::Render() {
 		std::cout << "FieldRender" << std::endl;
 	}
 	m_Sky.SetScale(800.0f, 800.0f, 800.0f);
-	m_Field.SetScale(0.2f, 0.2f, 0.2f);
+	m_Field.SetScale(0.25f, 0.25f, 0.25f);
 	m_Sky.SetPos(0, -30, 0);
 	m_Field.SetPos(80, 0, 0);
 	glDisable(GL_CULL_FACE);
