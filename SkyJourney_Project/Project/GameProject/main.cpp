@@ -89,11 +89,11 @@ void Init(void)
 	//ƒQ[ƒ€‹N“®‚Éˆê“x‚¾‚¯ŒÄ‚Î‚ê‚é
 	//-----------------------------------------------------
 	PublicNum::c_mode = PublicNum::WithPlayer;
-	PublicNum::d_mode = PublicNum::LogOn;
+	PublicNum::d_mode = PublicNum::LogOff;
 	if (PublicNum::d_mode== PublicNum::LogOn) {
 		std::cout << std::endl << "Init" << std::endl;
 	}
-	ADD_RESOURCE("FirstIsland", CModel::CreateModel("Field/Island.obj"));
+	ADD_RESOURCE("FirstIsland", CModel::CreateModel("Field/Island.obj",10,3,5));
 	ADD_RESOURCE("Sky", CModel::CreateModel("Field/SkyBox.obj"));
 	ADD_RESOURCE("Player", CModel::CreateModel("Character/Player.a3m"));
 	Task::Add(new Player(DEFAULT_POS));

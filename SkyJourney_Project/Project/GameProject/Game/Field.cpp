@@ -10,10 +10,10 @@ void Field::Render() {
 	if (PublicNum::d_mode == PublicNum::LogOn) {
 		std::cout << "FieldRender" << std::endl;
 	}
-	m_Sky.SetScale(250.0f, 250.0f, 0.0f);
-	m_Field.SetScale(0.1f, 0.1f, 0.1f);
-	m_Sky.SetPos(0, 0, 0);
-	m_Field.SetPos(0, 0, 0);
+	m_Sky.SetScale(800.0f, 800.0f, 800.0f);
+	m_Field.SetScale(0.2f, 0.2f, 0.2f);
+	m_Sky.SetPos(0, -30, 0);
+	m_Field.SetPos(80, 0, 0);
 	glDisable(GL_CULL_FACE);
 	CLight::SetLighting(false);
 	m_Sky.Render();
