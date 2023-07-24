@@ -63,6 +63,9 @@ void Player::Collision(Task* a) {
 	switch (a->GetType()) {
 	case EType::eField:
 	{
+		if (PublicNum::d_mode == PublicNum::LogOn) {
+			std::cout << "PlayerCollisionField" << std::endl;
+		}
 		auto tri = a->GetModel()->CollisionSphere(m_pos + CVector3D(0, m_rad, 0), m_rad);
 		//ê⁄êGÇµÇΩñ ÇÃêîåJÇËï‘Ç∑
 		for (auto& t : tri) {
@@ -90,6 +93,9 @@ void Player::Collision(Task* a) {
 		m_pos += v;
 		break;
 	case EType::eEnemy:
+		if (PublicNum::d_mode == PublicNum::LogOn) {
+			std::cout << "PlayerCollisionEnemy" << std::endl;
+		}
 		if ((a->m_pos - m_pos).Length() < a->m_rad + m_rad) {
 			CVector3D PEVec = a->m_pos - m_pos;
 			m_pos += PEVec.GetNormalize() * 0.5f;
@@ -97,12 +103,20 @@ void Player::Collision(Task* a) {
 		}
 		break;
 	case EType::eObject:
-		if ((a->m_pos - m_pos).Length() < a->m_rad + m_rad) {
-			CVector3D PEVec = a->m_pos - m_pos;
-			m_pos -= PEVec.GetNormalize();
+		if (PublicNum::d_mode == PublicNum::LogOn) {
+			std::cout << "PlayerCollisionObject" << std::endl;
+		}
+		if (a->GetCollision() == true) {
+			if ((a->m_pos - m_pos).Length() < a->m_rad + m_rad) {
+				CVector3D PEVec = a->m_pos - m_pos;
+				m_pos -= PEVec.GetNormalize();
+			}
 		}
 		break;
 	default:
+		if (PublicNum::d_mode == PublicNum::LogOn) {
+		std::cout << "PlayerCollisionDefault" << std::endl;
+	}
 		break;
 	}
 }

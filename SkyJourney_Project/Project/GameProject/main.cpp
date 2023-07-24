@@ -89,16 +89,19 @@ void Init(void)
 	//ƒQ[ƒ€‹N“®‚Éˆê“x‚¾‚¯ŒÄ‚Î‚ê‚é
 	//-----------------------------------------------------
 	PublicNum::c_mode = PublicNum::WithPlayer;
-	PublicNum::d_mode = PublicNum::LogOff;
+	PublicNum::d_mode = PublicNum::LogOn;
 	if (PublicNum::d_mode== PublicNum::LogOn) {
 		std::cout << std::endl << "Init" << std::endl;
 	}
 	ADD_RESOURCE("FirstIsland", CModel::CreateModel("Field/Island.obj",10,3,5));
 	ADD_RESOURCE("Sky", CModel::CreateModel("Field/SkyBox.obj"));
 	ADD_RESOURCE("Player", CModel::CreateModel("Character/Player.a3m"));
+	ADD_RESOURCE("Feather", CModel::CreateModel("Item/star.obj"));
 	Task::Add(new Player(CVector3D(88.5f,1.7f,4.37f)));
 	Task::Add(new Field());
 	Task::Add(new Camera());
+	Task::Add(new Feather(CVector3D(64.16f, 9.1f, 21.0f)));
+	Task::Add(new Feather(CVector3D(74.16f, 1.09f, -14.4f)));
 	if (PublicNum::d_mode == PublicNum::LogOn) {
 		std::cout << "Initfin" << std::endl;
 	}

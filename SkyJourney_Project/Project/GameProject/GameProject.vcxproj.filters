@@ -17,6 +17,9 @@
     <ClInclude Include="Public\PublicFile.h">
       <Filter>Puglic</Filter>
     </ClInclude>
+    <ClInclude Include="Game\Object.h">
+      <Filter>Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -34,6 +37,9 @@
     </ClCompile>
     <ClCompile Include="Public\PublicFile.cpp">
       <Filter>Puglic</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Object.cpp">
+      <Filter>Game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

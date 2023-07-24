@@ -44,6 +44,7 @@ void Task::CollisionAll() {
 				if (!(*ct)->m_kill) {
 					(*itr)->Collision(*ct);
 					(*ct)->Collision(*itr);
+					std::cout << (*itr)->m_type << " : " << (*ct)->m_type << std::endl;
 				}
 				//次のオブジェクト
 				ct++;
@@ -54,23 +55,23 @@ void Task::CollisionAll() {
 	}
 }
 void Task::DeleteAll() {
-	//auto itr = m_TaskList.begin();
-	////末尾まで繰り返す
-	//while (itr != m_TaskList.end()) {
-	//	//削除チェック
-	//	if ((*itr)->m_kill) {
-	//		if (--(*itr)->m_kill == 0) {
-	//			//削除
-	//			delete* itr;
-	//			//リストから除外する
-	//			//次のオブジェクトを受け取る
-	//			itr = m_TaskList.erase(itr);
-	//			continue;
-	//		}
-	//	}
-	//	//次のオブジェクト
-	//	itr++;
-	//}
+	auto itr = m_TaskList.begin();
+	//末尾まで繰り返す
+	while (itr != m_TaskList.end()) {
+		//削除チェック
+		if ((*itr)->m_kill==true) {
+			//if (--(*itr)->m_kill == true) {
+				//削除
+				delete* itr;
+				//リストから除外する
+				//次のオブジェクトを受け取る
+				itr = m_TaskList.erase(itr);
+				continue;
+			//}
+		}
+		//次のオブジェクト
+		itr++;
+	}
 }
 bool Task::CheckKill() {
 	if (m_kill = true) {
