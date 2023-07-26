@@ -1,4 +1,5 @@
 #include "Player.h"
+
 Player::Player(CVector3D &pos):Task(ETaskPrio::ePlayer, EType::ePlayer){
 	if (PublicNum::d_mode == PublicNum::LogOn) {
 		std::cout << "Player" << std::endl;
@@ -6,6 +7,14 @@ Player::Player(CVector3D &pos):Task(ETaskPrio::ePlayer, EType::ePlayer){
 	m_rad = 0.5f;
 	m_model = COPY_RESOURCE("Player", CModelA3M);
 	m_pos = pos;
+	//元のマテリアルを複製
+	//このキャラクターは1番がボディのマテリアル
+	mat1 = *m_model.GetMaterial(1);
+	mat2 = *m_model.GetMaterial(1);
+	//テクスチャを新規作成
+	mat2.mp_texture = new CTexture();
+	//テクスチャを読み込み
+	mat2.mp_texture->Load("Charactor/Vanguard/textures/vanguard_specular.png");
 }
 void Player::Render() {
 	if (PublicNum::d_mode == PublicNum::LogOn) {
@@ -18,6 +27,12 @@ void Player::Render() {
 	m_model.Render();
 }
 void Player::Update() {
+	//マテリアルの切り替え
+	if (PUSH(CInput::eButton1))
+		m_model.SetMaterial(1, &mat1);
+	if (PUSH(CInput::eButton2))
+		m_model.SetMaterial(1, &mat2);
+
 	if (PublicNum::d_mode == PublicNum::LogOn) {
 		std::cout << "PlayerUpdate" << std::endl;
 	}
@@ -30,19 +45,25 @@ void Player::Update() {
 	if (key_dir.LengthSq() > 0) {
 		CVector3D dir = CMatrix::MRotationY(m_rot.y) * key_dir;
 		if (OnGround == true) {
+			state = Walk;
 			m_pos += dir * move_speed;
+			m_model.ChangeAnimation(1);
 		}
 		else {
 			m_pos += dir * fly_speed;
 		}
-		//m_model.ChangeAnimation(1);
 	}
 	else {
-		//m_model.ChangeAnimation(0);
+		if (OnGround == true) {
+			state = Idle;
+			m_model.ChangeAnimation(0);
+		}
 	}
 	if (PUSH(CInput::eButton5/*space*/)) {
-		if(OnGround == true)m_vec.y += JUMP;
-		//m_model.ChangeAnimation(0);
+		//if(OnGround == true)
+		m_vec.y = JUMP;
+		state = Fly;
+		m_model.ChangeAnimation(2);
 	}
 	Task* a = Task::FindObject(EType::eCamera);
 	CVector3D c_rot = a->m_rot;//カメラの座標
