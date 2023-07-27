@@ -7,14 +7,12 @@ Player::Player(CVector3D &pos):Task(ETaskPrio::ePlayer, EType::ePlayer){
 	m_rad = 0.5f;
 	m_model = COPY_RESOURCE("Player", CModelA3M);
 	m_pos = pos;
-	//元のマテリアルを複製
-	//このキャラクターは1番がボディのマテリアル
-	mat1 = *m_model.GetMaterial(1);
-	mat2 = *m_model.GetMaterial(1);
-	//テクスチャを新規作成
-	mat2.mp_texture = new CTexture();
-	//テクスチャを読み込み
-	mat2.mp_texture->Load("Charactor/Vanguard/textures/vanguard_specular.png");
+	//レンダーターゲット生成
+	texture_frame_rader = new CTextureFrame(512, 512, CVector4D(1, 0, 0, 1)/*マントを赤に塗りつぶし*/);
+
+	//レンダーターゲットのテクスチャーと差し替え
+	m_model.GetMaterial(12)->mp_texture = texture_frame_rader->GetTexture();
+
 }
 void Player::Render() {
 	if (PublicNum::d_mode == PublicNum::LogOn) {
@@ -27,15 +25,21 @@ void Player::Render() {
 	m_model.Render();
 }
 void Player::Update() {
-	//マテリアルの切り替え
-	if (PUSH(CInput::eButton1))
-		m_model.SetMaterial(1, &mat1);
-	if (PUSH(CInput::eButton2))
-		m_model.SetMaterial(1, &mat2);
-
 	if (PublicNum::d_mode == PublicNum::LogOn) {
 		std::cout << "PlayerUpdate" << std::endl;
 	}
+	// --■モデルのテクスチャーへ書き込み----
+	//現在のカメラをコピー
+	CCamera back = *CCamera::GetCurrent();
+
+	//画面解像度変更
+	CCamera::GetCamera()->SetSize(texture_frame_rader->GetWidth(), texture_frame_rader->GetHeight());
+	texture_frame_rader->BeginDraw();
+	Utility::DrawQuad(CVector2D(280,50), CVector2D(50, 50),CVector4D(0,0,0,1));
+	texture_frame_rader->EndDraw();
+	//カメラを元の状態に戻す
+	*CCamera::GetCurrent() = back;
+
 	CVector2D mouse_vec = CInput::GetMouseVec();
 	CVector3D key_dir = CVector3D(0, 0, 0);
 	if (HOLD(CInput::eUp))key_dir.z = 1;

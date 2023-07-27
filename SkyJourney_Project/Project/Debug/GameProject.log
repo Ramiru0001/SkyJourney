@@ -1,13 +1,14 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: 中間ディレクトリ (G:\Anabuki\GC2_C++\SkyJourney\SkyJourney_Project\Project\Debug\) に別のプロジェクト (GLLibrary.vcxproj) と共有されているファイルが含まれています。これにより、クリーンしてリビルド動作が適切に行われない可能性があります。
-  main.cpp
-G:\Anabuki\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\main.cpp(127,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-G:\Anabuki\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\main.cpp(127,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: 中間ディレクトリ (C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\Debug\) に別のプロジェクト (GLLibrary.vcxproj) と共有されているファイルが含まれています。これにより、クリーンしてリビルド動作が適切に行われない可能性があります。
+  Player.cpp
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Player.cpp(36,95): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Player.cpp(36,61): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
 GLFW.lib(init.obj) : warning LNK4099: PDB '' が 'GLFW.lib(init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(window.obj) : warning LNK4099: PDB '' が 'GLFW.lib(window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(input.obj) : warning LNK4099: PDB '' が 'GLFW.lib(input.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(win32_init.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(win32_monitor.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_monitor.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+  glew.lib(glew.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
 GLFW.lib(win32_time.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_time.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(monitor.obj) : warning LNK4099: PDB '' が 'GLFW.lib(monitor.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(vulkan.obj) : warning LNK4099: PDB '' が 'GLFW.lib(vulkan.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
@@ -16,9 +17,8 @@ GLFW.lib(win32_tls.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_tls.obj)' 
 GLFW.lib(win32_joystick.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_joystick.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(wgl_context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(wgl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(egl_context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(egl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-  glew.lib(glew.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
 LINK : warning LNK4075: /INCREMENTAL は /LTCG の指定によって無視されます。
-     ライブラリ G:\Anabuki\GC2_C++\SkyJourney\SkyJourney_Project\Project\/../Game/GameProject.lib とオブジェクト G:\Anabuki\GC2_C++\SkyJourney\SkyJourney_Project\Project\/../Game/GameProject.exp を作成中
+     ライブラリ C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\/../Game/GameProject.lib とオブジェクト C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\/../Game/GameProject.exp を作成中
 LINK : warning LNK4098: defaultlib 'LIBCMT' は他のライブラリの使用と競合しています。/NODEFAULTLIB:library を使用してください。
   コード生成しています。
   コード生成が終了しました。
@@ -76,4 +76,4 @@ LINK : warning LNK4286: シンボル 'alGetError' ('OpenAL32.lib(alError.obj)' �
 LINK : warning LNK4286: シンボル 'alGetError' ('OpenAL32.lib(alError.obj)' で定義) が 'alut.lib(alutBufferData.obj)' によってインポートされています
 LINK : warning LNK4286: シンボル 'alGenBuffers' ('OpenAL32.lib(alBuffer.obj)' で定義) が 'alut.lib(alutBufferData.obj)' によってインポートされています
 LINK : warning LNK4286: シンボル 'alBufferData' ('OpenAL32.lib(alBuffer.obj)' で定義) が 'alut.lib(alutBufferData.obj)' によってインポートされています
-  GameProject.vcxproj -> G:\Anabuki\GC2_C++\SkyJourney\SkyJourney_Project\Game\GameProject.exe
+  GameProject.vcxproj -> C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Game\GameProject.exe

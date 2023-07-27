@@ -95,7 +95,7 @@ void Init(void)
 	}
 	ADD_RESOURCE("FirstIsland", CModel::CreateModel("Field/Island.obj",10,3,5));
 	ADD_RESOURCE("Sky", CModel::CreateModel("Field/SkyBox.obj"));
-	ADD_RESOURCE("Player", CModel::CreateModel("Character/PlayerA1003.a3m"));
+	ADD_RESOURCE("Player", CModel::CreateModel("Character/PlayerA100401.a3m"));
 	ADD_RESOURCE("Feather", CModel::CreateModel("Item/star.obj"));
 	Task::Add(new Player(CVector3D(88.5f,1.7f,4.37f)));
 	Task::Add(new Field());

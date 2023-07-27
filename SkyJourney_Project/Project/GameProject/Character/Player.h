@@ -6,9 +6,8 @@ class Player :public Task {
 		Fly,
 	};
 private:
-	CMaterial mat1;
-	CMaterial mat2;
 	int state = 0;//Idle=0,Walk=1,Fly=2
+	CTextureFrame* texture_frame_rader;
 public:
 	CModelA3M m_model;
 	float move_speed = 0.1f;
