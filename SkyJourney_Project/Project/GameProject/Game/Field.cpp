@@ -3,7 +3,7 @@ Field::Field():Task(ETaskPrio::eField, EType::eField) {
 	if (PublicNum::d_mode == PublicNum::LogOn) {
 		std::cout << "Field" << std::endl;
 	}
-	m_Field =COPY_RESOURCE("FirstIsland",CModelObj);
+	m_Field = COPY_RESOURCE("FirstIsland", CModelObj);
 	m_Sky = COPY_RESOURCE("Sky", CModelObj);
 }
 void Field::Render() {

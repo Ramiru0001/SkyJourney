@@ -95,8 +95,10 @@ void Init(void)
 	}
 	ADD_RESOURCE("FirstIsland", CModel::CreateModel("Field/Island.obj",10,3,5));
 	ADD_RESOURCE("Sky", CModel::CreateModel("Field/SkyBox.obj"));
-	ADD_RESOURCE("Player", CModel::CreateModel("Character/PlayerA100401.a3m"));
+	ADD_RESOURCE("Player", CModel::CreateModel("Character/PlayerA1005.a3m"));
 	ADD_RESOURCE("Feather", CModel::CreateModel("Item/star.obj"));
+	ADD_RESOURCE("Mant_DesignL", CImage::CreateImage("Character/MantFeather01.png"));
+	ADD_RESOURCE("Mant_DesignD", CImage::CreateImage("Character/MantFeatherBlack.png"));
 	Task::Add(new Player(CVector3D(88.5f,1.7f,4.37f)));
 	Task::Add(new Field());
 	Task::Add(new Camera());

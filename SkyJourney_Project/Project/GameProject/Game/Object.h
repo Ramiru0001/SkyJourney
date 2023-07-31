@@ -9,6 +9,7 @@ public:
 	CModelObj m_model;
 public:
 	Feather(CVector3D& pos);
+	~Feather();
 	void Render();
 	void Update();
 	bool GetCollision();

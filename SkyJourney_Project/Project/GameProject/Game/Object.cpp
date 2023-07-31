@@ -40,7 +40,11 @@ void Feather::Collision(Task* a) {
 		if ((a->m_pos - m_pos).Length() < a->m_rad + m_rad) {
 			m_featherCount++;
 			SetKill();
+			PublicNum::Feather_Count++;
+			PublicNum::LightFeather_Count = PublicNum::Feather_Count;
 		}
 		break;
 	}
+}
+Feather::~Feather() {
 }
