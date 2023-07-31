@@ -97,6 +97,7 @@ void Init(void)
 	ADD_RESOURCE("Sky", CModel::CreateModel("Field/SkyBox.obj"));
 	ADD_RESOURCE("Player", CModel::CreateModel("Character/PlayerA1005.a3m"));
 	ADD_RESOURCE("Feather", CModel::CreateModel("Item/star.obj"));
+	ADD_RESOURCE("Glass1", CModel::CreateModel("Item/Glass/square03.obj"));
 	ADD_RESOURCE("Mant_DesignL", CImage::CreateImage("Character/MantFeather01.png"));
 	ADD_RESOURCE("Mant_DesignD", CImage::CreateImage("Character/MantFeatherBlack.png"));
 	Task::Add(new Player(CVector3D(88.5f,1.7f,4.37f)));
@@ -105,6 +106,7 @@ void Init(void)
 	Task::Add(new Feather(CVector3D(64.16f, 9.1f, 21.0f)));
 	Task::Add(new Feather(CVector3D(74.16f, 1.09f, -14.4f)));
 	Task::Add(new Feather(CVector3D(-16.0f, 14.3f, 27.4f)));
+	Task::Add(new Candle(CVector3D(61.5f,1.04f, 13.4f)));
 	if (PublicNum::d_mode == PublicNum::LogOn) {
 		std::cout << "Initfin" << std::endl;
 	}

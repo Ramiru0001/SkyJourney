@@ -138,9 +138,9 @@ void Player::Collision(Task* a) {
 			v.x = fabs(v.x) > fabs(nv.x) ? v.x : nv.x;
 			v.z = fabs(v.z) > fabs(nv.z) ? v.z : nv.z;
 		}
-	}
 		//‰Ÿ‚µ–ß‚·
-		m_pos += v;
+		m_pos += v; 
+	}
 		break;
 	case EType::eEnemy:
 		if (PublicNum::d_mode == PublicNum::LogOn) {
