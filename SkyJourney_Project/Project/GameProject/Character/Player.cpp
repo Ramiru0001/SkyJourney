@@ -45,7 +45,8 @@ void Player::Update() {
 	std::cout << "羽の数" << PublicNum::Feather_Count << " : " << PublicNum::LightFeather_Count << std::endl;
 	//カメラを元の状態に戻す
 	*CCamera::GetCurrent() = back;
-
+	Task* a = Task::FindObject(EType::eCamera);
+	CVector3D c_rot = a->m_rot;//カメラの座標
 	CVector2D mouse_vec = CInput::GetMouseVec();
 	CVector3D key_dir = CVector3D(0, 0, 0);
 	if (HOLD(CInput::eUp))key_dir.z = 1;
@@ -53,7 +54,7 @@ void Player::Update() {
 	if (HOLD(CInput::eLeft))key_dir.x = 1;
 	if (HOLD(CInput::eRight))key_dir.x = -1;
 	if (key_dir.LengthSq() > 0) {
-		CVector3D dir = CMatrix::MRotationY(m_rot.y) * key_dir;
+		CVector3D dir = CMatrix::MRotationY(m_rot.y).GetFront();
 		if (OnGround == true) {
 			state = Walk;
 			m_pos += dir * move_speed;
@@ -69,19 +70,32 @@ void Player::Update() {
 			m_model.ChangeAnimation(0);
 		}
 	}
-	if (PUSH(CInput::eButton5/*space*/ )) {
-		if (PublicNum::LightFeather_Count > 0) {
-			//if(OnGround == true)
+	if (PUSH(CInput::eButton5/*space*/)) {
+		space_count = 0;
+	}
+	if (HOLD(CInput::eButton5/*space*/ )) {
+		if (space_count == 30) {
+			if (PublicNum::LightFeather_Count > 0) {
+				//if(OnGround == true)
+				m_vec.y = FLY;
+				state = Fly;
+				m_model.ChangeAnimation(2);
+				PublicNum::LightFeather_Count--;
+			}
+		}
+		space_count++;
+	}
+	if (PULL(CInput::eButton5/*space*/)) {
+		if (space_count < 30 ||OnGround==true) {
+			state = Jump;
+			m_model.ChangeAnimation(2);//ジャンプアニメーション
 			m_vec.y = JUMP;
-			state = Fly;
-			m_model.ChangeAnimation(2);
-			PublicNum::LightFeather_Count--;
 		}
 	}
-	Task* a = Task::FindObject(EType::eCamera);
-	CVector3D c_rot = a->m_rot;//カメラの座標
-	m_rot.y = c_rot.y;
+	m_rot.y = Utility::NormalizeAngle(c_rot.y + atan2(key_dir.x, key_dir.z));
+	//m_rot.y = c_rot.y;
 	m_pos.y += m_vec.y;
+	//m_pos += m_vec;
 	m_vec.y -= GRAVITY;
 	if (PublicNum::d_mode == PublicNum::LogOn) {
 		std::cout << "m_pos.x : " << m_pos.x << "m_pos.y : " << m_pos.y << "m_pos.z : " << m_pos.z << std::endl;
@@ -148,8 +162,8 @@ void Player::Collision(Task* a) {
 		}
 		if ((a->m_pos - m_pos).Length() < a->m_rad + m_rad) {
 			CVector3D PEVec = a->m_pos - m_pos;
-			m_pos += PEVec.GetNormalize() * 0.5f;
-			a->m_pos -= PEVec.GetNormalize() * 0.5f;
+			m_pos += PEVec.GetNormalize() * 0.5f* move_speed;
+			a->m_pos -= PEVec.GetNormalize() * 0.5f* move_speed;
 		}
 		break;
 	case EType::eObject:
@@ -159,7 +173,7 @@ void Player::Collision(Task* a) {
 		if (a->GetCollision() == true) {
 			if ((a->m_pos - m_pos).Length() < a->m_rad + m_rad) {
 				CVector3D PEVec = a->m_pos - m_pos;
-				m_pos -= PEVec.GetNormalize();
+				m_pos -= PEVec.GetNormalize()* move_speed;
 			}
 		}
 		break;

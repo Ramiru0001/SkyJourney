@@ -54,14 +54,14 @@ Candle::Candle(CVector3D& pos) :Task(ETaskPrio::eObject, EType::eObject) {
 	}
 	candle_model = COPY_RESOURCE("Glass1", CModelObj);
 	m_pos = pos;
-	m_rad = 2.0f;
+	m_rad = 1.0f;
 	m_collision = true;
 }
 void Candle::Render() {
 	if (PublicNum::d_mode == PublicNum::LogOn) {
 		std::cout << "FeatherRender" << std::endl;
 	}
-	candle_model.SetPos(m_pos.x, m_pos.y + 1.5f, m_pos.z);
+	candle_model.SetPos(m_pos.x, m_pos.y + 0.35f, m_pos.z);
 	candle_model.SetRot(m_rot);
 	candle_model.SetScale(1.5f, 1.5f, 1.5f);
 	//CLight::SetLighting(false);
@@ -83,9 +83,9 @@ void Candle::Collision(Task* a) {
 	}
 	switch (a->GetType()) {
 	case EType::ePlayer:
-		if ((a->m_pos - m_pos).Length() < a->m_rad + m_rad) {
+		if ((a->m_pos - m_pos).Length() < a->m_rad + m_rad+0.5f) {
 			recovery_count++;
-			if (recovery_count > 60) {
+			if (recovery_count > 60 && PublicNum::Feather_Count>PublicNum::LightFeather_Count) {
 				PublicNum::LightFeather_Count++;
 				recovery_count = 0;
 			}

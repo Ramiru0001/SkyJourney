@@ -4,9 +4,11 @@ class Player :public Task {
 		Idle,
 		Walk,
 		Fly,
+		Jump,
 	};
 private:
 	int state = 0;//Idle=0,Walk=1,Fly=2
+	int space_count=0;//スペースキーを押してる時間をカウント
 	CImage mant_DesignLight;//明るいマントの模様
 	CImage mant_DesignDark;//暗いマントの模様
 	CTextureFrame* texture_frame_rader;
