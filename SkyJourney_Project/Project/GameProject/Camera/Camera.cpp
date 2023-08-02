@@ -1,17 +1,17 @@
 #include "Camera.h"
 #include "../Global.h"
 Camera::Camera() :Task(ETaskPrio::eCamera, EType::eCamera){
-	if (PublicNum::d_mode == PublicNum::LogOn) {
+	if (PublicNum::log_passage == true) {
 		std::cout << "Camera" << std::endl;
 	}
 	m_pos = CVector3D(-10, 10, 10);
 	m_rot = CVector3D(DtoR(30), DtoR(-125), 0);
-	if (PublicNum::d_mode == PublicNum::LogOn) {
+	if (PublicNum::log_passage == true) {
 		std::cout << "Camerafin" << std::endl;
 	}
 }
 void Camera::Update() {
-	if (PublicNum::d_mode == PublicNum::LogOn) {
+	if (PublicNum::log_passage == true) {
 		std::cout << "CameraUpdate" << std::endl;
 	}
 	switch(PublicNum::c_mode) {

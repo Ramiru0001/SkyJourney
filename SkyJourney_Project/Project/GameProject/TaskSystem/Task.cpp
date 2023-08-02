@@ -44,7 +44,9 @@ void Task::CollisionAll() {
 				if (!(*ct)->m_kill) {
 					(*itr)->Collision(*ct);
 					(*ct)->Collision(*itr);
-					std::cout << (*itr)->m_type << " : " << (*ct)->m_type << std::endl;
+					if (PublicNum::log_passage == true) {
+						std::cout << (*itr)->m_type << " : " << (*ct)->m_type << std::endl;
+					}
 				}
 				//次のオブジェクト
 				ct++;

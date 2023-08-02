@@ -10,7 +10,9 @@ public:
 		LogOff,
 	};
 	static CMode c_mode;//カメラのモード
-	static DMode d_mode;//ログオンorオフ
+	//static DMode d_mode;//ログオンorオフ
+	static bool log_passage;
+	static bool log_pos;
 	static int Feather_Count;//総羽の数
 	static int LightFeather_Count;//使える羽の数
 };

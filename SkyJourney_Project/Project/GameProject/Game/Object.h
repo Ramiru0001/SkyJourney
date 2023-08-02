@@ -21,7 +21,7 @@ private:
 public:
 	CModelObj candle_model;
 public:
-	Candle(CVector3D& pos);
+	Candle(CVector3D& pos, float rotY);
 	~Candle();
 	void Render();
 	void Update();

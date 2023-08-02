@@ -1,13 +1,13 @@
 #include"Field.h"
 Field::Field():Task(ETaskPrio::eField, EType::eField) {
-	if (PublicNum::d_mode == PublicNum::LogOn) {
+	if (PublicNum::log_passage == true) {
 		std::cout << "Field" << std::endl;
 	}
 	m_Field = COPY_RESOURCE("FirstIsland", CModelObj);
 	m_Sky = COPY_RESOURCE("Sky", CModelObj);
 }
 void Field::Render() {
-	if (PublicNum::d_mode == PublicNum::LogOn) {
+	if (PublicNum::log_passage == true) {
 		std::cout << "FieldRender" << std::endl;
 	}
 	m_Sky.SetScale(800.0f, 800.0f, 800.0f);

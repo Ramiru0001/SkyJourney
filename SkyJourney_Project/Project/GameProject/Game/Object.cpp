@@ -1,6 +1,6 @@
 #include"Object.h"
 Feather::Feather(CVector3D& pos) :Task(ETaskPrio::eFeather, EType::eFeather) {
-	if (PublicNum::d_mode == PublicNum::LogOn) {
+	if (PublicNum::log_passage == true) {
 		std::cout << "Feather" << std::endl;
 	}
 	m_model = COPY_RESOURCE("Feather", CModelObj);
@@ -9,7 +9,7 @@ Feather::Feather(CVector3D& pos) :Task(ETaskPrio::eFeather, EType::eFeather) {
 	m_collision = false;
 }
 void Feather::Render() {
-	if (PublicNum::d_mode == PublicNum::LogOn) {
+	if (PublicNum::log_passage == true) {
 		std::cout << "FeatherRender" << std::endl;
 	}
 	m_model.SetPos(m_pos.x,m_pos.y+1.5f,m_pos.z);
@@ -20,7 +20,7 @@ void Feather::Render() {
 	CLight::SetLighting(true);
 }
 void Feather::Update() {
-	if (PublicNum::d_mode == PublicNum::LogOn) {
+	if (PublicNum::log_passage == true) {
 		std::cout << "FeatherUpdate" << std::endl;
 	}
 	//Task* a = Task::FindObject(EType::ePlayer);
@@ -32,7 +32,7 @@ bool Feather::GetCollision() {
 	return m_collision;
 }
 void Feather::Collision(Task* a) {
-	if (PublicNum::d_mode == PublicNum::LogOn) {
+	if (PublicNum::log_passage == true) {
 		std::cout << "FeatherCollision" << std::endl;
 	}
 	switch (a->GetType()) {
@@ -48,17 +48,18 @@ void Feather::Collision(Task* a) {
 }
 Feather::~Feather() {
 }
-Candle::Candle(CVector3D& pos) :Task(ETaskPrio::eObject, EType::eObject) {
-	if (PublicNum::d_mode == PublicNum::LogOn) {
+Candle::Candle(CVector3D& pos, float rotY) :Task(ETaskPrio::eObject, EType::eObject) {
+	if (PublicNum::log_passage == true) {
 		std::cout << "Candle" << std::endl;
 	}
 	candle_model = COPY_RESOURCE("Glass1", CModelObj);
 	m_pos = pos;
 	m_rad = 1.0f;
 	m_collision = true;
+	m_rot.y = rotY;
 }
 void Candle::Render() {
-	if (PublicNum::d_mode == PublicNum::LogOn) {
+	if (PublicNum::log_passage == true) {
 		std::cout << "FeatherRender" << std::endl;
 	}
 	candle_model.SetPos(m_pos.x, m_pos.y + 0.35f, m_pos.z);
@@ -69,7 +70,7 @@ void Candle::Render() {
 	//CLight::SetLighting(true);
 }
 void Candle::Update() {
-	if (PublicNum::d_mode == PublicNum::LogOn) {
+	if (PublicNum::log_passage == true) {
 		std::cout << "FeatherUpdate" << std::endl;
 	}
 	m_rot.y = Utility::NormalizeAngle(m_rot.y);
@@ -78,7 +79,7 @@ bool Candle::GetCollision() {
 	return m_collision;
 }
 void Candle::Collision(Task* a) {
-	if (PublicNum::d_mode == PublicNum::LogOn) {
+	if (PublicNum::log_passage == true) {
 		std::cout << "CandleCollision" << std::endl;
 	}
 	switch (a->GetType()) {

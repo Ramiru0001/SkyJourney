@@ -1,7 +1,7 @@
 #include "Player.h"
 
 Player::Player(CVector3D &pos):Task(ETaskPrio::ePlayer, EType::ePlayer){
-	if (PublicNum::d_mode == PublicNum::LogOn) {
+	if (PublicNum::log_passage == true) {
 		std::cout << "Player" << std::endl;
 	}
 	m_rad = 0.5f;
@@ -18,7 +18,7 @@ Player::Player(CVector3D &pos):Task(ETaskPrio::ePlayer, EType::ePlayer){
 
 }
 void Player::Render() {
-	if (PublicNum::d_mode == PublicNum::LogOn) {
+	if (PublicNum::log_passage == true) {
 		std::cout << "PlayerRender" << std::endl;
 	}
 	m_model.SetPos(m_pos);
@@ -28,7 +28,7 @@ void Player::Render() {
 	m_model.Render();
 }
 void Player::Update() {
-	if (PublicNum::d_mode == PublicNum::LogOn) {
+	if (PublicNum::log_passage == true) {
 		std::cout << "PlayerUpdate" << std::endl;
 	}
 
@@ -42,7 +42,9 @@ void Player::Update() {
 	
 	FeatherRender(PublicNum::Feather_Count, PublicNum::LightFeather_Count);
 	texture_frame_rader->EndDraw();
-	std::cout << "羽の数" << PublicNum::Feather_Count << " : " << PublicNum::LightFeather_Count << std::endl;
+	if (PublicNum::log_passage == true) {
+		std::cout << "羽の数" << PublicNum::Feather_Count << " : " << PublicNum::LightFeather_Count << std::endl;
+	}
 	//カメラを元の状態に戻す
 	*CCamera::GetCurrent() = back;
 	Task* a = Task::FindObject(EType::eCamera);
@@ -55,12 +57,16 @@ void Player::Update() {
 	if (HOLD(CInput::eRight))key_dir.x = -1;
 	if (key_dir.LengthSq() > 0) {
 		CVector3D dir = CMatrix::MRotationY(m_rot.y).GetFront();
+		m_rot.y = Utility::NormalizeAngle(c_rot.y + atan2(key_dir.x, key_dir.z));
 		if (OnGround == true) {
 			state = Walk;
 			m_pos += dir * move_speed;
 			m_model.ChangeAnimation(1);
 		}
-		else {
+		else if(state == Jump){
+			m_pos += dir * jump_speed;
+		}
+		else if (state == Fly) {
 			m_pos += dir * fly_speed;
 		}
 	}
@@ -74,7 +80,7 @@ void Player::Update() {
 		space_count = 0;
 	}
 	if (HOLD(CInput::eButton5/*space*/ )) {
-		if (space_count == 30) {
+		if (space_count == 10) {
 			if (PublicNum::LightFeather_Count > 0) {
 				//if(OnGround == true)
 				m_vec.y = FLY;
@@ -86,19 +92,18 @@ void Player::Update() {
 		space_count++;
 	}
 	if (PULL(CInput::eButton5/*space*/)) {
-		if (space_count < 30 ||OnGround==true) {
+		if (space_count < 10 && state != Jump && state != Fly) {
 			state = Jump;
 			m_model.ChangeAnimation(2);//ジャンプアニメーション
 			m_vec.y = JUMP;
 		}
-	}
-	m_rot.y = Utility::NormalizeAngle(c_rot.y + atan2(key_dir.x, key_dir.z));
+	};
 	//m_rot.y = c_rot.y;
 	m_pos.y += m_vec.y;
 	//m_pos += m_vec;
 	m_vec.y -= GRAVITY;
-	if (PublicNum::d_mode == PublicNum::LogOn) {
-		std::cout << "m_pos.x : " << m_pos.x << "m_pos.y : " << m_pos.y << "m_pos.z : " << m_pos.z << std::endl;
+	if (PublicNum::log_pos == true) {
+		std::cout << "座標：" << m_pos.x << "," << m_pos.y << "," << m_pos.z << std::endl;
 	}
 }
 void Player::FeatherRender(int Count, int LightCount) {
@@ -119,7 +124,7 @@ void Player::FeatherRender(int Count, int LightCount) {
 }
 void Player::Collision(Task* a) {
 	OnGround = false;
-	if (PublicNum::d_mode == PublicNum::LogOn) {
+	if (PublicNum::log_passage == true) {
 		std::cout << "PlayerCollision" << std::endl;
 	}
 	//押し戻し量
@@ -127,7 +132,7 @@ void Player::Collision(Task* a) {
 	switch (a->GetType()) {
 	case EType::eField:
 	{
-		if (PublicNum::d_mode == PublicNum::LogOn) {
+		if (PublicNum::log_passage == true) {
 			std::cout << "PlayerCollisionField" << std::endl;
 		}
 		auto tri = a->GetModel()->CollisionSphere(m_pos + CVector3D(0, m_rad, 0), m_rad);
@@ -157,7 +162,7 @@ void Player::Collision(Task* a) {
 	}
 		break;
 	case EType::eEnemy:
-		if (PublicNum::d_mode == PublicNum::LogOn) {
+		if (PublicNum::log_passage == true) {
 			std::cout << "PlayerCollisionEnemy" << std::endl;
 		}
 		if ((a->m_pos - m_pos).Length() < a->m_rad + m_rad) {
@@ -167,7 +172,7 @@ void Player::Collision(Task* a) {
 		}
 		break;
 	case EType::eObject:
-		if (PublicNum::d_mode == PublicNum::LogOn) {
+		if (PublicNum::log_passage == true) {
 			std::cout << "PlayerCollisionObject" << std::endl;
 		}
 		if (a->GetCollision() == true) {
@@ -178,7 +183,7 @@ void Player::Collision(Task* a) {
 		}
 		break;
 	default:
-		if (PublicNum::d_mode == PublicNum::LogOn) {
+		if (PublicNum::log_passage == true) {
 		std::cout << "PlayerCollisionDefault" << std::endl;
 	}
 		break;
