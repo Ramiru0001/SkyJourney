@@ -18,8 +18,12 @@ void Field::Render() {
 	CLight::SetLighting(false);
 	m_Sky.Render();
 	glEnable(GL_CULL_FACE);
+	//glEnable(GL_AMBIENT);
+	//glEnable(GL_POSITION);
 	CLight::SetLighting(true);
-	m_Field.Render();
+	m_Field.Render(); 
+	//glDisable(GL_AMBIENT);
+	//glDisable(GL_POSITION);
 }
 void Field::Update() {
 }
