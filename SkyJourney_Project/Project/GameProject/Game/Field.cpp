@@ -20,8 +20,12 @@ void Field::Render() {
 	glEnable(GL_CULL_FACE);
 	//glEnable(GL_AMBIENT);
 	//glEnable(GL_POSITION);
+	//CLight::SetLighting(true);
+	//glBegin();
+	CLight::SetColor(0, CVector3D(0.8f, 0.8f, 0.8f/*1.0f,1.0f,1.0f*/), CVector3D(0.6f, 0.6f, 0.6f)); 
+	m_Field.Render();
 	CLight::SetLighting(true);
-	m_Field.Render(); 
+	//glEnd();
 	//glDisable(GL_AMBIENT);
 	//glDisable(GL_POSITION);
 }

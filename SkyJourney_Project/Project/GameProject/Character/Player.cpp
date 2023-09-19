@@ -24,8 +24,11 @@ void Player::Render() {
 	m_model.SetPos(m_pos);
 	m_model.SetScale(0.01f,0.01f,0.01f);
 	m_model.SetRot(m_rot);;
-	m_model.UpdateAnimation();
+	m_model.UpdateAnimation(); 
+	CLight::SetColor(0, CVector3D(.9f, .9f, .9f), CVector3D(0.3f, 0.3f, 0.3f));
+	glDisable(GL_CULL_FACE);
 	m_model.Render();
+	glEnable(GL_CULL_FACE);
 }
 void Player::Update() {
 	if (PublicNum::log_passage == true) {

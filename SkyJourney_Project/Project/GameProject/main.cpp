@@ -28,13 +28,11 @@ void Init(void)
 	glEnable(GL_BLEND);//ブレンドの有効化
 	glEnable(GL_CULL_FACE);/* カリング */
 	glCullFace(GL_BACK);/* カリングする面の指定 */
-	glEnable(GL_DIFFUSE);
 
 	//固定シェーダー用
 	glEnable(GL_LIGHTING);/* ライティング処理のオン */
-	glDisable(GL_LIGHT0); /* ０番目の光源点灯 */
-	GLfloat light0pos[] = { 0.0, 3.0, 5.0, 1.0 };
-	//glLightfv(GL_LIGHT0, GL_POSITION, light0pos); //光源の位置設定
+	glEnable(GL_LIGHT0);/* ０番目の光源点灯 */
+	//glEnable(GL_LIGHT1);
 	glEnable(GL_ALPHA_TEST);
 
 	CFPS::SetFPS(60);
@@ -59,19 +57,24 @@ void Init(void)
 	//マウス非表示
 	//	CInput::ShowCursor(false);
 	//	CInput::SetMouseInside(true);
-	//CInput::Update();
+	CInput::Update();
 	CInput::Update();
 
 
 	//ライト設定
-	//CLight::SetType(0, CLight::eLight_Direction);
 	CLight::SetType(0, CLight::eLight_Direction);
-	CLight::SetPos(0, CVector3D(0, 1000, 200));
-	CLight::SetDir(0, CVector3D(-1, -2, 1).GetNormalize());
-	CLight::SetColor(0, CVector3D(0.2f, 0.2f, 0.2f), CVector3D(0.8f, 0.8f, 0.8f));
+	CLight::SetPos(0, CVector3D(50, 200, 200));
+	CLight::SetDir(0, CVector3D(0, -2, 0).GetNormalize());
+	CLight::SetColor(0, CVector3D(0.5f, 0.5f, 0.5f/*1.0f,1.0f,1.0f*/), CVector3D(0.5f, 0.5f, 0.5f)); 
+	{/*
+		CLight::SetType(1, CLight::eLight_Hemi);
+		CLight::SetPos(1, CVector3D(50, 200, 200));
+		CLight::SetDir(1, CVector3D(-1, -2, 1).GetNormalize());
+		CLight::SetColor(1, CVector3D(0.2f, 0.2f, 0.2f), CVector3D(1, 1, 1));*/
+	}
 
 
-	//CLight::SetFogParam(CVector4D(1, 1, 1, 1), 700, 800);
+	CLight::SetFogParam(CVector4D(1, 1, 1, 1), 700, 800);
 
 	//カメラ初期化
 	CCamera::GetCamera()->LookAt(CVector3D(5, 5, 5),
@@ -81,8 +84,8 @@ void Init(void)
 	SetCurrentDirectory("data");
 
 
-	//CShader::GetInstance("StaticMesh");
-	//CShader::GetInstance("SkinMesh");
+	CShader::GetInstance("StaticMesh");
+	CShader::GetInstance("SkinMesh");
 	CSound::GetInstance();
 
 	SetCurrentDirectory("data");
