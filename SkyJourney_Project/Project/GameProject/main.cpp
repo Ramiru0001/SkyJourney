@@ -34,6 +34,8 @@ void Init(void)
 	glEnable(GL_LIGHT0);/* ÇOî‘ñ⁄ÇÃåıåπì_ìî */
 	//glEnable(GL_LIGHT1);
 	glEnable(GL_ALPHA_TEST);
+	//static GLfloat lightSpecular[3] = { 0.0f,0.0f,0.0f }; //ãæñ åı
+	//glLightfv(GL_LIGHT0, GL_SPECULAR, lightSpecular);
 
 	CFPS::SetFPS(60);
 	//ÉtÉåÅ[ÉÄêßå‰èâä˙âª
@@ -65,7 +67,12 @@ void Init(void)
 	CLight::SetType(0, CLight::eLight_Direction);
 	CLight::SetPos(0, CVector3D(50, 200, 200));
 	CLight::SetDir(0, CVector3D(0, -2, 0).GetNormalize());
-	CLight::SetColor(0, CVector3D(0.5f, 0.5f, 0.5f/*1.0f,1.0f,1.0f*/), CVector3D(0.5f, 0.5f, 0.5f)); 
+	CLight::SetColor(0, CVector3D(0.5f, 0.5f, 0.5f/*1.0f,1.0f,1.0f*/), CVector3D(0.5f, 0.5f, 0.5f));
+	static GLfloat lightSpecular[3] = { 0.0f,0.0f,0.0f }; //ãæñ åı
+	glLightfv(GL_LIGHT0, GL_SPECULAR, lightSpecular);
+	static GLfloat lightAmbient[3] = { 1.0f,1.0f,1.0f };
+	glLightfv(GL_LIGHT0, GL_AMBIENT, lightAmbient);
+	//glLightfv(GL_LIGHT0, GL_POSITION, lightPosition);
 	{/*
 		CLight::SetType(1, CLight::eLight_Hemi);
 		CLight::SetPos(1, CVector3D(50, 200, 200));
@@ -97,7 +104,7 @@ void Init(void)
 	//-----------------------------------------------------
 	PublicNum::c_mode = PublicNum::WithPlayer;
 	PublicNum::log_passage = false;
-	PublicNum::log_pos = true;
+	PublicNum::log_pos = false;
 	if (PublicNum::log_passage == true) {
 		std::cout << std::endl << "Init" << std::endl;
 	}
