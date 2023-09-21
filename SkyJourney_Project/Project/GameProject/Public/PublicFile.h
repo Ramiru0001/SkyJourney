@@ -15,6 +15,8 @@ public:
 	static bool log_pos;
 	static int Feather_Count;//‘‰H‚Ì”
 	static int LightFeather_Count;//g‚¦‚é‰H‚Ì”
+	static CVector3D Player_pos;
+	static CVector3D Camera_rot;
 };
 class PublicFunction {
 public:

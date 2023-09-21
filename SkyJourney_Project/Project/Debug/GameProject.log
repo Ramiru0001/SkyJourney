@@ -1,7 +1,7 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: 中間ディレクトリ (C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\Debug\) に別のプロジェクト (GLLibrary.vcxproj) と共有されているファイルが含まれています。これにより、クリーンしてリビルド動作が適切に行われない可能性があります。
-  main.cpp
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\main.cpp(151,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\main.cpp(151,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+  Player.cpp
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Player.cpp(49,95): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Player.cpp(49,61): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
 GLFW.lib(init.obj) : warning LNK4099: PDB '' が 'GLFW.lib(init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(window.obj) : warning LNK4099: PDB '' が 'GLFW.lib(window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(input.obj) : warning LNK4099: PDB '' が 'GLFW.lib(input.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。

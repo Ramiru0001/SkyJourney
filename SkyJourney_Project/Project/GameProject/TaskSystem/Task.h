@@ -11,7 +11,14 @@ enum class ETaskPrio   {
 };
 class Task {
 private:
+	/// <summary>
+	/// 現在のすべてのタスクリスト
+	/// </summary>
 	static std::list<Task*> m_TaskList;
+	/// <summary>
+	/// 現在のステージで使用しているタスクリスト
+	/// </summary>
+	static std::list<Task*> m_StageTaskList;
 public:
 	enum EType{
 		eDefault,
@@ -39,10 +46,15 @@ public:
 	/// </summary>
 	/// <param name="m_Prio">タスクの優先度</param>
 	Task(ETaskPrio prio,EType type);
-	/// <summary>
+	/// <summary>タスクリストに追加
 	/// </summary>
 	/// <param name="">Taskクラスのポインタ</param>
-	static void Add(Task* a);
+	static void Add(Task* a); 
+	/// <summary>
+	/// stage固有のタスクリストに追加
+	/// </summary>
+	/// <param name="a"></param>
+	static void AddStage(Task* a);
 	/// <summary>
 	/// 削除フラグtrue
 	/// </summary>
@@ -60,7 +72,7 @@ public:
 	/// </summary>
 	virtual void Collision(Task* a);
 	virtual CModel* GetModel();
-	virtual Task* FindObject(EType type);
+	//virtual Task* FindObject(EType type);
 	/// <summary>
 	/// キルフラグがonかoffかを確認
 	/// </summary>
@@ -78,6 +90,10 @@ public:
 	/// すべての当たり判定処理
 	/// </summary>
 	static void CollisionAll();
+	/// <summary>
+	/// ステージ固有のタスクをすべて削除
+	/// </summary>
+	static void DeleteAllStage();
 	/// <summary>
 	/// 削除フラグONのタスクをすべて削除
 	/// </summary>

@@ -25,10 +25,12 @@ void Camera::Update() {
 			(float)SCREEN_WIDTH / (float)SCREEN_HEIGHT,
 			z_near,
 			z_far);
+		PublicNum::Camera_rot = m_rot;
 		break;
 	case PublicNum::WithPlayer:
-		Task* p = Task::FindObject(EType::ePlayer);
-		CVector3D p_pos = p->m_pos;//プレイヤーの座標
+		//Task* p = Task::FindObject(EType::ePlayer);
+		//CVector3D p_pos = p->m_pos;//プレイヤーの座標
+		CVector3D p_pos = PublicNum::Player_pos;
 		mouse_vec = CInput::GetMouseVec();
 		m_rot += CVector3D(mouse_vec.y, -mouse_vec.x, 0) * m_speed;
 		//上下角制限
@@ -42,6 +44,7 @@ void Camera::Update() {
 		CCamera::GetCurrent()->SetTranseRot(m_pos, m_rot);
 		CCamera::GetCurrent()->Perspective(fov,
 			(float)SCREEN_WIDTH / (float)SCREEN_HEIGHT, z_near, z_far);
+		PublicNum::Camera_rot = m_rot;
 		break;
 	}
 }

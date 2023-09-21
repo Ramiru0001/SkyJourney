@@ -37,6 +37,10 @@ void Feather::Collision(Task* a) {
 	}
 	switch (a->GetType()) {
 	case EType::ePlayer:
+		if (PublicNum::log_passage == true) {
+			std::cout << "FeatherPlayerCollision" << std::endl;
+			//std::cout << "playerpos"<< << std::endl;
+		}
 		if ((a->m_pos - m_pos).Length() < a->m_rad + m_rad) {
 			m_featherCount++;
 			SetKill();

@@ -31,6 +31,12 @@ void Player::Render() {
 	glEnable(GL_CULL_FACE);
 }
 void Player::Update() {
+	if (OnGround == true) {
+		std::cout << "OnGround" << std::endl;
+	}
+	else {
+		std::cout << "OffGround" << std::endl;
+	}
 	if (PublicNum::log_passage == true) {
 		std::cout << "PlayerUpdate" << std::endl;
 	}
@@ -50,8 +56,9 @@ void Player::Update() {
 	}
 	//カメラを元の状態に戻す
 	*CCamera::GetCurrent() = back;
-	Task* a = Task::FindObject(EType::eCamera);
-	CVector3D c_rot = a->m_rot;//カメラの座標
+	//Task* a = Task::FindObject(EType::eCamera);
+	//CVector3D c_rot = a->m_rot;//カメラの座標
+	CVector3D c_rot = PublicNum::Camera_rot;
 	CVector2D mouse_vec = CInput::GetMouseVec();
 	CVector3D key_dir = CVector3D(0, 0, 0);
 	if (HOLD(CInput::eUp))key_dir.z = 1;
@@ -108,6 +115,7 @@ void Player::Update() {
 	if (PublicNum::log_pos == true) {
 		std::cout << "座標：" << m_pos.x << "," << m_pos.y << "," << m_pos.z << std::endl;
 	}
+	PublicNum::Player_pos = m_pos;
 }
 void Player::FeatherRender(int Count, int LightCount) {
 	CVector2D pos[] = { CVector2D(226, 370) ,CVector2D(226, 290) ,CVector2D(226, 210) ,CVector2D(226, 130), CVector2D(226, 50) };
@@ -141,6 +149,7 @@ void Player::Collision(Task* a) {
 		auto tri = a->GetModel()->CollisionSphere(m_pos + CVector3D(0, m_rad, 0), m_rad);
 		//接触した面の数繰り返す
 		for (auto& t : tri) {
+			//std::cout << "プレイヤーとフィールドの距離：" << t.m_normal.y << std::endl;
 			if (t.m_normal.y < -0.5f) {
 				if (m_vec.y > 0) {
 					m_vec.y = 0;
