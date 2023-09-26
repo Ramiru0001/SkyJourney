@@ -115,10 +115,7 @@ void Init(void)
 	ADD_RESOURCE("Glass1", CModel::CreateModel("Item/Glass/square05.obj"));
 	ADD_RESOURCE("Mant_DesignL", CImage::CreateImage("Character/MantFeather01.png"));
 	ADD_RESOURCE("Mant_DesignD", CImage::CreateImage("Character/MantFeatherBlack.png"));
-	Task::Add(new Player(CVector3D(88.5f,1.7f,4.37f)));
-	Task::Add(new Camera());
-	SkyIsland::SkyIsland();
-	
+	Task::Add(new Progress());
 	if (PublicNum::log_passage == true) {
 		std::cout << "Initfin" << std::endl;
 	}

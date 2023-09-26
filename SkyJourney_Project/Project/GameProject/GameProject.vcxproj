@@ -16,9 +16,11 @@
     <ClInclude Include="Game\Field.h" />
     <ClInclude Include="Game\Object.h" />
     <ClInclude Include="Global.h" />
+    <ClInclude Include="Management\Progress.h" />
+    <ClInclude Include="Management\Task.h" />
     <ClInclude Include="Public\PublicFile.h" />
     <ClInclude Include="Stage\SkyIsland.h" />
-    <ClInclude Include="TaskSystem\Task.h" />
+    <ClInclude Include="Title\Title.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Camera\Camera.cpp" />
@@ -26,9 +28,11 @@
     <ClCompile Include="Game\Field.cpp" />
     <ClCompile Include="Game\Object.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Management\Progress.cpp" />
+    <ClCompile Include="Management\Task.cpp" />
     <ClCompile Include="Public\PublicFile.cpp" />
     <ClCompile Include="Stage\SkyIsland.cpp" />
-    <ClCompile Include="TaskSystem\Task.cpp" />
+    <ClCompile Include="Title\Title.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{FE2CE3B1-49BF-46A5-9DB1-9BD5B52FE1A0}</ProjectGuid>

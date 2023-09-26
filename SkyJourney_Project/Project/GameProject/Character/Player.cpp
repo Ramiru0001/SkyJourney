@@ -32,10 +32,10 @@ void Player::Render() {
 }
 void Player::Update() {
 	if (OnGround == true) {
-		std::cout << "OnGround" << std::endl;
+		std::cout << "UOnGround" << std::endl;
 	}
 	else {
-		std::cout << "OffGround" << std::endl;
+		std::cout << "UOffGround" << std::endl;
 	}
 	if (PublicNum::log_passage == true) {
 		std::cout << "PlayerUpdate" << std::endl;
@@ -134,7 +134,6 @@ void Player::FeatherRender(int Count, int LightCount) {
 	}
 }
 void Player::Collision(Task* a) {
-	OnGround = false;
 	if (PublicNum::log_passage == true) {
 		std::cout << "PlayerCollision" << std::endl;
 	}
@@ -143,6 +142,8 @@ void Player::Collision(Task* a) {
 	switch (a->GetType()) {
 	case EType::eField:
 	{
+		OnGround = false;
+		std::cout << "OnGroundfalse;‰Šú‰»" << std::endl;
 		if (PublicNum::log_passage == true) {
 			std::cout << "PlayerCollisionField" << std::endl;
 		}
@@ -157,7 +158,7 @@ void Player::Collision(Task* a) {
 			}
 			else if (t.m_normal.y > 0.5f) {
 				OnGround = true;
-				//std::cout << "OnGround" << std::endl;
+				std::cout << "OnGround" << std::endl;
 				if (m_vec.y < 0)m_vec.y = 0;
 			}
 			float max_y = max(t.m_vertex[0].y, max(t.m_vertex[1].y, t.m_vertex[2].y));
@@ -172,6 +173,7 @@ void Player::Collision(Task* a) {
 		//‰Ÿ‚µ–ß‚·
 		m_pos += v; 
 	}
+	//std::cout << "OffGround1" << std::endl;
 		break;
 	case EType::eEnemy:
 		if (PublicNum::log_passage == true) {

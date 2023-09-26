@@ -4,10 +4,15 @@
 #include <list>
 #include <algorithm>
 #include <iostream>
-#include "TaskSystem/Task.h"
+#include "Management/Task.h"
+#include "Management/Progress.h"
 #include "Public/PublicFile.h"
 #include "Game/Field.h"
 #include "Game/Object.h"
+#include "Stage/SkyIsland.h"
+#include "Character/Player.h"
+#include "Camera/Camera.h"
+#include "Title/Title.h"
 #define GRAVITY (0.01f)
 #define JUMP (0.2f)
 #define FLY (0.4f)

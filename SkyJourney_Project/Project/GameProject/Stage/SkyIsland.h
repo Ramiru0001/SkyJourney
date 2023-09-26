@@ -3,5 +3,4 @@ class SkyIsland {
 public:
 	SkyIsland();
 	~SkyIsland();
-	void Update();
 };

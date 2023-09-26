@@ -2,9 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClInclude Include="Global.h" />
-    <ClInclude Include="TaskSystem\Task.h">
-      <Filter>TaskSystem</Filter>
-    </ClInclude>
     <ClInclude Include="Character\Player.h">
       <Filter>Character</Filter>
     </ClInclude>
@@ -23,12 +20,18 @@
     <ClInclude Include="Stage\SkyIsland.h">
       <Filter>Stage</Filter>
     </ClInclude>
+    <ClInclude Include="Management\Task.h">
+      <Filter>Management</Filter>
+    </ClInclude>
+    <ClInclude Include="Management\Progress.h">
+      <Filter>Management</Filter>
+    </ClInclude>
+    <ClInclude Include="Title\Title.h">
+      <Filter>Title</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="TaskSystem\Task.cpp">
-      <Filter>TaskSystem</Filter>
-    </ClCompile>
     <ClCompile Include="Character\Player.cpp">
       <Filter>Character</Filter>
     </ClCompile>
@@ -47,11 +50,17 @@
     <ClCompile Include="Stage\SkyIsland.cpp">
       <Filter>Stage</Filter>
     </ClCompile>
+    <ClCompile Include="Management\Task.cpp">
+      <Filter>Management</Filter>
+    </ClCompile>
+    <ClCompile Include="Management\Progress.cpp">
+      <Filter>Management</Filter>
+    </ClCompile>
+    <ClCompile Include="Title\Title.cpp">
+      <Filter>Title</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="TaskSystem">
-      <UniqueIdentifier>{15f89e13-c97f-454c-92ce-6bf5971c1c96}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Character">
       <UniqueIdentifier>{6764bb85-da02-44ba-b335-a722f212f25d}</UniqueIdentifier>
     </Filter>
@@ -66,6 +75,12 @@
     </Filter>
     <Filter Include="Stage">
       <UniqueIdentifier>{2ac9be8c-7051-4f5d-85aa-1900ad637de7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Management">
+      <UniqueIdentifier>{15f89e13-c97f-454c-92ce-6bf5971c1c96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Title">
+      <UniqueIdentifier>{4051a66f-729a-49bf-b0ad-730091c304f5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -18,7 +18,7 @@ public:
 	float fly_speed = 0.15f;
 	float jump_speed = 0.15f;
 public:
-	bool OnGround = true;;
+	bool OnGround = true;
 	Player(CVector3D &pos);
 	void FeatherRender(int Count,int LightCount);
 	void Render();

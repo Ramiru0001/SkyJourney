@@ -10,12 +10,7 @@ SkyIsland::SkyIsland() {
 	Task::AddStage(new Candle(CVector3D(-86.7567f, 16.7766f, 13.9631f), DtoR(90)));
 	Task::AddStage(new Field());
 }
-void SkyIsland::Update() {
-	if (PUSH(CInput::eButton1)) {
-		Task::DeleteAllStage();
-	}
-}
 SkyIsland::~SkyIsland() {
 	//コンストラクタで出したすべてを消す
-	
+	Task::DeleteAllStage();
 }
