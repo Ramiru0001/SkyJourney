@@ -1,6 +1,6 @@
 #pragma once
 
-class Title {
+class Title:public Task {
 	//画像オブジェクト
 	CImage m_img;
 	//文字表示オブジェクト

@@ -13,4 +13,8 @@ private:
 public:
 	Progress();
 	void Update();
+	/// <summary>
+	/// i’»‚ª•Ï‰»‚µ‚½ê‡‚Ì‚İŒÄ‚Î‚ê‚é
+	/// </summary>
+	void ProgressChange();
 };

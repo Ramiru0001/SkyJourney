@@ -1,24 +1,40 @@
 #include "progress.h"
 Progress::Progress():Task(ETaskPrio::eSystem, EType::eDefault) {
+	ProgressChange();
 }
 void Progress::Update() {
+	//進捗を変えるトリガー
 	switch (prog_num) {
 	case ProgressNum::eTytle:
 	{
-		Title* TitleStage = new Title;
 		if (PUSH(CInput::eButton1)) {
-			delete TitleStage;
 			prog_num = ProgressNum::eSkyIsland;
+			ProgressChange();
 		}
 	}
-		break;
+	break;
 	case ProgressNum::eSkyIsland:
-		Task::Add(new Player(CVector3D(88.5f, 1.7f, 4.37f)));
-		Task::Add(new Camera());
-		SkyIsland* SkyIslandStage = new SkyIsland;
 		/*if (ステージをクリアした場合) {
 			delete SkyIslandStage;
 		}*/
+		break;
+	}
+}
+void Progress::ProgressChange() {
+	//ステージリストのアイテムをすべて破棄して、変更後の進捗のアイテムを追加
+	Task::DeleteAllStage();
+	switch (prog_num) {
+	case ProgressNum::eTytle:
+		Task::AddStage(new Title());
+		break;
+	case ProgressNum::eSkyIsland:
+		if (PublicNum::Camera_On == false) {
+			Task::Add(new Camera());
+		}
+		if (PublicNum::Player_On == false) {
+			Task::Add(new Player(CVector3D(88.5f, 1.7f, 4.37f)));
+		}
+		SkyIsland* SkyIslandStage = new SkyIsland;
 		break;
 	}
 }

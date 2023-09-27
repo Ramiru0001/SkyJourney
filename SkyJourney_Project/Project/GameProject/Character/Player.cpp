@@ -4,6 +4,7 @@ Player::Player(CVector3D &pos):Task(ETaskPrio::ePlayer, EType::ePlayer){
 	if (PublicNum::log_passage == true) {
 		std::cout << "Player" << std::endl;
 	}
+	PublicNum::Player_On = true;
 	m_rad = 0.5f;
 	m_model = COPY_RESOURCE("Player", CModelA3M);
 	mant_DesignLight = COPY_RESOURCE("Mant_DesignL", CImage);
@@ -16,6 +17,9 @@ Player::Player(CVector3D &pos):Task(ETaskPrio::ePlayer, EType::ePlayer){
 	//レンダーターゲットのテクスチャーと差し替え
 	m_model.GetMaterial(12)->mp_texture = texture_frame_rader->GetTexture();
 
+}
+Player::~Player() {
+	PublicNum::Player_On = false;
 }
 void Player::Render() {
 	if (PublicNum::log_passage == true) {
@@ -31,16 +35,17 @@ void Player::Render() {
 	glEnable(GL_CULL_FACE);
 }
 void Player::Update() {
-	if (OnGround == true) {
-		std::cout << "UOnGround" << std::endl;
-	}
-	else {
-		std::cout << "UOffGround" << std::endl;
-	}
 	if (PublicNum::log_passage == true) {
-		std::cout << "PlayerUpdate" << std::endl;
+		if (OnGround == true) {
+			std::cout << "UOnGround" << std::endl;
+		}
+		else {
+			std::cout << "UOffGround" << std::endl;
+		}
+		if (PublicNum::log_passage == true) {
+			std::cout << "PlayerUpdate" << std::endl;
+		}
 	}
-
 	// --■モデルのテクスチャーへ書き込み----
 	//現在のカメラをコピー
 	CCamera back = *CCamera::GetCurrent();
@@ -143,9 +148,9 @@ void Player::Collision(Task* a) {
 	case EType::eField:
 	{
 		OnGround = false;
-		std::cout << "OnGroundfalse;初期化" << std::endl;
 		if (PublicNum::log_passage == true) {
 			std::cout << "PlayerCollisionField" << std::endl;
+			std::cout << "OnGroundfalse;初期化" << std::endl;
 		}
 		auto tri = a->GetModel()->CollisionSphere(m_pos + CVector3D(0, m_rad, 0), m_rad);
 		//接触した面の数繰り返す
@@ -157,8 +162,10 @@ void Player::Collision(Task* a) {
 				}
 			}
 			else if (t.m_normal.y > 0.5f) {
-				OnGround = true;
-				std::cout << "OnGround" << std::endl;
+				OnGround = true; 
+				if (PublicNum::log_passage == true) {
+					std::cout << "OnGround" << std::endl;
+				}
 				if (m_vec.y < 0)m_vec.y = 0;
 			}
 			float max_y = max(t.m_vertex[0].y, max(t.m_vertex[1].y, t.m_vertex[2].y));

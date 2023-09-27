@@ -1,5 +1,5 @@
 #pragma once
-class SkyIsland {
+class SkyIsland:public Task {
 public:
 	SkyIsland();
 	~SkyIsland();

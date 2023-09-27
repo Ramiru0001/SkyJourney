@@ -14,5 +14,6 @@ public :
 	CVector2D mouse_vec;//ƒ}ƒEƒX‚ÌˆÚ“®—Ê
 public:
 	Camera();
+	~Camera();
 	void Update();
 };

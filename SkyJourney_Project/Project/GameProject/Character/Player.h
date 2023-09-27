@@ -20,6 +20,7 @@ public:
 public:
 	bool OnGround = true;
 	Player(CVector3D &pos);
+	~Player();
 	void FeatherRender(int Count,int LightCount);
 	void Render();
 	void Update();

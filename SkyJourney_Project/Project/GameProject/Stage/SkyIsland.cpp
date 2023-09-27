@@ -1,5 +1,5 @@
 #include "SkyIsland.h"
-SkyIsland::SkyIsland() {
+SkyIsland::SkyIsland():Task(ETaskPrio::eSystem, EType::eDefault) {
 	Task::AddStage(new Feather(CVector3D(64.16f, 9.1f, 21.0f)));
 	Task::AddStage(new Feather(CVector3D(74.16f, 1.09f, -14.4f)));
 	Task::AddStage(new Feather(CVector3D(-16.0f, 14.3f, 27.4f)));

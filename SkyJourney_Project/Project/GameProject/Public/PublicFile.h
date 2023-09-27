@@ -9,6 +9,8 @@ public:
 		LogOn,
 		LogOff,
 	};
+	static bool Player_On;//プレイヤーがいるかいないか。いたらtrue
+	static bool Camera_On;//カメラがあるかないか。あったらtrue
 	static CMode c_mode;//カメラのモード
 	//static DMode d_mode;//ログオンorオフ
 	static bool log_passage;

@@ -4,6 +4,7 @@ Camera::Camera() :Task(ETaskPrio::eCamera, EType::eCamera){
 	if (PublicNum::log_passage == true) {
 		std::cout << "Camera" << std::endl;
 	}
+	PublicNum::Camera_On = true;
 	m_pos = CVector3D(-10, 10, 10);
 	m_rot = CVector3D(DtoR(30), DtoR(-125), 0);
 	if (PublicNum::log_passage == true) {
@@ -47,4 +48,7 @@ void Camera::Update() {
 		PublicNum::Camera_rot = m_rot;
 		break;
 	}
+}
+Camera::~Camera() {
+	PublicNum::Camera_On = false;
 }

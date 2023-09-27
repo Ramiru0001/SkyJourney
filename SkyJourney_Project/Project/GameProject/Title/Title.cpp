@@ -1,5 +1,5 @@
 #include "Title.h"
-Title::Title():
+Title::Title() :Task(ETaskPrio::eSystem, EType::eDefault) ,
 m_title_text("C:\\Windows\\Fonts\\msgothic.ttc", 64)
 {
 	//m_img = COPY_RESOURCE("Tap To Start",CImage);
