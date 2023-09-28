@@ -1,6 +1,6 @@
 #include "progress.h"
 Progress::Progress():Task(ETaskPrio::eSystem, EType::eDefault) {
-	ProgressChange();
+	ProgressChange(prog_num = ProgressNum::eTytle);
 }
 void Progress::Update() {
 	//進捗を変えるトリガー
@@ -9,7 +9,7 @@ void Progress::Update() {
 	{
 		if (PUSH(CInput::eButton1)) {
 			prog_num = ProgressNum::eSkyIsland;
-			ProgressChange();
+			ProgressChange(prog_num);
 		}
 	}
 	break;
@@ -20,10 +20,10 @@ void Progress::Update() {
 		break;
 	}
 }
-void Progress::ProgressChange() {
+void Progress::ProgressChange(int Progress) {
 	//ステージリストのアイテムをすべて破棄して、変更後の進捗のアイテムを追加
 	Task::DeleteAllStage();
-	switch (prog_num) {
+	switch (Progress) {
 	case ProgressNum::eTytle:
 		Task::AddStage(new Title());
 		break;
