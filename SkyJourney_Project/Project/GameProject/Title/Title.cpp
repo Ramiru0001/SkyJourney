@@ -19,10 +19,10 @@ void Title::Update()
 		//m_kill = true;
 }
 
-void Title::Draw()
+void Title::Render()
 {
 	//m_img.Draw();
 	//•¶Žš•\Ž¦
-	m_title_text.Draw(64, 256, 1, 1, 1, "PUSH D To Start GAME");
+	m_title_text.Draw(64, 256, 0, 0, 0, "PUSH Z To Start GAME");
 	//m_title_text.Draw(64, 512, 0, 0, 0, "Push Z");
 }

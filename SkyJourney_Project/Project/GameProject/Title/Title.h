@@ -9,5 +9,5 @@ public:
 	Title();
 	~Title();
 	void Update();
-	void Draw();
+	void Render();
 };
