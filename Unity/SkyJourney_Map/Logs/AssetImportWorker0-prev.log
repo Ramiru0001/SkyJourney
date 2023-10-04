@@ -15,7 +15,7 @@ C:/AnabukiSchool/GC2_C++/SkyJourney/Unity/SkyJourney_Map
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-59662
+49725
 Successfully changed project path to: C:/AnabukiSchool/GC2_C++/SkyJourney/Unity/SkyJourney_Map
 C:/AnabukiSchool/GC2_C++/SkyJourney/Unity/SkyJourney_Map
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ C:/AnabukiSchool/GC2_C++/SkyJourney/Unity/SkyJourney_Map
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [27624] Host "[IP] 192.168.1.62 [Port] 0 [Flags] 2 [Guid] 2571957565 [EditorId] 2571957565 [Version] 1048832 [Id] WindowsEditor(7,HoneyCookie) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [28108] Host "[IP] 192.168.1.62 [Port] 0 [Flags] 2 [Guid] 2515313218 [EditorId] 2515313218 [Version] 1048832 [Id] WindowsEditor(7,HoneyCookie) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [27624] Host "[IP] 192.168.1.62 [Port] 0 [Flags] 2 [Guid] 2571957565 [EditorId] 2571957565 [Version] 1048832 [Id] WindowsEditor(7,HoneyCookie) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [28108] Host "[IP] 192.168.1.62 [Port] 0 [Flags] 2 [Guid] 2515313218 [EditorId] 2515313218 [Version] 1048832 [Id] WindowsEditor(7,HoneyCookie) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 103.41 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 110.92 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.22f1 (b6c551784ba3)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/Resources/UnitySubsystems
@@ -67,52 +67,52 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56168
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56228
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.038011 seconds.
+Registered in 0.046127 seconds.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 412 ms
+Android Extension - Scanning For ADB Devices 456 ms
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 105.24 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 123.03 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.410 seconds
+- Completed reload, in  1.857 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1411ms)
-		BeginReloadAssembly (160ms)
+	ReloadAssembly (1857ms)
+		BeginReloadAssembly (280ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (1074ms)
-			LoadAssemblies (149ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (1304ms)
+			LoadAssemblies (275ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (165ms)
+			SetupTypeCache (229ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (40ms)
-			SetupLoadedEditorAssemblies (776ms)
+			SetupLoadedEditorAssemblies (924ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (515ms)
+				InitializePlatformSupportModulesInManaged (575ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (105ms)
-				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (100ms)
-				ProcessInitializeOnLoadMethodAttributes (53ms)
+				RefreshPlugins (123ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (153ms)
+				ProcessInitializeOnLoadMethodAttributes (70ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.012109 seconds.
+Registered in 0.013974 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\AnabukiSchool\GC2_C++\SkyJourney\Unity\SkyJourney_Map\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\AnabukiSchool\GC2_C++\SkyJourney\Unity\SkyJourney_Map\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
@@ -120,46 +120,46 @@ Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.91 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.574 seconds
+- Completed reload, in  1.536 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1576ms)
-		BeginReloadAssembly (233ms)
+	ReloadAssembly (1537ms)
+		BeginReloadAssembly (180ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (7ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (27ms)
-		EndReloadAssembly (1165ms)
-			LoadAssemblies (193ms)
+			CreateAndSetChildDomain (20ms)
+		EndReloadAssembly (1206ms)
+			LoadAssemblies (154ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (358ms)
+			SetupTypeCache (429ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (69ms)
-			SetupLoadedEditorAssemblies (548ms)
+			RebuildScriptCaches (99ms)
+			SetupLoadedEditorAssemblies (482ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (40ms)
-				SetLoadedEditorAssemblies (0ms)
+				InitializePlatformSupportModulesInManaged (41ms)
+				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (149ms)
-				ProcessInitializeOnLoadAttributes (305ms)
-				ProcessInitializeOnLoadMethodAttributes (25ms)
+				BeforeProcessingInitializeOnLoad (129ms)
+				ProcessInitializeOnLoadAttributes (262ms)
+				ProcessInitializeOnLoadMethodAttributes (21ms)
 				AfterProcessingInitializeOnLoad (27ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.89 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3048 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 24 unused Assets / (113.3 KB). Loaded Objects now: 3510.
 Memory consumption went from 107.7 MB to 107.6 MB.
-Total: 3.704500 ms (FindLiveObjects: 0.296700 ms CreateObjectMapping: 0.321600 ms MarkObjects: 2.980000 ms  DeleteObjects: 0.105100 ms)
+Total: 3.196100 ms (FindLiveObjects: 0.282600 ms CreateObjectMapping: 0.236600 ms MarkObjects: 2.554200 ms  DeleteObjects: 0.120900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -171,109 +171,3 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 90493.595206 seconds.
-  path: Assets/くじらのぬいぐるみ/prefab/ボーン設定入り/クジラ橙/くじら橙むっ.prefab
-  artifactKey: Guid(9b8ffcf637e26434ca68d499e212532f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/くじらのぬいぐるみ/prefab/ボーン設定入り/クジラ橙/くじら橙むっ.prefab using Guid(9b8ffcf637e26434ca68d499e212532f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18f18c4aca80817a1aa47c9b00d9b5da') in 0.169733 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/くじらのぬいぐるみ/prefab/ボーン設定入り/クジラ紫/くじら紫.prefab
-  artifactKey: Guid(eea0cf1d9760a0f40a02bf32dca14895) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/くじらのぬいぐるみ/prefab/ボーン設定入り/クジラ紫/くじら紫.prefab using Guid(eea0cf1d9760a0f40a02bf32dca14895) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e816a6df7041750e992aaaa5ddc8d2a8') in 0.027936 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/くじらのぬいぐるみ/prefab/ボーン設定入り/クジラ橙/くじら橙すや.prefab
-  artifactKey: Guid(cb1f2b413f1c85b4686459ef59ee42ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/くじらのぬいぐるみ/prefab/ボーン設定入り/クジラ橙/くじら橙すや.prefab using Guid(cb1f2b413f1c85b4686459ef59ee42ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '981f4007da39bb4e9aaaed31808ce59f') in 0.031831 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/くじらのぬいぐるみ/prefab/ボーン設定入り/クジラ赤/くじら赤ぽかん.prefab
-  artifactKey: Guid(c2d575bc1e2fb684ba5389e45daa5813) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/くじらのぬいぐるみ/prefab/ボーン設定入り/クジラ赤/くじら赤ぽかん.prefab using Guid(c2d575bc1e2fb684ba5389e45daa5813) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c0a43e91521e49ae38c67caad6bc51a') in 0.032960 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/くじらのぬいぐるみ/prefab/ボーン設定入り/クジラ橙/くじら橙くの字.prefab
-  artifactKey: Guid(e5608aed41e57114d94a02a7cde6067e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/くじらのぬいぐるみ/prefab/ボーン設定入り/クジラ橙/くじら橙くの字.prefab using Guid(e5608aed41e57114d94a02a7cde6067e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68a8c38f74c51ecf292028a9aac8b09d') in 0.033049 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/くじらのぬいぐるみ/prefab/ボーン設定入り/クジラ赤/くじら赤きらきら.prefab
-  artifactKey: Guid(82a3c9f442779bf40bc4b3a0dd7973c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/くじらのぬいぐるみ/prefab/ボーン設定入り/クジラ赤/くじら赤きらきら.prefab using Guid(82a3c9f442779bf40bc4b3a0dd7973c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f637b8ac4be552e54b70ee708103666') in 0.033518 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/くじらのぬいぐるみ/prefab/ボーン設定入り/クジラ紫/くじら紫にこ.prefab
-  artifactKey: Guid(795054ef8e8089044ae44c1892e40ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/くじらのぬいぐるみ/prefab/ボーン設定入り/クジラ紫/くじら紫にこ.prefab using Guid(795054ef8e8089044ae44c1892e40ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16cc30c35c83852780b02bbc69b34abf') in 0.025445 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 20.554588 seconds.
-  path: Assets/くじらのぬいぐるみ/Texture/kujira_tex_pink/kujira_tex_pink_kirakira.jpg
-  artifactKey: Guid(8e3baa63fe9134b4b8f3c80f98863faf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/くじらのぬいぐるみ/Texture/kujira_tex_pink/kujira_tex_pink_kirakira.jpg using Guid(8e3baa63fe9134b4b8f3c80f98863faf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bf63f905c489dcf5eb6882d2614b6ca') in 0.029100 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/くじらのぬいぐるみ/Texture/kujira_tex_pink/kujira_tex_pink_suya.jpg
-  artifactKey: Guid(f258c137420152541b1f2394bfce9a6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/くじらのぬいぐるみ/Texture/kujira_tex_pink/kujira_tex_pink_suya.jpg using Guid(f258c137420152541b1f2394bfce9a6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ae48c72ec3446fa9517612de6e24e01') in 0.019319 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.478584 seconds.
-  path: Assets/くじらのぬいぐるみ/Texture/kujira_tex_yellow/kujira_tex_yellow_kirakira.jpg
-  artifactKey: Guid(6200deaf9011f9346be0235a2d834479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/くじらのぬいぐるみ/Texture/kujira_tex_yellow/kujira_tex_yellow_kirakira.jpg using Guid(6200deaf9011f9346be0235a2d834479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5463f99a8de8ddc1ff9c0450158f88af') in 0.019511 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/くじらのぬいぐるみ/Texture/kujira_tex_yellow/kujira_tex_yellow_niko.jpg
-  artifactKey: Guid(7440886bdbc5ef4469490e0df7e0ac62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/くじらのぬいぐるみ/Texture/kujira_tex_yellow/kujira_tex_yellow_niko.jpg using Guid(7440886bdbc5ef4469490e0df7e0ac62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14481db26ff3737708e054330c2304fa') in 0.018809 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/くじらのぬいぐるみ/Texture/kujira_tex_yellow/kujira_tex_yellow_mu.jpg
-  artifactKey: Guid(57cba606890ebb24da7f27b8af46f466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/くじらのぬいぐるみ/Texture/kujira_tex_yellow/kujira_tex_yellow_mu.jpg using Guid(57cba606890ebb24da7f27b8af46f466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e1811bd12676751c31fe9a8c9805534') in 0.017069 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 51.877297 seconds.
-  path: Assets/くじらのぬいぐるみ/prefab/ボーン設定入り/クジラ桃/くじら桃きらきら.prefab
-  artifactKey: Guid(a16a759458772f94fb8332c429aabff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/くじらのぬいぐるみ/prefab/ボーン設定入り/クジラ桃/くじら桃きらきら.prefab using Guid(a16a759458772f94fb8332c429aabff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f597c5a0497a82cdd74bbb3ea3e2a35b') in 0.025630 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/くじらのぬいぐるみ/prefab/ボーン設定入り/クジラ桃/くじら桃むっ.prefab
-  artifactKey: Guid(7d1fb343953be86458f337e6c212fbbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/くじらのぬいぐるみ/prefab/ボーン設定入り/クジラ桃/くじら桃むっ.prefab using Guid(7d1fb343953be86458f337e6c212fbbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '756ec595cdeecddd461ff061df9fda34') in 0.023051 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/くじらのぬいぐるみ/prefab/ボーン設定入り/クジラ桃/くじら桃ぽかん.prefab
-  artifactKey: Guid(2a6c9a85484115c48aa49cd5b1e14060) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/くじらのぬいぐるみ/prefab/ボーン設定入り/クジラ桃/くじら桃ぽかん.prefab using Guid(2a6c9a85484115c48aa49cd5b1e14060) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87f5585e68519a02fae3e0cfcf071a9b') in 0.021554 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.339773 seconds.
-  path: Assets/くじらのぬいぐるみ/prefab/ボーン設定入り/クジラ橙/くじら橙きらきら.prefab
-  artifactKey: Guid(965bbdbed572f094bbda82ce3bd0f7b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/くじらのぬいぐるみ/prefab/ボーン設定入り/クジラ橙/くじら橙きらきら.prefab using Guid(965bbdbed572f094bbda82ce3bd0f7b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6847feda9fde5290ccb4bebb25801190') in 0.020281 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/くじらのぬいぐるみ/prefab/ボーン設定入り/クジラ橙/くじら橙むっ.prefab
-  artifactKey: Guid(9b8ffcf637e26434ca68d499e212532f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/くじらのぬいぐるみ/prefab/ボーン設定入り/クジラ橙/くじら橙むっ.prefab using Guid(9b8ffcf637e26434ca68d499e212532f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46728d685873b495a439c09ba3cf14c0') in 0.024039 seconds 
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
