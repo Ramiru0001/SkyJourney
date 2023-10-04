@@ -29,6 +29,9 @@
     <ClInclude Include="Title\Title.h">
       <Filter>Title</Filter>
     </ClInclude>
+    <ClInclude Include="Whale.h">
+      <Filter>Character</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -58,6 +61,9 @@
     </ClCompile>
     <ClCompile Include="Title\Title.cpp">
       <Filter>Title</Filter>
+    </ClCompile>
+    <ClCompile Include="Whale.cpp">
+      <Filter>Character</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

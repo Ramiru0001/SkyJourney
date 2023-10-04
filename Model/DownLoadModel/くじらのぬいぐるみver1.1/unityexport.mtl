@@ -1,0 +1,5 @@
+newmtl TT_checker_2048x2048_COLOR_GRID
+Kd 0.8 0.8 0.8
+map_Bump null
+illum 2
+

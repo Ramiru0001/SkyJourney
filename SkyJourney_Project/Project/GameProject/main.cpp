@@ -115,6 +115,7 @@ void Init(void)
 	ADD_RESOURCE("Glass1", CModel::CreateModel("Item/Glass/square05.obj"));
 	ADD_RESOURCE("Mant_DesignL", CImage::CreateImage("Character/MantFeather01.png"));
 	ADD_RESOURCE("Mant_DesignD", CImage::CreateImage("Character/MantFeatherBlack.png"));
+	ADD_RESOURCE("Whale", CModel::CreateModel("Character/whale/whale.a3m"));
 	Task::Add(new Progress());
 	if (PublicNum::log_passage == true) {
 		std::cout << "Initfin" << std::endl;

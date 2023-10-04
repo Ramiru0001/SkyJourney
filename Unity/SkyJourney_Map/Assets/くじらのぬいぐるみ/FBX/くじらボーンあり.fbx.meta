@@ -1,0 +1,149 @@
+fileFormatVersion: 2
+guid: c570618491edb4147bb1b76e0c44f52c
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature
+    100002: body
+    100004: body01
+    100006: body02
+    100008: Camera
+    100010: head
+    100012: head_end
+    100014: Light
+    100016: Light.001
+    100018: root
+    100020: tail01
+    100022: tail02
+    100024: tail02_end
+    100026: //RootNode
+    100028: "\u7403"
+    100030: hire_left
+    100032: hire_right
+    100034: "\u304F\u3057\u3089\u30DB\u30FC\u30F3\u3042\u308A"
+    100036: hire_left_end
+    100038: hire_right_end
+    400000: Armature
+    400002: body
+    400004: body01
+    400006: body02
+    400008: Camera
+    400010: head
+    400012: head_end
+    400014: Light
+    400016: Light.001
+    400018: root
+    400020: tail01
+    400022: tail02
+    400024: tail02_end
+    400026: //RootNode
+    400028: "\u7403"
+    400030: hire_left
+    400032: hire_right
+    400034: "\u304F\u3057\u3089\u30DB\u30FC\u30F3\u3042\u308A"
+    400036: hire_left_end
+    400038: hire_right_end
+    2000000: Camera
+    2100000: TT_checker_2048x2048_COLOR_GRID
+    4300000: "\u7403"
+    7400000: "\u7403|\u7403Action"
+    9500000: //RootNode
+    10800000: Light
+    10800002: Light.001
+    13700000: "\u7403"
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TT_checker_2048x2048_COLOR_GRID
+    second: {fileID: 2100000, guid: 453226165e4657446a98d0f99109c09c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: kujira_tex10_green2
+    second: {fileID: 2100000, guid: 453226165e4657446a98d0f99109c09c, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
