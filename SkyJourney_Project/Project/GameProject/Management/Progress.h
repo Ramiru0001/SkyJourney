@@ -5,6 +5,7 @@ private:
 	enum ProgressNum{
 		eTytle,
 		eSkyIsland,
+		eDesert,
 	};
 	/// <summary>
 	/// 進捗を数字で管理。タイトル＝0。最初のステージ＝１

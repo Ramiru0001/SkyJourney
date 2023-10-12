@@ -1,4 +1,6 @@
 #include "progress.h"
+#include "../Stage/SkyIslandStage.h"
+#include "../Stage/DesertStage.h"
 Progress::Progress():Task(ETaskPrio::eSystem, EType::eDefault) {
 	ProgressChange(prog_num = ProgressNum::eTytle);
 }
@@ -15,7 +17,8 @@ void Progress::Update() {
 	break;
 	case ProgressNum::eSkyIsland:
 		/*if (ステージをクリアした場合) {
-			delete SkyIslandStage;
+			prog_num = ProgressNum::eDesert;
+			ProgressChange(prog_num);
 		}*/
 		break;
 	}
@@ -25,16 +28,38 @@ void Progress::ProgressChange(int Progress) {
 	Task::DeleteAllStage();
 	switch (Progress) {
 	case ProgressNum::eTytle:
+		//１つしかないので、stageを作らずに直接追加
 		Task::AddStage(new Title());
 		break;
 	case ProgressNum::eSkyIsland:
+		//カメラがない場合、召喚
+		if (PublicNum::Camera_On == false) {
+			Task::Add(new Camera());
+		}
+		//プレイヤーがいない場合召喚
+		if (PublicNum::Player_On == false) {
+			Task::Add(new Player(CVector3D(88.5f, 1.7f, 4.37f)));
+		}
+		{
+			//SkyIslandStageのコンストラクタを呼んでstageタスクリストに追加
+			SkyIslandStage* SkyIslandStage_Instance = new SkyIslandStage;
+			//呼んだクラスは必要ないので即破棄
+			delete SkyIslandStage_Instance;
+		}
+		break;
+	case ProgressNum::eDesert:
 		if (PublicNum::Camera_On == false) {
 			Task::Add(new Camera());
 		}
 		if (PublicNum::Player_On == false) {
 			Task::Add(new Player(CVector3D(88.5f, 1.7f, 4.37f)));
 		}
-		SkyIsland* SkyIslandStage = new SkyIsland;
+		{
+			//DesertStageのコンストラクタを呼んでstageタスクリストに追加
+			DesertStage* DesertStage_Instance = new DesertStage;
+			//呼んだクラスは必要ないので即破棄
+			delete DesertStage_Instance; 
+		}
 		break;
 	}
 }

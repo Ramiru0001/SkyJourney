@@ -9,7 +9,6 @@
 #include "Public/PublicFile.h"
 #include "Game/Field.h"
 #include "Game/Object.h"
-#include "Stage/SkyIsland.h"
 #include "Character/Player.h"
 #include "Camera/Camera.h"
 #include "Title/Title.h"

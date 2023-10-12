@@ -17,7 +17,7 @@
     <ClInclude Include="Game\Object.h">
       <Filter>Game</Filter>
     </ClInclude>
-    <ClInclude Include="Stage\SkyIsland.h">
+    <ClInclude Include="Stage\SkyIslandStage.h">
       <Filter>Stage</Filter>
     </ClInclude>
     <ClInclude Include="Management\Task.h">
@@ -31,6 +31,9 @@
     </ClInclude>
     <ClInclude Include="Whale.h">
       <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage\DesertStage.h">
+      <Filter>Stage</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -50,7 +53,7 @@
     <ClCompile Include="Game\Object.cpp">
       <Filter>Game</Filter>
     </ClCompile>
-    <ClCompile Include="Stage\SkyIsland.cpp">
+    <ClCompile Include="Stage\SkyIslandStage.cpp">
       <Filter>Stage</Filter>
     </ClCompile>
     <ClCompile Include="Management\Task.cpp">
@@ -64,6 +67,9 @@
     </ClCompile>
     <ClCompile Include="Whale.cpp">
       <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage\DesertStage.cpp">
+      <Filter>Stage</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

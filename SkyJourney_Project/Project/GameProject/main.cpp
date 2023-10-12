@@ -1,10 +1,6 @@
 //--------------------------------------------
 //ƒOƒ[ƒoƒ‹•Ï”—Ìˆæ
 //-------------------------------------------
-#include "Character/Player.h"
-#include "Game/Field.h"
-#include "Stage/SkyIsland.h"
-#include "Camera/Camera.h"
 #include "Global.h"
 void MainLoop(void) {
 	//--------------------------------------------------------------
@@ -108,7 +104,8 @@ void Init(void)
 	if (PublicNum::log_passage == true) {
 		std::cout << std::endl << "Init" << std::endl;
 	}
-	ADD_RESOURCE("FirstIsland", CModel::CreateModel("Field/Island.obj",10,3,5));
+	ADD_RESOURCE("SkyIsland", CModel::CreateModel("Field/Island.obj", 10, 3, 5));;
+	ADD_RESOURCE("Desert", CModel::CreateModel("Field/Desert.obj", 10, 5, 5));
 	ADD_RESOURCE("Sky", CModel::CreateModel("Field/SkyBox.obj"));
 	ADD_RESOURCE("Player", CModel::CreateModel("Character/PlayerA1005.a3m"));
 	ADD_RESOURCE("Feather", CModel::CreateModel("Item/star.obj"));
