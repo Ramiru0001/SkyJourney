@@ -20,6 +20,12 @@ void Progress::Update() {
 			prog_num = ProgressNum::eDesert;
 			ProgressChange(prog_num);
 		}*/
+		if (PUSH(CInput::eButton1)) {
+			prog_num = ProgressNum::eDesert;
+			ProgressChange(prog_num);
+		}
+		break;
+	case ProgressNum::eDesert:
 		break;
 	}
 }
@@ -38,7 +44,7 @@ void Progress::ProgressChange(int Progress) {
 		}
 		//プレイヤーがいない場合召喚
 		if (PublicNum::Player_On == false) {
-			Task::Add(new Player(CVector3D(88.5f, 1.7f, 4.37f)));
+			Task::Add(new Player(CVector3D(468.5f, 0.07f, -11.7f)));
 		}
 		{
 			//SkyIslandStageのコンストラクタを呼んでstageタスクリストに追加

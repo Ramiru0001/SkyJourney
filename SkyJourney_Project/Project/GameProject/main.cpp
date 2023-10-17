@@ -100,11 +100,11 @@ void Init(void)
 	//-----------------------------------------------------
 	PublicNum::c_mode = PublicNum::WithPlayer;
 	PublicNum::log_passage = false;
-	PublicNum::log_pos = false;
+	PublicNum::log_pos = true;
 	if (PublicNum::log_passage == true) {
 		std::cout << std::endl << "Init" << std::endl;
 	}
-	ADD_RESOURCE("SkyIsland", CModel::CreateModel("Field/Island.obj", 10, 3, 5));;
+	ADD_RESOURCE("SkyIsland", CModel::CreateModel("Field/IslandPlusTemple.obj", 10, 3, 5));;
 	ADD_RESOURCE("Desert", CModel::CreateModel("Field/Desert.obj", 10, 5, 5));
 	ADD_RESOURCE("Sky", CModel::CreateModel("Field/SkyBox.obj"));
 	ADD_RESOURCE("Player", CModel::CreateModel("Character/PlayerA1005.a3m"));
@@ -117,6 +117,7 @@ void Init(void)
 	if (PublicNum::log_passage == true) {
 		std::cout << "Initfin" << std::endl;
 	}
+	glDisable(GL_SPECULAR);
 }
 void Release()
 {
