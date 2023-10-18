@@ -1,5 +1,5 @@
 #pragma once
-class PublicNum {
+class PublicNum :public Progress{
 public:
 	enum CMode {
 		FixedPoint,//固定カメラ
@@ -9,14 +9,21 @@ public:
 		LogOn,
 		LogOff,
 	};
+	enum StageNum {
+		Tytle,
+		SkyIsland,
+		Desert,
+	};
 	static bool Player_On;//プレイヤーがいるかいないか。いたらtrue
 	static bool Camera_On;//カメラがあるかないか。あったらtrue
 	static CMode c_mode;//カメラのモード
 	//static DMode d_mode;//ログオンorオフ
 	static bool log_passage;
 	static bool log_pos;
+	static bool Stage_Change;//通常はfalse。stageが変わった時にtrueになる。
 	static int Feather_Count;//総羽の数
 	static int LightFeather_Count;//使える羽の数
+	static int Stage_Num;//現在のステージnumber
 	static CVector3D Player_pos;
 	static CVector3D Camera_rot;
 };

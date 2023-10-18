@@ -12,11 +12,14 @@ Player::Player(CVector3D &pos):Task(ETaskPrio::ePlayer, EType::ePlayer){
 	mant_DesignLight.SetSize(50, 50);
 	mant_DesignDark.SetSize(50, 50);
 	m_pos = pos;
+	Stage_Pos[PublicNum::StageNum::Tytle] = CVector3D(0, 0, 0);
+	Stage_Pos[PublicNum::StageNum::SkyIsland] = SkyIslandPos;
+	Stage_Pos[PublicNum::StageNum::Desert] = DesertPos;
 	//レンダーターゲット生成
 	texture_frame_rader = new CTextureFrame(512, 512, CVector4D(1, 0, 0, 1)/*マントを赤に塗りつぶし*/);
 	//レンダーターゲットのテクスチャーと差し替え
 	m_model.GetMaterial(12)->mp_texture = texture_frame_rader->GetTexture();
-
+	std::cout << "座標ss：" << Stage_Pos[0].x << "," << Stage_Pos[0].y << "," << Stage_Pos[0].z << std::endl;
 }
 Player::~Player() {
 	PublicNum::Player_On = false;
@@ -25,10 +28,13 @@ void Player::Render() {
 	if (PublicNum::log_passage == true) {
 		std::cout << "PlayerRender" << std::endl;
 	}
+	//マントへ羽を描画
+	FeatherDraw();
+	//プレイヤーモデルの描画
 	m_model.SetPos(m_pos);
 	m_model.SetScale(0.01f,0.01f,0.01f);
 	m_model.SetRot(m_rot);;
-	m_model.UpdateAnimation(); 
+	m_model.UpdateAnimation();
 	CLight::SetColor(0, CVector3D(.9f, .9f, .9f), CVector3D(0.3f, 0.3f, 0.3f));
 	glDisable(GL_CULL_FACE);
 	m_model.Render();
@@ -46,83 +52,21 @@ void Player::Update() {
 			std::cout << "PlayerUpdate" << std::endl;
 		}
 	}
-	// --■モデルのテクスチャーへ書き込み----
-	//現在のカメラをコピー
-	CCamera back = *CCamera::GetCurrent();
-
-	//画面解像度変更
-	CCamera::GetCamera()->SetSize(texture_frame_rader->GetWidth(), texture_frame_rader->GetHeight());
-	texture_frame_rader->BeginDraw();
-	
-	FeatherRender(PublicNum::Feather_Count, PublicNum::LightFeather_Count);
-	texture_frame_rader->EndDraw();
-	if (PublicNum::log_passage == true) {
-		std::cout << "羽の数" << PublicNum::Feather_Count << " : " << PublicNum::LightFeather_Count << std::endl;
-	}
-	//カメラを元の状態に戻す
-	*CCamera::GetCurrent() = back;
-	//Task* a = Task::FindObject(EType::eCamera);
-	//CVector3D c_rot = a->m_rot;//カメラの座標
-	CVector3D c_rot = PublicNum::Camera_rot;
-	CVector2D mouse_vec = CInput::GetMouseVec();
-	CVector3D key_dir = CVector3D(0, 0, 0);
-	if (HOLD(CInput::eUp))key_dir.z = 1;
-	if (HOLD(CInput::eDown))key_dir.z = -1;
-	if (HOLD(CInput::eLeft))key_dir.x = 1;
-	if (HOLD(CInput::eRight))key_dir.x = -1;
-	if (key_dir.LengthSq() > 0) {
-		CVector3D dir = CMatrix::MRotationY(m_rot.y).GetFront();
-		m_rot.y = Utility::NormalizeAngle(c_rot.y + atan2(key_dir.x, key_dir.z));
-		if (OnGround == true) {
-			state = Walk;
-			m_pos += dir * move_speed;
-			m_model.ChangeAnimation(1);
-		}
-		else if(state == Jump){
-			m_pos += dir * jump_speed;
-		}
-		else if (state == Fly) {
-			m_pos += dir * fly_speed;
-		}
+	PublicNum::Player_pos = m_pos;
+	if (PublicNum::Stage_Change == false) {
+		//プレイヤーの移動処理
+		std::cout << "Moving" << std::endl;
+		Move();
 	}
 	else {
-		if (OnGround == true) {
-			state = Idle;
-			m_model.ChangeAnimation(0);
-		}
+		std::cout << "StageChange!" << std::endl;
+		m_pos = Stage_Pos[PublicNum::Stage_Num];
 	}
-	if (PUSH(CInput::eButton5/*space*/)) {
-		space_count = 0;
-	}
-	if (HOLD(CInput::eButton5/*space*/ )) {
-		if (space_count == 10) {
-			if (PublicNum::LightFeather_Count > 0) {
-				//if(OnGround == true)
-				m_vec.y = FLY;
-				state = Fly;
-				m_model.ChangeAnimation(2);
-				PublicNum::LightFeather_Count--;
-			}
-		}
-		space_count++;
-	}
-	if (PULL(CInput::eButton5/*space*/)) {
-		if (space_count < 10 && state != Jump && state != Fly) {
-			state = Jump;
-			m_model.ChangeAnimation(2);//ジャンプアニメーション
-			m_vec.y = JUMP;
-		}
-	};
-	//m_rot.y = c_rot.y;
-	m_pos.y += m_vec.y;
-	//m_pos += m_vec;
-	m_vec.y -= GRAVITY;
 	if (PublicNum::log_pos == true) {
 		std::cout << "座標：" << m_pos.x << "," << m_pos.y << "," << m_pos.z << std::endl;
 	}
-	PublicNum::Player_pos = m_pos;
 }
-void Player::FeatherRender(int Count, int LightCount) {
+void Player::FeatherSetPos(int Count, int LightCount) {
 	CVector2D pos[] = { CVector2D(226, 370) ,CVector2D(226, 290) ,CVector2D(226, 210) ,CVector2D(226, 130), CVector2D(226, 50) };
 	for (int i = 0; i < 5; i++) {
 		if (LightCount > i) {
@@ -209,6 +153,78 @@ void Player::Collision(Task* a) {
 	}
 		break;
 	}
+}
+void Player::Move() {
+	{CVector3D c_rot = PublicNum::Camera_rot;
+	CVector2D mouse_vec = CInput::GetMouseVec();
+	CVector3D key_dir = CVector3D(0, 0, 0);
+	if (HOLD(CInput::eUp))key_dir.z = 1;
+	if (HOLD(CInput::eDown))key_dir.z = -1;
+	if (HOLD(CInput::eLeft))key_dir.x = 1;
+	if (HOLD(CInput::eRight))key_dir.x = -1;
+	if (key_dir.LengthSq() > 0) {
+		CVector3D dir = CMatrix::MRotationY(m_rot.y).GetFront();
+		m_rot.y = Utility::NormalizeAngle(c_rot.y + atan2(key_dir.x, key_dir.z));
+		if (OnGround == true) {
+			state = Walk;
+			m_pos += dir * move_speed;
+			m_model.ChangeAnimation(1);
+		}
+		else if (state == Jump) {
+			m_pos += dir * jump_speed;
+		}
+		else if (state == Fly) {
+			m_pos += dir * fly_speed;
+		}
+	}
+	else {
+		if (OnGround == true) {
+			state = Idle;
+			m_model.ChangeAnimation(0);
+		}
+	}
+	if (PUSH(CInput::eButton5/*space*/)) {
+		space_count = 0;
+	}
+	if (HOLD(CInput::eButton5/*space*/)) {
+		if (space_count == 10) {
+			if (PublicNum::LightFeather_Count > 0) {
+				//if(OnGround == true)
+				m_vec.y = FLY;
+				state = Fly;
+				m_model.ChangeAnimation(2);
+				PublicNum::LightFeather_Count--;
+			}
+		}
+		space_count++;
+	}
+	if (PULL(CInput::eButton5/*space*/)) {
+		if (space_count < 10 && state != Jump && state != Fly) {
+			state = Jump;
+			m_model.ChangeAnimation(2);//ジャンプアニメーション
+			m_vec.y = JUMP;
+		}
+	};
+	//m_rot.y = c_rot.y;
+	m_pos.y += m_vec.y;
+	//m_pos += m_vec;
+	m_vec.y -= GRAVITY; }
+}
+void Player::FeatherDraw() {
+	//現在のカメラをコピー
+	CCamera back = *CCamera::GetCurrent();
+
+	//画面解像度変更
+	CCamera::GetCamera()->SetSize(texture_frame_rader->GetWidth(), texture_frame_rader->GetHeight());
+	texture_frame_rader->BeginDraw();
+	//羽の表示
+	FeatherSetPos(PublicNum::Feather_Count, PublicNum::LightFeather_Count);
+	texture_frame_rader->EndDraw();
+	if (PublicNum::log_passage == true) {
+		std::cout << "羽の数" << PublicNum::Feather_Count << " : " << PublicNum::LightFeather_Count << std::endl;
+	}
+	//カメラを元の状態に戻す
+	*CCamera::GetCurrent() = back;
 }
 CModel* Player::GetModel() {
 	return  &m_model;
