@@ -7,7 +7,7 @@ Progress::Progress():Task(ETaskPrio::eSystem, EType::eDefault) {
 }
 void Progress::Update() {
 	//ステージ変更フラグをオフにする。
-	PublicNum::Stage_Change = true;
+	PublicNum::Stage_Change = false;
 	//進捗を変えるトリガー
 	switch (prog_num) {
 	case ProgressNum::Tytle:
@@ -53,6 +53,7 @@ void Progress::ProgressChange(int Progress) {
 		if (PublicNum::Player_On == false) {
 			Task::Add(new Player(CVector3D(88.5f, 1.7f, 4.37f)));
 		}
+		Task::AddStage(new UI());
 		{
 			//SkyIslandStageのコンストラクタを呼んでstageタスクリストに追加
 			SkyIslandStage* SkyIslandStage_Instance = new SkyIslandStage;

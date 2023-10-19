@@ -13,6 +13,7 @@
   <ItemGroup>
     <ClInclude Include="Camera\Camera.h" />
     <ClInclude Include="Character\Player.h" />
+    <ClInclude Include="Character\Whale.h" />
     <ClInclude Include="Game\Field.h" />
     <ClInclude Include="Game\Object.h" />
     <ClInclude Include="Global.h" />
@@ -22,11 +23,12 @@
     <ClInclude Include="Stage\DesertStage.h" />
     <ClInclude Include="Stage\SkyIslandStage.h" />
     <ClInclude Include="Title\Title.h" />
-    <ClInclude Include="Whale.h" />
+    <ClInclude Include="UI\UI.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Camera\Camera.cpp" />
     <ClCompile Include="Character\Player.cpp" />
+    <ClCompile Include="Character\Whale.cpp" />
     <ClCompile Include="Game\Field.cpp" />
     <ClCompile Include="Game\Object.cpp" />
     <ClCompile Include="main.cpp" />
@@ -36,7 +38,7 @@
     <ClCompile Include="Stage\DesertStage.cpp" />
     <ClCompile Include="Stage\SkyIslandStage.cpp" />
     <ClCompile Include="Title\Title.cpp" />
-    <ClCompile Include="Whale.cpp" />
+    <ClCompile Include="UI\UI.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{FE2CE3B1-49BF-46A5-9DB1-9BD5B52FE1A0}</ProjectGuid>

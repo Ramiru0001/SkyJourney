@@ -1,5 +1,5 @@
 #pragma once
-class PublicNum :public Progress{
+class PublicNum {
 public:
 	enum CMode {
 		FixedPoint,//ŒÅ’èƒJƒƒ‰

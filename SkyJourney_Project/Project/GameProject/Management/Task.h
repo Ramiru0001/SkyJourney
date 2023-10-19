@@ -10,6 +10,7 @@ enum class ETaskPrio   {
 	ePlayer,
 	eEnemy,
 	eCamera,
+	eUI,
 };
 class Task {
 private:
@@ -32,6 +33,7 @@ public:
 		ePlayer,
 		eEnemy,
 		eCamera,
+		eUI,
 	};
 	ETaskPrio m_prio;//タスクの優先度
 	EType m_type;//タスクのタイプ

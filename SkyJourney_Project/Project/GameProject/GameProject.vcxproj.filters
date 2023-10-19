@@ -29,11 +29,14 @@
     <ClInclude Include="Title\Title.h">
       <Filter>Title</Filter>
     </ClInclude>
-    <ClInclude Include="Whale.h">
-      <Filter>Character</Filter>
-    </ClInclude>
     <ClInclude Include="Stage\DesertStage.h">
       <Filter>Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\UI.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Character\Whale.h">
+      <Filter>Character</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -65,11 +68,14 @@
     <ClCompile Include="Title\Title.cpp">
       <Filter>Title</Filter>
     </ClCompile>
-    <ClCompile Include="Whale.cpp">
-      <Filter>Character</Filter>
-    </ClCompile>
     <ClCompile Include="Stage\DesertStage.cpp">
       <Filter>Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\UI.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Character\Whale.cpp">
+      <Filter>Character</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -93,6 +99,9 @@
     </Filter>
     <Filter Include="Title">
       <UniqueIdentifier>{4051a66f-729a-49bf-b0ad-730091c304f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{5fde42cf-7a5e-486e-8baf-930717c042ed}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
