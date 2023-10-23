@@ -1,24 +1,26 @@
 #include "UI.h"
-UI::UI():Task(ETaskPrio::eUI, EType::eUI) {
+Whiteout::Whiteout():Task(ETaskPrio::eUI, EType::eUI) {
 }
-void UI::Render() {
-	if (Whiteout_Flag == true) {
-		std::cout << "DrawQuad" << std::endl;
+void Whiteout::Render() {
+	if (PublicNum::Whiteout_flag == true) {
 		Utility::DrawQuad(CVector2D(0, 0), CVector2D(SCREEN_WIDTH, SCREEN_HEIGHT), Whiteout_ColorSet());
 	}
 }
-void UI::Update() {
-	if (Whiteout_Flag == true) {
-		Whiteout_Timer--;
+void Whiteout::Update() {
+	if (White_count <= MaxWhite_count) {
+		White_count++;
 	}
-	if (Whiteout_Timer <= 0) {
-		Whiteout_Timer = 30;
-		Whiteout_Flag = false;
+	else {
+		White_count = 0;
+		PublicNum::Whiteout_flag = false;
 	}
-	
+	if (White_count == MaxWhite_count / 2) {
+		PublicNum::Stage_Change = true;
+	}
 }
-CVector4D UI::Whiteout_ColorSet() {
+CVector4D Whiteout::Whiteout_ColorSet() {
 	//”Z“x
-	int Consistency=1.0f - Whiteout_Timer / 30.0f;
+	int Whiteout_step = White_count - (MaxWhite_count / 2);
+	float Consistency = 1 - (std::abs(Whiteout_step) / (MaxWhite_count / 2));
 	return CVector4D(0, 0, 0, Consistency);
 }

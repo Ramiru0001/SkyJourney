@@ -54,6 +54,8 @@ public:
 		eDown,
 		eLeft,
 		eRight,
+		eShift,
+		eSpace,
 		eKeyMax = 31
 	};
 	static unsigned char	m_key_code[PAD_MAX][eKeyMax];

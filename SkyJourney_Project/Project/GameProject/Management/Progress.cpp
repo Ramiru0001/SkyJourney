@@ -6,8 +6,10 @@ Progress::Progress():Task(ETaskPrio::eSystem, EType::eDefault) {
 	prog_num = ProgressNum::Tytle;
 }
 void Progress::Update() {
-	//ステージ変更フラグをオフにする。
-	PublicNum::Stage_Change = false;
+	if (PublicNum::Whiteout_flag) {
+		Whiteout* WhiteoutInstance = new Whiteout;
+		PublicNum::Whiteout_flag = false;
+	}
 	//進捗を変えるトリガー
 	switch (prog_num) {
 	case ProgressNum::Tytle:
@@ -24,7 +26,7 @@ void Progress::Update() {
 			prog_num = ProgressNum::eDesert;
 			ProgressChange(prog_num);
 		}*/
-		if (PUSH(CInput::eButton1)) {
+		if (PublicNum::Stage_Change) {
 			prog_num = ProgressNum::Desert;
 			PublicNum::Stage_Num = PublicNum::StageNum::Desert;
 			ProgressChange(prog_num);
@@ -35,8 +37,6 @@ void Progress::Update() {
 	}
 }
 void Progress::ProgressChange(int Progress) {
-	//ステージ変更のフラグをオンにする
-	PublicNum::Stage_Change = true;
 	//ステージリストのアイテムをすべて破棄して、変更後の進捗のアイテムを追加
 	Task::DeleteAllStage();
 	switch (Progress) {
@@ -53,7 +53,7 @@ void Progress::ProgressChange(int Progress) {
 		if (PublicNum::Player_On == false) {
 			Task::Add(new Player(CVector3D(88.5f, 1.7f, 4.37f)));
 		}
-		Task::AddStage(new UI());
+		Task::AddStage(new Whiteout());
 		{
 			//SkyIslandStageのコンストラクタを呼んでstageタスクリストに追加
 			SkyIslandStage* SkyIslandStage_Instance = new SkyIslandStage;
@@ -76,6 +76,8 @@ void Progress::ProgressChange(int Progress) {
 		}
 		break;
 	}
+	//ステージ変更フラグをオフにする。
+	PublicNum::Stage_Change = false;
 }
 int Progress::GetProgNum() {
 	return prog_num;

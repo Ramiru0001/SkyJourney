@@ -12,12 +12,12 @@ private:
 	/// </summary>
 	int prog_num;
 public:
-	
 	Progress();
 	int GetProgNum();
 	void Update();
 	/// <summary>
-	/// 進捗が変化した場合のみ呼ばれる
+	/// 進捗が変化した場合のみ呼ばれる。
+	/// ステージリストのアイテムをすべて破棄して、変更後の進捗のアイテムを追加
 	/// </summary>
 	void ProgressChange(int Progress);
 };

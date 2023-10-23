@@ -43,7 +43,9 @@ void Init(void)
 	CInput::SetButton(0, CInput::eButton3, 'C');
 	CInput::SetButton(0, CInput::eButton4, 'V');
 	CInput::SetButton(0, CInput::eButton5, VK_SPACE);
-	CInput::SetButton(0, CInput::eButton10, VK_RETURN);
+	CInput::SetButton(0, CInput::eButton10, VK_RETURN); 
+	CInput::SetButton(0, CInput::eShift, VK_SHIFT); 
+	CInput::SetButton(0, CInput::eSpace, VK_SPACE);
 	CInput::SetButton(0, CInput::eUp, 'W');
 	CInput::SetButton(0, CInput::eDown, 'S');
 	CInput::SetButton(0, CInput::eLeft, 'A');
@@ -100,7 +102,7 @@ void Init(void)
 	//-----------------------------------------------------
 	PublicNum::c_mode = PublicNum::WithPlayer;
 	PublicNum::log_passage = false;
-	PublicNum::log_pos = false;
+	PublicNum::log_pos = true;
 	if (PublicNum::log_passage == true) {
 		std::cout << std::endl << "Init" << std::endl;
 	}

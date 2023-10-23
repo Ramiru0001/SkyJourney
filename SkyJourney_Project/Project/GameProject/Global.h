@@ -1,6 +1,7 @@
 #pragma once
 #include <GLLibrary.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <list>
 #include <algorithm>
 #include <iostream>

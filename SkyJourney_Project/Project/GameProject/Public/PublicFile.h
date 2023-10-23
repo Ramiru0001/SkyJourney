@@ -20,7 +20,9 @@ public:
 	//static DMode d_mode;//ログオンorオフ
 	static bool log_passage;
 	static bool log_pos;
+	static bool Whiteout_flag;//trueになったらホワイトアウト処理
 	static bool Stage_Change;//通常はfalse。stageが変わった時にtrueになる。
+	static bool Debug_mode;
 	static int Feather_Count;//総羽の数
 	static int LightFeather_Count;//使える羽の数
 	static int Stage_Num;//現在のステージnumber

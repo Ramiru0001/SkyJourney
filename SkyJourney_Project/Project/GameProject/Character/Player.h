@@ -18,6 +18,7 @@ private:
 
 public:
 	CModelA3M m_model;
+	float debug_speed = 0.5f;
 	float move_speed = 0.13f;
 	float fly_speed = 0.15f;
 	float jump_speed = 0.15f;
@@ -39,5 +40,10 @@ public:
 	void Update();
 	void Collision(Task* a);
 	void Move();
+	void DebugMove();//debugmodeの移動処理
+	/// <summary>
+	/// マップチェンジをするエリアに入ったらtrue
+	/// </summary>
+	bool MapChangeCheck();
 	CModel* GetModel();
 };

@@ -53,10 +53,20 @@ void Player::Update() {
 		}
 	}
 	PublicNum::Player_pos = m_pos;
+	if (MapChangeCheck()) {
+		PublicNum::Whiteout_flag = true;
+	}
 	if (PublicNum::Stage_Change == false) {
 		//プレイヤーの移動処理
-		std::cout << "Moving" << std::endl;
-		Move();
+		if (PublicNum::log_passage == true) {
+			std::cout << "Moving" << std::endl;
+		}
+		if (PublicNum::Debug_mode) {
+			DebugMove();
+		}
+		else {
+			Move();
+		}
 	}
 	else {
 		std::cout << "StageChange!" << std::endl;
@@ -210,6 +220,63 @@ void Player::Move() {
 	//m_pos += m_vec;
 	m_vec.y -= GRAVITY; }
 }
+void Player::DebugMove() {
+	{CVector3D c_rot = PublicNum::Camera_rot;
+	CVector2D mouse_vec = CInput::GetMouseVec();
+	CVector3D key_dir = CVector3D(0, 0, 0);
+	if (HOLD(CInput::eUp))key_dir.z = 1;
+	if (HOLD(CInput::eDown))key_dir.z = -1;
+	if (HOLD(CInput::eLeft))key_dir.x = 1;
+	if (HOLD(CInput::eRight))key_dir.x = -1;
+	if (key_dir.LengthSq() > 0) {
+		CVector3D dir = CMatrix::MRotationY(m_rot.y).GetFront();
+		m_rot.y = Utility::NormalizeAngle(c_rot.y + atan2(key_dir.x, key_dir.z));
+		//if (OnGround == true) {
+			state = Walk;
+			m_pos += dir * debug_speed;
+			m_model.ChangeAnimation(1);
+	}
+	else {
+		if (OnGround == true) {
+			state = Idle;
+			m_model.ChangeAnimation(0);
+		}
+	}
+	if (HOLD(CInput::eSpace)) {
+		m_pos.y += 0.5f;
+	}
+	if (HOLD(CInput::eShift)) {
+		m_pos.y -= 0.5f;
+	}
+	//	space_count = 0;
+	//}
+	//飛ぶ処理
+	//if (HOLD(CInput::eButton5/*space*/)) {
+	//	if (space_count == 10) {
+	//		if (PublicNum::LightFeather_Count > 0) {
+	//			//if(OnGround == true)
+	//			m_vec.y = FLY;
+	//			state = Fly;
+	//			m_model.ChangeAnimation(2);
+	//			PublicNum::LightFeather_Count--;
+	//		}
+	//	}
+	//	space_count++;
+	//}
+	//ジャンプ処理
+	//if (PULL(CInput::eButton5/*space*/)) {
+	//	if (space_count < 10 && state != Jump && state != Fly) {
+	//		state = Jump;
+	//		m_model.ChangeAnimation(2);//ジャンプアニメーション
+	//		m_vec.y = JUMP;
+	//	}
+	//};
+	//m_rot.y = c_rot.y;
+	m_pos.y += m_vec.y;
+	//m_pos += m_vec;
+	//m_vec.y -= GRAVITY; 
+	}
+}
 void Player::FeatherDraw() {
 	//現在のカメラをコピー
 	CCamera back = *CCamera::GetCurrent();
@@ -225,6 +292,16 @@ void Player::FeatherDraw() {
 	}
 	//カメラを元の状態に戻す
 	*CCamera::GetCurrent() = back;
+}
+bool Player::MapChangeCheck() {
+	switch (PublicNum::Stage_Num) {
+	case PublicNum::StageNum::SkyIsland:
+		if (m_pos.x>-120.0f&&m_pos.x < -107.3f && m_pos.y > 29.0f && m_pos.y < 40.0f && m_pos.z < 11.0f && 5.0f < m_pos.z) {
+			return true;
+		}
+		break;
+	}
+	return false;
 }
 CModel* Player::GetModel() {
 	return  &m_model;

@@ -1,12 +1,13 @@
 #pragma once
-class UI :public Task {
+class Whiteout :public Task {
 private:
-    bool Whiteout_Flag = false;
-    int Whiteout_Timer = 30;
+    int White_count = 0;
+    const int MaxWhite_count = 120;
 public:
-    UI();
+    Whiteout();
     void Update();
     void Render();
+    void Whiteout();
     CVector4D Whiteout_ColorSet();
 };
 
