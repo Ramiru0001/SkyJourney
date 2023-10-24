@@ -10,7 +10,10 @@ private:
 	/// <summary>
 	/// 進捗を数字で管理。タイトル＝0。最初のステージ＝１
 	/// </summary>
+	int Whiteout_count;
+	bool Whiteout_flag_old=false;
 	int prog_num;
+	bool TimerOn;
 public:
 	Progress();
 	int GetProgNum();
@@ -20,4 +23,8 @@ public:
 	/// ステージリストのアイテムをすべて破棄して、変更後の進捗のアイテムを追加
 	/// </summary>
 	void ProgressChange(int Progress);
+	//ステージチェンジのタイマー。チェンジする時にtrue
+	void TimerStart();
+	bool StageChangeTimer(bool);
+	//bool WhiteoutFinishTrigger();
 };

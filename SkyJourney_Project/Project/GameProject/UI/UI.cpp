@@ -1,10 +1,13 @@
 #include "UI.h"
 Whiteout::Whiteout():Task(ETaskPrio::eUI, EType::eUI) {
+	White_count = 0;
+	MaxWhite_count = PublicNum::MaxWhite_Count;
 }
 void Whiteout::Render() {
 	if (PublicNum::Whiteout_flag == true) {
 		Utility::DrawQuad(CVector2D(0, 0), CVector2D(SCREEN_WIDTH, SCREEN_HEIGHT), Whiteout_ColorSet());
 	}
+	std::cout << "ホワイトアウト描画" << std::endl;
 }
 void Whiteout::Update() {
 	if (White_count <= MaxWhite_count) {
@@ -13,9 +16,7 @@ void Whiteout::Update() {
 	else {
 		White_count = 0;
 		PublicNum::Whiteout_flag = false;
-	}
-	if (White_count == MaxWhite_count / 2) {
-		PublicNum::Stage_Change = true;
+		Task::SetKill();
 	}
 }
 CVector4D Whiteout::Whiteout_ColorSet() {

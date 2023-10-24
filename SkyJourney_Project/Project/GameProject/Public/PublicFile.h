@@ -26,9 +26,15 @@ public:
 	static int Feather_Count;//総羽の数
 	static int LightFeather_Count;//使える羽の数
 	static int Stage_Num;//現在のステージnumber
+	static int MaxWhite_Count;//ホワイトアウトの時間
 	static CVector3D Player_pos;
 	static CVector3D Camera_rot;
 };
 class PublicFunction {
 public:
+	/// <summary>
+	/// 以前の値と今の値を比べて増えていたらtrue。それ以外はfalse
+	/// </summary>
+	/// <returns></returns>
+	static bool Observer(int old,int now);
 };

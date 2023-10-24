@@ -6,8 +6,13 @@ Progress::Progress():Task(ETaskPrio::eSystem, EType::eDefault) {
 	prog_num = ProgressNum::Tytle;
 }
 void Progress::Update() {
-	if (PublicNum::Whiteout_flag) {
-		Whiteout* WhiteoutInstance = new Whiteout;
+	if (PublicFunction::Observer(Whiteout_flag_old,PublicNum::Whiteout_flag)) {
+		Task::Add(new Whiteout);
+		TimerStart();
+	}
+	Whiteout_flag_old = PublicNum::Whiteout_flag;
+	PublicNum::Stage_Change=StageChangeTimer(TimerOn);
+	if (StageChangeTimer(TimerOn)) {
 		PublicNum::Whiteout_flag = false;
 	}
 	//進捗を変えるトリガー
@@ -45,6 +50,7 @@ void Progress::ProgressChange(int Progress) {
 		Task::AddStage(new Title());
 		break;
 	case ProgressNum::SkyIsland:
+		std::cout << "召喚！" << std::endl;
 		//カメラがない場合、召喚
 		if (PublicNum::Camera_On == false) {
 			Task::Add(new Camera());
@@ -62,6 +68,7 @@ void Progress::ProgressChange(int Progress) {
 		}
 		break;
 	case ProgressNum::Desert:
+		std::cout << "召喚！" << std::endl;
 		if (PublicNum::Camera_On == false) {
 			Task::Add(new Camera());
 		}
@@ -81,4 +88,16 @@ void Progress::ProgressChange(int Progress) {
 }
 int Progress::GetProgNum() {
 	return prog_num;
+}
+void Progress::TimerStart() {
+	TimerOn = true;
+	Whiteout_count = 0;
+}
+bool Progress::StageChangeTimer(bool Timer_flag) {
+	if (!Timer_flag)return false;
+	Whiteout_count++;
+	if (Whiteout_count == PublicNum::MaxWhite_Count / 2) {
+		return true;
+	}
+	return false;
 }

@@ -1,12 +1,12 @@
 #include "Task.h"
 std::list<Task*> Task::m_TaskList;
 std::list<Task*> Task::m_StageTaskList;
-Task::Task(ETaskPrio prio,EType type):m_prio(prio),m_type(type) {
+Task::Task(ETaskPrio prio, EType type) :m_prio(prio), m_type(type) {
 
 }
 void Task::Add(Task* a) {
 	auto itr = m_TaskList.begin();
-	while (itr != m_TaskList.end()){
+	while (itr != m_TaskList.end()) {
 		if ((*itr)->GetPrio() >= a->GetPrio()) {
 			m_TaskList.insert(itr, a);
 			return;
@@ -26,29 +26,51 @@ void Task::AddStage(Task* a) {
 	}
 	m_StageTaskList.push_front(a);
 }
-void Task::Render(){}
-void Task::Update(){}
-void Task::Collision(Task* a){
+void Task::Render() {}
+void Task::Update() {}
+void Task::Collision(Task* a) {
 
 }
 void Task::SetKill() {
 	m_kill = true;
 }
 void Task::RenderAll() {
-	for (auto& b : m_TaskList){
+	auto itr = m_TaskList.begin();
+	auto Stageitr = m_StageTaskList.begin();
+	while (itr != m_TaskList.end()) {
+		while(Stageitr != m_StageTaskList.end()) {
+			if((*itr)->GetPrio() >= (*Stageitr)->GetPrio()) {
+				(*Stageitr)->Render();
+				Stageitr++;
+			}
+			else if ((*itr)->GetPrio() <= (*Stageitr)->GetPrio()) {
+				(*itr)->Render();
+				itr++;
+			}
+		}
+	}
+	while (itr != m_TaskList.end()) {
+		(*itr)->Render();
+		itr++;
+	}
+	while (Stageitr != m_StageTaskList.end()) {
+		(*Stageitr)->Render();
+		Stageitr++;
+	}
+
+	/*for (auto& b : m_TaskList){
 		b->Render();
 	}for (auto& b : m_StageTaskList) {
 		b->Render();
-	}
+	}*/
 }
-void Task::UpdateAll(){
+void Task::UpdateAll() {
 	for (auto& b : m_TaskList) {
 		b->Update();
 	}
 	for (auto& b : m_StageTaskList) {
 		b->Update();
 	}
-	//std::cout << Task::m_TaskList.size() << std::endl;
 }
 void Task::CollisionAll() {
 	auto itr = m_TaskList.begin();
@@ -119,14 +141,14 @@ void Task::DeleteAll() {
 	//末尾まで繰り返す
 	while (itr != m_TaskList.end()) {
 		//削除チェック
-		if ((*itr)->m_kill==true) {
+		if ((*itr)->m_kill == true) {
 			//if (--(*itr)->m_kill == true) {
 				//削除
-				delete* itr;
-				//リストから除外する
-				//次のオブジェクトを受け取る
-				itr = m_TaskList.erase(itr);
-				continue;
+			delete* itr;
+			//リストから除外する
+			//次のオブジェクトを受け取る
+			itr = m_TaskList.erase(itr);
+			continue;
 			//}
 		}
 		//次のオブジェクト
@@ -150,7 +172,7 @@ void Task::DeleteAll() {
 		itr++;
 	}}
 }
-void Task::DeleteAllStage(){
+void Task::DeleteAllStage() {
 	auto itr = m_StageTaskList.begin();
 	//末尾まで繰り返す
 	while (itr != m_StageTaskList.end()) {
