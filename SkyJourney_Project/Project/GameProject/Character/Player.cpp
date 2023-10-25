@@ -41,26 +41,14 @@ void Player::Render() {
 	glEnable(GL_CULL_FACE);
 }
 void Player::Update() {
-	if (PublicNum::log_passage == true) {
-		if (OnGround == true) {
-			std::cout << "UOnGround" << std::endl;
-		}
-		else {
-			std::cout << "UOffGround" << std::endl;
-		}
-		if (PublicNum::log_passage == true) {
-			std::cout << "PlayerUpdate" << std::endl;
-		}
+	if (PublicNum::log_pos == true) {
+		std::cout << "playerUpdate" << std::endl;
 	}
 	PublicNum::Player_pos = m_pos;
 	if (MapChangeCheck()) {
 		PublicNum::Whiteout_flag = true;
 	}
 	if (PublicNum::Stage_Change == false) {
-		//プレイヤーの移動処理
-		if (PublicNum::log_passage == true) {
-			std::cout << "Moving" << std::endl;
-		}
 		if (PublicNum::Debug_mode) {
 			DebugMove();
 		}
@@ -69,7 +57,7 @@ void Player::Update() {
 		}
 	}
 	else {
-		std::cout << "StageChange!" << std::endl;
+		std::cout << "posChange" <<std::endl;
 		m_pos = Stage_Pos[PublicNum::Stage_Num];
 	}
 	if (PublicNum::log_pos == true) {
@@ -93,33 +81,23 @@ void Player::FeatherSetPos(int Count, int LightCount) {
 	}
 }
 void Player::Collision(Task* a) {
-	if (PublicNum::log_passage == true) {
-		std::cout << "PlayerCollision" << std::endl;
-	}
-	//押し戻し量
 	CVector3D v(0, 0, 0);
 	switch (a->GetType()) {
 	case EType::eField:
 	{
 		OnGround = false;
-		if (PublicNum::log_passage == true) {
-			std::cout << "PlayerCollisionField" << std::endl;
-			std::cout << "OnGroundfalse;初期化" << std::endl;
-		}
 		auto tri = a->GetModel()->CollisionSphere(m_pos + CVector3D(0, m_rad, 0), m_rad);
-		//接触した面の数繰り返す
 		for (auto& t : tri) {
-			//std::cout << "プレイヤーとフィールドの距離：" << t.m_normal.y << std::endl;
 			if (t.m_normal.y < -0.5f) {
 				if (m_vec.y > 0) {
 					m_vec.y = 0;
 				}
 			}
 			else if (t.m_normal.y > 0.5f) {
-				OnGround = true; 
+				OnGround = true; /*
 				if (PublicNum::log_passage == true) {
 					std::cout << "OnGround" << std::endl;
-				}
+				}*/
 				if (m_vec.y < 0)m_vec.y = 0;
 			}
 			float max_y = max(t.m_vertex[0].y, max(t.m_vertex[1].y, t.m_vertex[2].y));
@@ -137,9 +115,6 @@ void Player::Collision(Task* a) {
 	//std::cout << "OffGround1" << std::endl;
 		break;
 	case EType::eEnemy:
-		if (PublicNum::log_passage == true) {
-			std::cout << "PlayerCollisionEnemy" << std::endl;
-		}
 		if ((a->m_pos - m_pos).Length() < a->m_rad + m_rad) {
 			CVector3D PEVec = a->m_pos - m_pos;
 			m_pos += PEVec.GetNormalize() * 0.5f* move_speed;
@@ -147,9 +122,6 @@ void Player::Collision(Task* a) {
 		}
 		break;
 	case EType::eObject:
-		if (PublicNum::log_passage == true) {
-			std::cout << "PlayerCollisionObject" << std::endl;
-		}
 		if (a->GetCollision() == true) {
 			if ((a->m_pos - m_pos).Length() < a->m_rad + m_rad) {
 				CVector3D PEVec = a->m_pos - m_pos;
@@ -158,9 +130,6 @@ void Player::Collision(Task* a) {
 		}
 		break;
 	default:
-		if (PublicNum::log_passage == true) {
-		std::cout << "PlayerCollisionDefault" << std::endl;
-	}
 		break;
 	}
 }
@@ -287,9 +256,9 @@ void Player::FeatherDraw() {
 	//羽の表示
 	FeatherSetPos(PublicNum::Feather_Count, PublicNum::LightFeather_Count);
 	texture_frame_rader->EndDraw();
-	if (PublicNum::log_passage == true) {
+	/*if (PublicNum::log_passage == true) {
 		std::cout << "羽の数" << PublicNum::Feather_Count << " : " << PublicNum::LightFeather_Count << std::endl;
-	}
+	}*/
 	//カメラを元の状態に戻す
 	*CCamera::GetCurrent() = back;
 }

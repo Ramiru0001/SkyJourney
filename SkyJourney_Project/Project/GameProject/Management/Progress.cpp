@@ -6,15 +6,14 @@ Progress::Progress():Task(ETaskPrio::eSystem, EType::eDefault) {
 	prog_num = ProgressNum::Tytle;
 }
 void Progress::Update() {
+	//std::cout << "Update" << std::endl;
 	if (PublicFunction::Observer(Whiteout_flag_old,PublicNum::Whiteout_flag)) {
 		Task::Add(new Whiteout);
 		TimerStart();
+		std::cout << "TimeStart" << std::endl;
 	}
 	Whiteout_flag_old = PublicNum::Whiteout_flag;
 	PublicNum::Stage_Change=StageChangeTimer(TimerOn);
-	if (StageChangeTimer(TimerOn)) {
-		PublicNum::Whiteout_flag = false;
-	}
 	//進捗を変えるトリガー
 	switch (prog_num) {
 	case ProgressNum::Tytle:
@@ -43,6 +42,7 @@ void Progress::Update() {
 }
 void Progress::ProgressChange(int Progress) {
 	//ステージリストのアイテムをすべて破棄して、変更後の進捗のアイテムを追加
+	std::cout << "ProgressChange" << std::endl;
 	Task::DeleteAllStage();
 	switch (Progress) {
 	case ProgressNum::Tytle:
@@ -50,7 +50,7 @@ void Progress::ProgressChange(int Progress) {
 		Task::AddStage(new Title());
 		break;
 	case ProgressNum::SkyIsland:
-		std::cout << "召喚！" << std::endl;
+		std::cout << "SkyIsland召喚！" << std::endl;
 		//カメラがない場合、召喚
 		if (PublicNum::Camera_On == false) {
 			Task::Add(new Camera());
@@ -68,7 +68,7 @@ void Progress::ProgressChange(int Progress) {
 		}
 		break;
 	case ProgressNum::Desert:
-		std::cout << "召喚！" << std::endl;
+		std::cout << "Desert召喚！" << std::endl;
 		if (PublicNum::Camera_On == false) {
 			Task::Add(new Camera());
 		}
@@ -83,8 +83,6 @@ void Progress::ProgressChange(int Progress) {
 		}
 		break;
 	}
-	//ステージ変更フラグをオフにする。
-	PublicNum::Stage_Change = false;
 }
 int Progress::GetProgNum() {
 	return prog_num;

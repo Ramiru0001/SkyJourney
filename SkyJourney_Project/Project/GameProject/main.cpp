@@ -102,7 +102,7 @@ void Init(void)
 	//-----------------------------------------------------
 	PublicNum::c_mode = PublicNum::WithPlayer;
 	PublicNum::log_passage = false;
-	PublicNum::log_pos = true;
+	PublicNum::log_pos = false;
 	if (PublicNum::log_passage == true) {
 		std::cout << std::endl << "Init" << std::endl;
 	}

@@ -7,9 +7,9 @@ SkyIsland::SkyIsland():Task(ETaskPrio::eField, EType::eField) {
 	m_Sky = COPY_RESOURCE("Sky", CModelObj);
 }
 void SkyIsland::Render() {
-	if (PublicNum::log_passage == true) {
+	/*if (PublicNum::log_passage == true) {
 		std::cout << "FieldRender" << std::endl;
-	}
+	}*/
 	m_Sky.SetScale(800.0f, 800.0f, 800.0f);
 	m_Field.SetScale(0.25f, 0.25f, 0.25f);
 	m_Sky.SetPos(0, -30, 0);

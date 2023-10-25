@@ -32,15 +32,11 @@ bool Feather::GetCollision() {
 	return m_collision;
 }
 void Feather::Collision(Task* a) {
-	if (PublicNum::log_passage == true) {
+	/*if (PublicNum::log_passage == true) {
 		std::cout << "FeatherCollision" << std::endl;
-	}
+	}*/
 	switch (a->GetType()) {
 	case EType::ePlayer:
-		if (PublicNum::log_passage == true) {
-			std::cout << "FeatherPlayerCollision" << std::endl;
-			//std::cout << "playerpos"<< << std::endl;
-		}
 		if ((a->m_pos - m_pos).Length() < a->m_rad + m_rad) {
 			m_featherCount++;
 			SetKill();
@@ -83,9 +79,9 @@ bool Candle::GetCollision() {
 	return m_collision;
 }
 void Candle::Collision(Task* a) {
-	if (PublicNum::log_passage == true) {
+	/*if (PublicNum::log_passage == true) {
 		std::cout << "CandleCollision" << std::endl;
-	}
+	}*/
 	switch (a->GetType()) {
 	case EType::ePlayer:
 		if ((a->m_pos - m_pos).Length() < a->m_rad + m_rad+0.5f) {
