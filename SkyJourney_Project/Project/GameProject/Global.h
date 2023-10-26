@@ -10,6 +10,7 @@
 #include "Public/PublicFile.h"
 #include "Game/Field.h"
 #include "Game/Object.h"
+#include "Game/SkyBox.h"
 #include "Character/Player.h"
 #include "Camera/Camera.h"
 #include "Title/Title.h"

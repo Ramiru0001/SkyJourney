@@ -38,6 +38,9 @@
     <ClInclude Include="Character\Whale.h">
       <Filter>Character</Filter>
     </ClInclude>
+    <ClInclude Include="Game\SkyBox.h">
+      <Filter>Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -76,6 +79,9 @@
     </ClCompile>
     <ClCompile Include="Character\Whale.cpp">
       <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\SkyBox.cpp">
+      <Filter>Game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

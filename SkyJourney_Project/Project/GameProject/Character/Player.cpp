@@ -19,7 +19,7 @@ Player::Player(CVector3D &pos):Task(ETaskPrio::ePlayer, EType::ePlayer){
 	texture_frame_rader = new CTextureFrame(512, 512, CVector4D(1, 0, 0, 1)/*マントを赤に塗りつぶし*/);
 	//レンダーターゲットのテクスチャーと差し替え
 	m_model.GetMaterial(12)->mp_texture = texture_frame_rader->GetTexture();
-	std::cout << "座標ss：" << Stage_Pos[0].x << "," << Stage_Pos[0].y << "," << Stage_Pos[0].z << std::endl;
+	//std::cout << "座標ss：" << Stage_Pos[0].x << "," << Stage_Pos[0].y << "," << Stage_Pos[0].z << std::endl;
 }
 Player::~Player() {
 	PublicNum::Player_On = false;
@@ -256,9 +256,6 @@ void Player::FeatherDraw() {
 	//羽の表示
 	FeatherSetPos(PublicNum::Feather_Count, PublicNum::LightFeather_Count);
 	texture_frame_rader->EndDraw();
-	/*if (PublicNum::log_passage == true) {
-		std::cout << "羽の数" << PublicNum::Feather_Count << " : " << PublicNum::LightFeather_Count << std::endl;
-	}*/
 	//カメラを元の状態に戻す
 	*CCamera::GetCurrent() = back;
 }

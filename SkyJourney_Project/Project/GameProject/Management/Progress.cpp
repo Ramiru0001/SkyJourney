@@ -6,6 +6,7 @@ Progress::Progress():Task(ETaskPrio::eSystem, EType::eDefault) {
 	prog_num = ProgressNum::Tytle;
 }
 void Progress::Update() {
+
 	//std::cout << "Update" << std::endl;
 	if (PublicFunction::Observer(Whiteout_flag_old,PublicNum::Whiteout_flag)) {
 		Task::Add(new Whiteout);
@@ -59,6 +60,7 @@ void Progress::ProgressChange(int Progress) {
 		if (PublicNum::Player_On == false) {
 			Task::Add(new Player(CVector3D(88.5f, 1.7f, 4.37f)));
 		}
+		Task::Add(new SkyBox());
 		Task::AddStage(new Whiteout());
 		{
 			//SkyIslandStageのコンストラクタを呼んでstageタスクリストに追加

@@ -16,6 +16,7 @@
     <ClInclude Include="Character\Whale.h" />
     <ClInclude Include="Game\Field.h" />
     <ClInclude Include="Game\Object.h" />
+    <ClInclude Include="Game\SkyBox.h" />
     <ClInclude Include="Global.h" />
     <ClInclude Include="Management\Progress.h" />
     <ClInclude Include="Management\Task.h" />
@@ -31,6 +32,7 @@
     <ClCompile Include="Character\Whale.cpp" />
     <ClCompile Include="Game\Field.cpp" />
     <ClCompile Include="Game\Object.cpp" />
+    <ClCompile Include="Game\SkyBox.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Management\Progress.cpp" />
     <ClCompile Include="Management\Task.cpp" />

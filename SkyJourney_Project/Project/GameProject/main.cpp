@@ -14,6 +14,7 @@ void MainLoop(void) {
 	Task::UpdateAll(); 
 	Task::CollisionAll();
 	Task::RenderAll();
+
 }
 void Init(void)
 {
@@ -115,6 +116,7 @@ void Init(void)
 	ADD_RESOURCE("Mant_DesignL", CImage::CreateImage("Character/MantFeather01.png"));
 	ADD_RESOURCE("Mant_DesignD", CImage::CreateImage("Character/MantFeatherBlack.png"));
 	ADD_RESOURCE("Whale", CModel::CreateModel("Character/whale/whale.a3m"));
+	ADD_RESOURCE("SkyBox", CModel::CreateModel("Field/SkyBox.obj"));
 	Task::Add(new Progress());
 	if (PublicNum::log_passage == true) {
 		std::cout << "Initfin" << std::endl;
