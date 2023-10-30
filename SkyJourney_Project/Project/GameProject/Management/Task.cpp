@@ -164,6 +164,18 @@ void Task::DeleteAllStage() {
 		itr++;
 	}
 }
+void Task::AddFeathers(CVector3D FeatherPos[]) {
+	int PosCount = sizeof(FeatherPos);
+	for (int i = 0; i < PosCount; i++) {
+		Task::AddStage(new Feather(FeatherPos[i]));
+	}
+}
+void Task::AddCandles(CVector3D CandlePos[],float rotY[]) {
+	int PosCount = sizeof(CandlePos);
+	for (int i = 0; i < PosCount; i++) {
+		Task::AddStage(new Candle(CandlePos[i],rotY[i]));
+	}
+}
 bool Task::CheckKill() {
 	if (m_kill = true) {
 		return true;

@@ -41,9 +41,6 @@ void Player::Render() {
 	glEnable(GL_CULL_FACE);
 }
 void Player::Update() {
-	if (PublicNum::log_pos == true) {
-		std::cout << "playerUpdate" << std::endl;
-	}
 	PublicNum::Player_pos = m_pos;
 	if (MapChangeCheck()) {
 		PublicNum::Whiteout_flag = true;
@@ -57,11 +54,11 @@ void Player::Update() {
 		}
 	}
 	else {
-		std::cout << "posChange" <<std::endl;
 		m_pos = Stage_Pos[PublicNum::Stage_Num];
 	}
 	if (PublicNum::log_pos == true) {
-		std::cout << "座標：" << m_pos.x << "," << m_pos.y << "," << m_pos.z << std::endl;
+		std::cout << "座標：" << m_pos.x << "," << m_pos.y << "," << m_pos.z << std::endl; 
+		std::cout << "m_rot.y : " << m_rot.y << std::endl;
 	}
 }
 void Player::FeatherSetPos(int Count, int LightCount) {
@@ -263,6 +260,11 @@ bool Player::MapChangeCheck() {
 	switch (PublicNum::Stage_Num) {
 	case PublicNum::StageNum::SkyIsland:
 		if (m_pos.x>-120.0f&&m_pos.x < -107.3f && m_pos.y > 29.0f && m_pos.y < 40.0f && m_pos.z < 11.0f && 5.0f < m_pos.z) {
+			return true;
+		}
+		break;
+	case PublicNum::StageNum::Desert:
+		if (m_pos.z<8.6 && m_pos.z>-17.0 && m_pos.y > 1.7 && m_pos.y < 57.2 && m_pos.x < -313&& m_pos.x > -323) {
 			return true;
 		}
 		break;

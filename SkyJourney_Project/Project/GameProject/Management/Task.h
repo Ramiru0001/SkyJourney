@@ -60,6 +60,8 @@ public:
 	/// </summary>
 	/// <param name="a"></param>
 	static void AddStage(Task* a);
+	static void AddFeathers(CVector3D[]);
+	static void AddCandles(CVector3D[],float[]);
 	/// <summary>
 	/// íœƒtƒ‰ƒOtrue
 	/// </summary>

@@ -101,18 +101,12 @@ void Init(void)
 	//‰Šú‰»‚Ì–½—ß‚ğ‘‚­
 	//ƒQ[ƒ€‹N“®‚Éˆê“x‚¾‚¯ŒÄ‚Î‚ê‚é
 	//-----------------------------------------------------
-	PublicNum::c_mode = PublicNum::WithPlayer;
-	PublicNum::log_passage = false;
-	PublicNum::log_pos = false;
-	if (PublicNum::log_passage == true) {
-		std::cout << std::endl << "Init" << std::endl;
-	}
 	ADD_RESOURCE("SkyIsland", CModel::CreateModel("Field/IslandPlusTemple.obj", 10, 3, 5));;
 	ADD_RESOURCE("Desert", CModel::CreateModel("Field/Desert.obj", 10, 5, 5));
 	ADD_RESOURCE("Sky", CModel::CreateModel("Field/SkyBox.obj"));
 	ADD_RESOURCE("Player", CModel::CreateModel("Character/PlayerA1005.a3m"));
 	ADD_RESOURCE("Feather", CModel::CreateModel("Item/star.obj"));
-	ADD_RESOURCE("Glass1", CModel::CreateModel("Item/Glass/square05.obj"));
+	ADD_RESOURCE("Glass1", CModel::CreateModel("Item/Glass/square06.obj"));
 	ADD_RESOURCE("Mant_DesignL", CImage::CreateImage("Character/MantFeather01.png"));
 	ADD_RESOURCE("Mant_DesignD", CImage::CreateImage("Character/MantFeatherBlack.png"));
 	ADD_RESOURCE("Whale", CModel::CreateModel("Character/whale/whale.a3m"));
