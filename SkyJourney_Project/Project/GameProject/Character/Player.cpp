@@ -25,9 +25,6 @@ Player::~Player() {
 	PublicNum::Player_On = false;
 }
 void Player::Render() {
-	if (PublicNum::log_passage == true) {
-		std::cout << "PlayerRender" << std::endl;
-	}
 	//マントへ羽を描画
 	FeatherDraw();
 	//プレイヤーモデルの描画
@@ -58,7 +55,6 @@ void Player::Update() {
 	}
 	if (PublicNum::log_pos == true) {
 		std::cout << "座標：" << m_pos.x << "," << m_pos.y << "," << m_pos.z << std::endl; 
-		std::cout << "m_rot.y : " << m_rot.y << std::endl;
 	}
 }
 void Player::FeatherSetPos(int Count, int LightCount) {

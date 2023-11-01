@@ -12,12 +12,12 @@ void SkyBox::Render() {
 	CCamera c = *back;
 	CMatrix matrix = c.GetViewMatrix();
 	matrix.m03 = 0;
-	matrix.m13 = 0;
+	matrix.m13 = -30;
 	matrix.m23 = 0;
 	c.SetViewMatrix(matrix);
 	c.SetProjectionMatrix(back->GetProjectionMatrix());
 	CCamera::SetCurrent(&c);
-	//SkyBox_model.Render();
+	SkyBox_model.Render();
 	CLight::SetLighting(true);
 	CCamera::SetCurrent(back);
 	glEnable(GL_DEPTH_TEST);

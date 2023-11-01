@@ -1,5 +1,5 @@
 #pragma once
-enum class ETaskPrio   {
+enum class ETaskPrio : int {
 	eSystem,
 	eSky,
 	eField,

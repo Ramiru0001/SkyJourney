@@ -13,7 +13,7 @@ void Task::Add(Task* a) {
 		}
 		itr++;
 	}
-	m_TaskList.push_front(a);
+	m_TaskList.push_back(a);
 }
 void Task::AddStage(Task* a) {
 	auto itr = m_StageTaskList.begin();
@@ -24,7 +24,7 @@ void Task::AddStage(Task* a) {
 		}
 		itr++;
 	}
-	m_StageTaskList.push_front(a);
+	m_StageTaskList.push_back(a);
 }
 void Task::Render() {}
 void Task::Update() {}
@@ -55,6 +55,14 @@ void Task::RenderAll() {
 	while (Stageitr != m_StageTaskList.end()) {
 		(*Stageitr)->Render();
 		Stageitr++;
+	}
+	std::cout << std::endl<<"m_TaskList : " ;
+	for (auto itr : m_TaskList) {
+		std::cout << int(itr->GetPrio())<<",";
+	}
+	std::cout << std::endl << "m_StageTaskList : ";
+	for (auto itr : m_StageTaskList) {
+		std::cout << int(itr->GetPrio()) << ",";
 	}
 }
 void Task::UpdateAll() {

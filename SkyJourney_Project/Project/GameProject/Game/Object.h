@@ -20,8 +20,9 @@ private:
 	int recovery_count = 0;//‰H‰ñ•œ‚Ì‚½‚ß‚ÌƒJƒEƒ“ƒg
 public:
 	CModelObj candle_model;
+	CModelObj fire_model;
 public:
-	Candle(CVector3D& pos, float rotY);
+	Candle(CVector3D& pos);
 	~Candle();
 	void Render();
 	void Update();
