@@ -4,6 +4,7 @@
 Progress::Progress():Task(ETaskPrio::eSystem, EType::eDefault) {
 	ProgressChange(prog_num = ProgressNum::Tytle);
 	prog_num = ProgressNum::Tytle;
+	Task::Add(new UI);
 }
 void Progress::Update() {
 	if (PublicFunction::Observer(Whiteout_flag_old,PublicNum::Whiteout_flag)) {

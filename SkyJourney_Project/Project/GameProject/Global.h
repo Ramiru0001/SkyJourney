@@ -5,6 +5,7 @@
 #include <list>
 #include <algorithm>
 #include <iostream>
+#include <math.h>
 #include "Management/Task.h"
 #include "Management/Progress.h"
 #include "Public/PublicFile.h"
@@ -14,7 +15,8 @@
 #include "Character/Player.h"
 #include "Camera/Camera.h"
 #include "Title/Title.h"
-#include "UI/UI.h"
+#include "System/UI.h"
+#include "System/Effect.h"
 #define GRAVITY (0.01f)
 #define JUMP (0.2f)
 #define FLY (0.4f)

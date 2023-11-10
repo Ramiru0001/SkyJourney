@@ -27,6 +27,8 @@ public:
 	static int LightFeather_Count;//使える羽の数
 	static int Stage_Num;//現在のステージnumber
 	static int MaxWhite_Count;//ホワイトアウトの時間
+	static int FeatherDetail_Count;//羽の詳細な数字
+	static int FeatherDetail_CountMax;//羽の詳細な数字の最大値
 	static CVector3D Player_pos;
 	static CVector3D Camera_rot;
 };

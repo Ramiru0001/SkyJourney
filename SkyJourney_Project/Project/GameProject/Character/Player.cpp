@@ -57,7 +57,7 @@ void Player::Update() {
 		std::cout << "座標：" << m_pos.x << "," << m_pos.y << "," << m_pos.z << std::endl; 
 	}
 }
-void Player::FeatherSetPos(int Count, int LightCount) {
+void Player::FeatherSetDraw(int Count, int LightCount) {
 	CVector2D pos[] = { CVector2D(226, 370) ,CVector2D(226, 290) ,CVector2D(226, 210) ,CVector2D(226, 130), CVector2D(226, 50) };
 	for (int i = 0; i < 5; i++) {
 		if (LightCount > i) {
@@ -247,7 +247,7 @@ void Player::FeatherDraw() {
 	CCamera::GetCamera()->SetSize(texture_frame_rader->GetWidth(), texture_frame_rader->GetHeight());
 	texture_frame_rader->BeginDraw();
 	//羽の表示
-	FeatherSetPos(PublicNum::Feather_Count, PublicNum::LightFeather_Count);
+	FeatherSetDraw(PublicNum::Feather_Count, PublicNum::LightFeather_Count);
 	texture_frame_rader->EndDraw();
 	//カメラを元の状態に戻す
 	*CCamera::GetCurrent() = back;

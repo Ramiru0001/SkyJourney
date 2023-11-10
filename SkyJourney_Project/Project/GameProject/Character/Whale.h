@@ -5,5 +5,7 @@ public:
 	Whale(CVector3D& pos);
 	void Update();
 	void Render();
+	void Search();
+	void Move();
 };
 

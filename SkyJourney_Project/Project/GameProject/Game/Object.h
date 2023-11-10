@@ -16,8 +16,6 @@ public:
 	void Collision(Task* a);
 };
 class Candle :public Task {
-private:
-	int recovery_count = 0;//‰H‰ñ•œ‚Ì‚½‚ß‚ÌƒJƒEƒ“ƒg
 public:
 	CModelObj candle_model;
 	CModelObj fire_model;

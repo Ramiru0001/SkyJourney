@@ -56,14 +56,6 @@ void Task::RenderAll() {
 		(*Stageitr)->Render();
 		Stageitr++;
 	}
-	std::cout << std::endl<<"m_TaskList : " ;
-	for (auto itr : m_TaskList) {
-		std::cout << int(itr->GetPrio())<<",";
-	}
-	std::cout << std::endl << "m_StageTaskList : ";
-	for (auto itr : m_StageTaskList) {
-		std::cout << int(itr->GetPrio()) << ",";
-	}
 }
 void Task::UpdateAll() {
 	for (auto& b : m_TaskList) {
@@ -178,10 +170,10 @@ void Task::AddFeathers(CVector3D FeatherPos[]) {
 		Task::AddStage(new Feather(FeatherPos[i]));
 	}
 }
-void Task::AddCandles(CVector3D CandlePos[],float rotY[]) {
+void Task::AddCandles(CVector3D CandlePos[]) {
 	int PosCount = sizeof(CandlePos);
 	for (int i = 0; i < PosCount; i++) {
-		Task::AddStage(new Candle(CandlePos[i],rotY[i]));
+		Task::AddStage(new Candle(CandlePos[i]));
 	}
 }
 bool Task::CheckKill() {

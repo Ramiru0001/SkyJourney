@@ -34,6 +34,9 @@ void Feather::Collision(Task* a) {
 			SetKill();
 			PublicNum::Feather_Count++;
 			PublicNum::LightFeather_Count = PublicNum::Feather_Count;
+			if (PublicNum::FeatherDetail_Count != 0) {
+				PublicNum::FeatherDetail_Count = 0;
+			}
 		}
 		break;
 	}
@@ -69,11 +72,11 @@ bool Candle::GetCollision() {
 void Candle::Collision(Task* a) {
 	switch (a->GetType()) {
 	case EType::ePlayer:
-		if ((a->m_pos - m_pos).Length() < a->m_rad + m_rad+0.5f) {
-			recovery_count++;
-			if (recovery_count > 60 && PublicNum::Feather_Count>PublicNum::LightFeather_Count) {
+		if ((a->m_pos - m_pos).Length() < a->m_rad + m_rad+0.5f && PublicNum::Feather_Count > PublicNum::LightFeather_Count) {
+			PublicNum::FeatherDetail_Count+= PublicNum::FeatherDetail_CountMax/60;
+			if (PublicNum::FeatherDetail_Count > PublicNum::FeatherDetail_CountMax && PublicNum::Feather_Count>PublicNum::LightFeather_Count) {
+				PublicNum::FeatherDetail_Count = 0;
 				PublicNum::LightFeather_Count++;
-				recovery_count = 0;
 			}
 		}
 		break;

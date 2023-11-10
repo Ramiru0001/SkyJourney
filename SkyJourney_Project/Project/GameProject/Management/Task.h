@@ -10,7 +10,9 @@ enum class ETaskPrio : int {
 	ePlayer,
 	eEnemy,
 	eCamera,
+	eEffectUnderUI,
 	eUI,
+	eEffect,
 };
 class Task {
 private:
@@ -33,7 +35,9 @@ public:
 		ePlayer,
 		eEnemy,
 		eCamera,
+		eEffectUnderUI,
 		eUI,
+		eEffect,
 	};
 	ETaskPrio m_prio;//タスクの優先度
 	EType m_type;//タスクのタイプ
@@ -61,7 +65,7 @@ public:
 	/// <param name="a"></param>
 	static void AddStage(Task* a);
 	static void AddFeathers(CVector3D[]);
-	static void AddCandles(CVector3D[],float[]);
+	static void AddCandles(CVector3D[]);
 	/// <summary>
 	/// 削除フラグtrue
 	/// </summary>

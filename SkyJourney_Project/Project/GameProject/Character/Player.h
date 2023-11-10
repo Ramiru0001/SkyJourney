@@ -19,9 +19,9 @@ private:
 public:
 	CModelA3M m_model;
 	float debug_speed = 0.5f;
-	float move_speed = 0.13f;
-	float fly_speed = 0.15f;
-	float jump_speed = 0.15f;
+	float move_speed = 0.2f;
+	float fly_speed = 0.25f;
+	float jump_speed = 0.21f;
 public:
 	bool OnGround = true;
 	Player(CVector3D &pos);
@@ -31,7 +31,7 @@ public:
 	/// </summary>
 	/// <param name="Count">‰H‚Ì”</param>
 	/// <param name="LightCount">g—p‚Å‚«‚é‰H‚Ì”</param>
-	void FeatherSetPos(int Count,int LightCount);
+	void FeatherSetDraw(int Count,int LightCount);
 	/// <summary>
 	/// ‰H‚ğƒ}ƒ“ƒg‚É•`‰æ‚·‚éB
 	/// </summary>
