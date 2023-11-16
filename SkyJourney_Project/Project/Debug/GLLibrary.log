@@ -1,9 +1,6 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(516,5): warning MSB8004: Intermediate ディレクトリの末尾がスラッシュではありません。Intermediate ディレクトリが適切に評価されるようにするために、このビルド インスタンスによってスラッシュが追加されます。
 C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: Output ディレクトリの末尾がスラッシュではありません。Output ディレクトリが適切に評価されるようにするために、このビルド インスタンスによってスラッシュが追加されます。
 C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: 中間ディレクトリ (C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\Debug\) に別のプロジェクト (GameProject.vcxproj) と共有されているファイルが含まれています。これにより、クリーンしてリビルド動作が適切に行われない可能性があります。
-  CInput.cpp
-  CModel.cpp
-  CModelA3M.cpp
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GLLibrary\GLLibrary\CModelA3M.cpp(2962,23): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
-  コードを生成中...
+  CShader.cpp
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GLLibrary\GLLibrary\CShader.cpp(353,11): warning C4267: '初期化中': 'size_t' から 'int' に変換しました。データが失われているかもしれません。
   GLLibrary.vcxproj -> C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GLLibrary\Debug\GLLibrary.lib

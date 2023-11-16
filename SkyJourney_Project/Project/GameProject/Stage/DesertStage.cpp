@@ -24,6 +24,7 @@ DesertStage::DesertStage() :Task(ETaskPrio::eSystem, EType::eDefault) {
 	};
 	Task::AddFeathers(FeatherPos);
 	Task::AddCandles(CandlePos);
+	Task::AddStage(new Whale(/*CVector3D (0,0,180)*/));
 }
 /*DesertSgate::~DesertSgate() {
 	//コンストラクタで出したすべてを消す

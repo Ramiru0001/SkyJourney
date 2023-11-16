@@ -13,6 +13,7 @@
 #include "Game/Object.h"
 #include "Game/SkyBox.h"
 #include "Character/Player.h"
+#include "Character/Whale.h"
 #include "Camera/Camera.h"
 #include "Title/Title.h"
 #include "System/UI.h"

@@ -122,6 +122,32 @@ void Player::Collision(Task* a) {
 			}
 		}
 		break;
+	case eCharacter:
+	{
+		auto tri = a->GetModel()->CollisionSphere(m_pos + CVector3D(0, m_rad, 0), m_rad);
+		for (auto& t : tri) {
+			if (t.m_normal.y < -0.5f) {
+				if (m_vec.y > 0) {
+					m_vec.y = 0;
+				}
+			}
+			else if (t.m_normal.y > 0.5f) {
+				if (m_vec.y < 0)m_vec.y = 0;
+			}
+			float max_y = max(t.m_vertex[0].y, max(t.m_vertex[1].y, t.m_vertex[2].y));
+			//‚ß‚èž‚ñ‚¾‚ç‰Ÿ‚µ–ß‚·
+			CVector3D nv = t.m_normal * (m_rad - t.m_dist);
+			//Å‚à‘å‚«‚ÈˆÚ“®—Ê‚ð‹‚ß‚é
+			v.y = fabs(v.y) > fabs(nv.y) ? v.y : nv.y;
+			//zennbu‰Ÿ‚µ–ß‚³‚ê‚é
+			v.x = fabs(v.x) > fabs(nv.x) ? v.x : nv.x;
+			v.z = fabs(v.z) > fabs(nv.z) ? v.z : nv.z;
+		}
+		//‰Ÿ‚µ–ß‚·
+		m_pos += v;
+	}
+	break;
+		break;
 	default:
 		break;
 	}

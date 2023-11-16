@@ -131,7 +131,7 @@ const char *mesh_frag = "#version 430\n\n"\
 "					vec = -vec;\n"\
 "				}\n"\
 "			float NL = dot(N, vec);\n"\
-"			//NL = (NL>0.5) ? 1.0:0;\n"\
+"			NL = (NL>0.5) ? 1.0:0.4;\n"\
 "			vec3 Reflect = normalize(2 * NL * N - vec);\n"\
 "			S += pow(clamp(dot(Reflect, -eyeVec), 0.0, 1.0), Pow) * p;\n"\
 "			if (lightType[i] == 4) {\n"\
