@@ -7,9 +7,7 @@ Whale::Whale(/*CVector3D& pos*/) :Task(ETaskPrio::eCharacter, EType::eCharacter)
 }
 void Whale::Update() {
 	Move();
-	m_pos.y = 160.0f;
-	m_pos.x += m_vec2D.x;
-	m_pos.z += m_vec2D.y;
+	m_pos += m_vec;
 	Search();
 }
 void Whale::Render() {
@@ -45,11 +43,30 @@ void Whale::Move() {
 				Point_num = 0;
 			}
 		}
-		m_vec2D = CVector2D((point_pos[Point_num].x - m_pos.x), (point_pos[Point_num].z - m_pos.z)).GetNormalize();
-		m_vec = CVector3D((point_pos[Point_num].x - m_pos.x), 160.0f-m_pos.y, (point_pos[Point_num].z - m_pos.z)).GetNormalize();
-		float rot=std::atan2(m_vec.z, m_vec.x);
-		std::cout << Point_num <<" : " << RtoD(rot) << std::endl;
-		m_rot.y = Utility::NormalizeAngle(rot);
+		//m_vec2D = CVector2D((point_pos[Point_num].x - m_pos.x), (point_pos[Point_num].z - m_pos.z)).GetNormalize();
+		//到着先へのベクトルと角度を入手
+		CVector3D Allive_vec= CVector3D((point_pos[Point_num].x - m_pos.x), 160.0f - m_pos.y, (point_pos[Point_num].z - m_pos.z)).GetNormalize();
+		float Alive_rot= Utility::NormalizeAngle(std::atan2(-Allive_vec.z, Allive_vec.x));
+		//現在の角度に、回転可能角度を足す
+		if (Alive_rot-m_rot.y> 0) {
+			if(Alive_rot - m_rot.y > RotationalSpeed)
+			m_rot.y += RotationalSpeed;
+			else {
+				m_rot.y += (Alive_rot - m_rot.y);
+			}
+		}
+		else if (Alive_rot - m_rot.y < 0) {
+			if(Alive_rot - m_rot.y < -RotationalSpeed)
+			m_rot.y -= RotationalSpeed;
+			else {
+				m_rot.y -= (Alive_rot - m_rot.y);
+			}
+		}
+		std::cout << RtoD(Alive_rot - m_rot.y) << std::endl;
+		//前進する
+		m_vec = CVector3D(cos(m_rot.y), 160.0f - m_pos.y, sin(-m_rot.y)).GetNormalize();
+		//float rot=std::atan2(-m_vec.z, m_vec.x);
+		m_rot.y = Utility::NormalizeAngle(m_rot.y);
 
 }
 CModel* Whale::GetModel() {

@@ -1,4 +1,5 @@
 #pragma once
+#define RotationalSpeed DtoR(1.0f)
 class PublicNum {
 public:
 	enum CMode {
