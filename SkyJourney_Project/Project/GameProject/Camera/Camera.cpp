@@ -6,6 +6,7 @@ Camera::Camera() :Task(ETaskPrio::eCamera, EType::eCamera){
 	m_rot = CVector3D(DtoR(30), DtoR(-125), 0);
 }
 void Camera::Update() {
+	if (CShadow::GetInstance()->GetState() == CShadow::eShadow)return;
 	switch(PublicNum::c_mode) {
 	case PublicNum::FixedPoint:
 		m_pos = CVector3D(-10, 10, 50);

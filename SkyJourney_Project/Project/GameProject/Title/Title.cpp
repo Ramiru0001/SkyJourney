@@ -2,7 +2,8 @@
 Title::Title() :Task(ETaskPrio::eSystem, EType::eDefault) ,
 m_title_text("C:\\Windows\\Fonts\\msgothic.ttc", 64)
 {
-	//m_img = COPY_RESOURCE("Tap To Start",CImage);
+	m_img = COPY_RESOURCE("TitleImage",CImage);
+	m_img.SetSize(SCREEN_WIDTH, SCREEN_HEIGHT);
 }
 
 Title::~Title()
@@ -21,7 +22,7 @@ void Title::Update()
 
 void Title::Render()
 {
-	//m_img.Draw();
+	m_img.Draw();
 	//•¶Žš•\Ž¦
 	m_title_text.Draw(64, 256, 0, 0, 0, "PUSH Z To Start GAME");
 	//m_title_text.Draw(64, 512, 0, 0, 0, "Push Z");

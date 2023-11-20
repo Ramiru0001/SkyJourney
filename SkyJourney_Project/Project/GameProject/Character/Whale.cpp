@@ -48,21 +48,36 @@ void Whale::Move() {
 		CVector3D Allive_vec= CVector3D((point_pos[Point_num].x - m_pos.x), 160.0f - m_pos.y, (point_pos[Point_num].z - m_pos.z)).GetNormalize();
 		float Alive_rot= Utility::NormalizeAngle(std::atan2(-Allive_vec.z, Allive_vec.x));
 		//現在の角度に、回転可能角度を足す
-		if (Alive_rot-m_rot.y> 0) {
-			if(Alive_rot - m_rot.y > RotationalSpeed)
+		//右回りと左回りどっちが近いか。近いほうで回る
+		/*if (Alive_rot-m_rot.y> 0) {
+			if(Alive_rot - m_rot.y >= RotationalSpeed)
 			m_rot.y += RotationalSpeed;
 			else {
 				m_rot.y += (Alive_rot - m_rot.y);
 			}
 		}
 		else if (Alive_rot - m_rot.y < 0) {
-			if(Alive_rot - m_rot.y < -RotationalSpeed)
+			if(Alive_rot - m_rot.y <= -RotationalSpeed)
 			m_rot.y -= RotationalSpeed;
 			else {
 				m_rot.y -= (Alive_rot - m_rot.y);
 			}
+		}*/
+		// Calculate the shortest rotation direction
+		float angleDifference = Alive_rot - m_rot.y;
+		float shortestRotation = atan2(sin(angleDifference), cos(angleDifference));
+
+		// Rotate towards the shortest direction
+		if (shortestRotation > 0) {
+			m_rot.y += (RotationalSpeed < shortestRotation) ? RotationalSpeed : shortestRotation;
 		}
-		std::cout << RtoD(Alive_rot - m_rot.y) << std::endl;
+		else if (shortestRotation < 0) {
+			m_rot.y -= (RotationalSpeed < -shortestRotation) ? RotationalSpeed : -shortestRotation;
+		}
+
+		//std::cout << RtoD(Alive_rot - m_rot.y) << std::endl; 
+		//std::cout << "Point_num: " << Point_num << std::endl;
+		//std::cout << "Alive_rot: " << Alive_rot << std::endl;
 		//前進する
 		m_vec = CVector3D(cos(m_rot.y), 160.0f - m_pos.y, sin(-m_rot.y)).GetNormalize();
 		//float rot=std::atan2(-m_vec.z, m_vec.x);

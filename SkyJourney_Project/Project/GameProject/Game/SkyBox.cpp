@@ -5,6 +5,7 @@ SkyBox::SkyBox():Task(ETaskPrio::eSky, EType::eSky) {
 void SkyBox::Update() {
 }
 void SkyBox::Render() {
+	if (CShadow::GetInstance()->GetState() == CShadow::eShadow)return;
 	glDisable(GL_DEPTH_TEST);
 	glDisable(GL_CULL_FACE);
 	CLight::SetLighting(false);

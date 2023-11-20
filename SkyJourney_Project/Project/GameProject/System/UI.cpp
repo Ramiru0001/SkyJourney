@@ -4,6 +4,7 @@ UI::UI() :Task(ETaskPrio::eUI, EType::eUI) {
 	Center_pos= CVector2D(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 30);
 }
 void UI::Render() {
+	if (CShadow::GetInstance()->GetState() == CShadow::eShadow)return;
 	if (PublicNum::Feather_Count > 0) {
 		float line_num = 180 / PublicNum::Feather_Count;
 		float harf_rot = 180 / PublicNum::Feather_Count / 2;

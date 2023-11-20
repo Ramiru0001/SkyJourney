@@ -4,6 +4,7 @@ Whiteout::Whiteout() :Task(ETaskPrio::eEffect, EType::eEffect) {
 	MaxWhite_count = PublicNum::MaxWhite_Count;
 }
 void Whiteout::Render() {
+	if (CShadow::GetInstance()->GetState() == CShadow::eShadow)return;
 	if (PublicNum::Whiteout_flag == true) {
 		Utility::DrawQuad(CVector2D(0, 0), CVector2D(SCREEN_WIDTH, SCREEN_HEIGHT), Whiteout_ColorSet());
 	}
@@ -27,6 +28,7 @@ CVector4D Whiteout::Whiteout_ColorSet() {
 Sandstorm::Sandstorm() :Task(ETaskPrio::eEffectUnderUI, EType::eEffectUnderUI) {
 }
 void Sandstorm::Render() {
+	if (CShadow::GetInstance()->GetState() == CShadow::eShadow)return;
 	Utility::DrawQuad(CVector2D(0, 0), CVector2D(SCREEN_WIDTH, SCREEN_HEIGHT), ColorSet());
 }
 void Sandstorm::Update() {

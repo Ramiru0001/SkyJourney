@@ -13,7 +13,10 @@ void MainLoop(void) {
 	Task::DeleteAll();
 	Task::UpdateAll(); 
 	Task::CollisionAll();
-	Task::RenderAll();
+	//CShadow::GetInstance()->Render([]() {
+		Task::RenderAll();
+		//});
+
 
 }
 void Init(void)
@@ -112,7 +115,9 @@ void Init(void)
 	ADD_RESOURCE("Mant_DesignD", CImage::CreateImage("Character/MantFeatherBlack.png"));
 	ADD_RESOURCE("Whale", CModel::CreateModel("Character/whale/whale.a3m"));
 	ADD_RESOURCE("SkyBox", CModel::CreateModel("Field/SkyBox.obj"));
+	ADD_RESOURCE("TitleImage", CImage::CreateImage("Title/Title.png"));
 	Task::Add(new Progress());
+	CShadow::CreateInscance(200.0f, 200.0f, 2048, 2046);
 	glDisable(GL_SPECULAR);
 }
 void Release()

@@ -20,22 +20,25 @@ Player::Player(CVector3D &pos):Task(ETaskPrio::ePlayer, EType::ePlayer){
 	//レンダーターゲットのテクスチャーと差し替え
 	m_model.GetMaterial(12)->mp_texture = texture_frame_rader->GetTexture();
 	//std::cout << "座標ss：" << Stage_Pos[0].x << "," << Stage_Pos[0].y << "," << Stage_Pos[0].z << std::endl;
+
 }
 Player::~Player() {
 	PublicNum::Player_On = false;
 }
 void Player::Render() {
-	//マントへ羽を描画
-	FeatherDraw();
+	if (CShadow::GetInstance()->GetState() != CShadow::eShadow) {
+		//マントへ羽を描画
+		FeatherDraw();
+	}
 	//プレイヤーモデルの描画
 	m_model.SetPos(m_pos);
 	m_model.SetScale(0.01f,0.01f,0.01f);
 	m_model.SetRot(m_rot);;
-	m_model.UpdateAnimation();
 	CLight::SetColor(0, CVector3D(.9f, .9f, .9f), CVector3D(0.3f, 0.3f, 0.3f));
 	glDisable(GL_CULL_FACE);
 	m_model.Render();
 	glEnable(GL_CULL_FACE);
+
 }
 void Player::Update() {
 	PublicNum::Player_pos = m_pos;
@@ -56,6 +59,7 @@ void Player::Update() {
 	if (PublicNum::log_pos == true) {
 		std::cout << "座標：" << m_pos.x << "," << m_pos.y << "," << m_pos.z << std::endl; 
 	}
+	m_model.UpdateAnimation();
 }
 void Player::FeatherSetDraw(int Count, int LightCount) {
 	CVector2D pos[] = { CVector2D(226, 370) ,CVector2D(226, 290) ,CVector2D(226, 210) ,CVector2D(226, 130), CVector2D(226, 50) };

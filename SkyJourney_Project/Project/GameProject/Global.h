@@ -7,6 +7,7 @@
 #include <iostream>
 #include <math.h>
 #include <cmath>
+#include <algorithm>
 #include "Management/Task.h"
 #include "Management/Progress.h"
 #include "Public/PublicFile.h"
