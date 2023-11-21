@@ -23,6 +23,6 @@
 #define GRAVITY (0.01f)
 #define JUMP (0.2f)
 #define FLY (0.4f)
-#define SCREEN_WIDTH 1280
-#define SCREEN_HEIGHT 720
+#define SCREEN_WIDTH 1920
+#define SCREEN_HEIGHT 1080
 #define DEFAULT_POS CVector3D(0,5,0)
