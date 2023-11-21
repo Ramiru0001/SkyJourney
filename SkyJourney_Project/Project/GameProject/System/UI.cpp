@@ -1,7 +1,7 @@
 #include "UI.h"
 std::list<Task*> m_FeatherList[];
 UI::UI() :Task(ETaskPrio::eUI, EType::eUI) {
-	Center_pos= CVector2D(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 30/*24*/);
+	Center_pos= CVector2D(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 30);
 }
 void UI::Render() {
 	if (CShadow::GetInstance()->GetState() == CShadow::eShadow)return;
