@@ -24,6 +24,6 @@ void Title::Render()
 {
 	m_img.Draw();
 	//•¶Žš•\Ž¦
-	m_title_text.Draw(64, 256, 0, 0, 0, "PUSH Z To Start GAME");
+	m_title_text.Draw(SCREEN_WIDTH*64/1280, SCREEN_HEIGHT*256/720, 0, 0, 0, "PUSH Z To Start GAME");
 	//m_title_text.Draw(64, 512, 0, 0, 0, "Push Z");
 }

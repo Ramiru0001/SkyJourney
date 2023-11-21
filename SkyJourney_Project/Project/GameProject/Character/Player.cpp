@@ -62,15 +62,60 @@ void Player::Update() {
 	m_model.UpdateAnimation();
 }
 void Player::FeatherSetDraw(int Count, int LightCount) {
-	CVector2D pos[] = { CVector2D(226, 370) ,CVector2D(226, 290) ,CVector2D(226, 210) ,CVector2D(226, 130), CVector2D(226, 50) };
-	for (int i = 0; i < 5; i++) {
+	CVector2D pos[] = { CVector2D(256, 370) ,CVector2D(256, 290) ,CVector2D(256, 210) ,CVector2D(256, 130), CVector2D(256, 50) };
+	for (int i = 0; i < 10; i++) {
 		if (LightCount > i) {
+			if (i>4) {
+				for (float x = -40; x <= 40; x++) {
+					float Highy;
+					float Lowy;
+					if (x >= 0) {
+						Highy = 0.036 * std::pow(x - 40, 2.0);
+						Lowy = 0.04 * std::pow(x - 35, 2.0);
+						Utility::DrawLine(CVector2D(x, Highy) + pos[i-5], CVector2D(x, Lowy) + pos[i-5], CVector4D(1.0f, 1.0f, 1.0f, 1.0f));
+						Utility::DrawLine(CVector2D(x, -Highy) + pos[i-5], CVector2D(x, -Lowy) + pos[i-5], CVector4D(1.0f, 1.0f, 1.0f, 1.0f));
+					}
+					else {
+						Highy = 0.036 * std::pow(x + 40, 2.0);
+						Lowy = 0.04 * std::pow(x + 35, 2.0);
+						Utility::DrawLine(CVector2D(x, Highy) + pos[i-5], CVector2D(x, Lowy) + pos[i-5], CVector4D(1.0f, 1.0f, 1.0f, 1.0f));
+						Utility::DrawLine(CVector2D(x, -Highy) + pos[i-5], CVector2D(x, -Lowy) + pos[i-5], CVector4D(1.0f, 1.0f, 1.0f, 1.0f));
+					}
+				}
+			}/*
 			mant_DesignLight.SetPos(pos[i]);
-			mant_DesignLight.Draw();
+			mant_DesignLight.Draw();*/
+			//Utility::DrawLine(pos[i],)
+			for (float x = -20; x<= 20; x++) {
+				float Highy;
+				float Lowy;
+				if (x >= 0) {
+					Highy = 0.04 * std::pow(x - 28, 2.0);
+					Lowy = -0.04 * std::pow(x - 28, 2.0);
+				}
+				else {
+					Highy = 0.04 * std::pow(x + 28, 2.0);
+					Lowy = -0.04 * std::pow(x + 28, 2.0);
+				}
+				Utility::DrawLine(CVector2D(x, Highy) + pos[i], CVector2D(x, Lowy) + pos[i], CVector4D(1.0f, 1.0f, 1.0f, 1.0f));
+			}
 		}
 		else if (Count > i) {
-			mant_DesignDark.SetPos(pos[i]);
-			mant_DesignDark.Draw();
+			/*mant_DesignDark.SetPos(pos[i]);
+			mant_DesignDark.Draw();*/
+			for (float x = -20; x <= 20; x++) {
+				float Highy;
+				float Lowy;
+				if (x >= 0) {
+					Highy = 0.05 * std::pow(x - 20, 2.0);
+					Lowy = -0.05 * std::pow(x - 20, 2.0);
+				}
+				else {
+					Highy = 0.05 * std::pow(x + 20, 2.0);
+					Lowy = -0.05 * std::pow(x + 20, 2.0);
+				}
+				Utility::DrawLine(CVector2D(x, Highy) + pos[i], CVector2D(x, Lowy) + pos[i], CVector4D(0.0f, 0.0f, 0.0f, 1.0f));
+			}
 		}
 		else {
 			break;
