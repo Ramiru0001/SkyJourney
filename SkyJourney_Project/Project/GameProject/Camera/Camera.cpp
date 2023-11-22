@@ -5,7 +5,7 @@ Camera::Camera() :Task(ETaskPrio::eCamera, EType::eCamera){
 	m_pos = CVector3D(-10, 10, 10);
 	m_rot = CVector3D(DtoR(30), DtoR(-125), 0);
 }
-void Camera::Update() {
+void Camera::Render() {
 	if (CShadow::GetInstance()->GetState() == CShadow::eShadow)return;
 	switch(PublicNum::c_mode) {
 	case PublicNum::FixedPoint:
@@ -40,6 +40,82 @@ void Camera::Update() {
 		PublicNum::Camera_rot = m_rot;
 		break;
 	}
+}
+void Camera::Collision(Task* a) {
+	//CVector3D v(0, 0, 0);
+	//switch (a->GetType()) {
+	//case EType::eField:
+	//{
+	//	m_rad = 0,1f;
+	//	auto tri = a->GetModel()->CollisionSphere(m_pos + CVector3D(0, m_rad, 0), m_rad);
+	//	for (auto& t : tri) {
+	//		if (t.m_normal.y < -0.5f) {
+	//			if (m_vec.y > 0) {
+	//				m_vec.y = 0;
+	//			}
+	//		}
+	//		else if (t.m_normal.y > 0.5f) {
+	//			if (m_vec.y < 0)m_vec.y = 0;
+	//		}
+	//		float max_y = max(t.m_vertex[0].y, max(t.m_vertex[1].y, t.m_vertex[2].y));
+	//		//‚ß‚èž‚ñ‚¾‚ç‰Ÿ‚µ–ß‚·
+	//		CVector3D nv = t.m_normal * (m_rad - t.m_dist);
+	//		//Å‚à‘å‚«‚ÈˆÚ“®—Ê‚ð‹‚ß‚é
+	//		v.y = fabs(v.y) > fabs(nv.y) ? v.y : nv.y;
+	//		//zennbu‰Ÿ‚µ–ß‚³‚ê‚é
+	//		v.x = fabs(v.x) > fabs(nv.x) ? v.x : nv.x;
+	//		v.z = fabs(v.z) > fabs(nv.z) ? v.z : nv.z;
+	//	}
+	//	//‰Ÿ‚µ–ß‚·
+	//	m_pos += v;
+	//	PublicNum::Player_pos = m_pos;
+	//}
+	//break;
+	////case EType::eEnemy:
+	////	if ((a->m_pos - m_pos).Length() < a->m_rad + m_rad) {
+	////		CVector3D PEVec = a->m_pos - m_pos;
+	////		m_pos += PEVec.GetNormalize() * 0.5f * move_speed;
+	////		a->m_pos -= PEVec.GetNormalize() * 0.5f * move_speed;
+	////	}
+	////	break;
+	////case EType::eObject:
+	////	if (a->GetCollision() == true) {
+	////		if ((a->m_pos - m_pos).Length() < a->m_rad + m_rad) {
+	////			CVector3D PEVec = a->m_pos - m_pos;
+	////			m_pos -= PEVec.GetNormalize() * move_speed;
+	////		}
+	////	}
+	////	break;
+	////case eCharacter:
+	////{
+	////	auto tri = a->GetModel()->CollisionSphere(m_pos + CVector3D(0, m_rad, 0), m_rad);
+	////	for (auto& t : tri) {
+	////		if (t.m_normal.y < -0.5f) {
+	////			if (m_vec.y > 0) {
+	////				m_vec.y = 0;
+	////			}
+	////		}
+	////		else if (t.m_normal.y > 0.5f) {
+	////			if (m_vec.y < 0)m_vec.y = 0;
+	////		}
+	////		float max_y = max(t.m_vertex[0].y, max(t.m_vertex[1].y, t.m_vertex[2].y));
+	////		//‚ß‚èž‚ñ‚¾‚ç‰Ÿ‚µ–ß‚·
+	////		CVector3D nv = t.m_normal * (m_rad - t.m_dist);
+	////		//Å‚à‘å‚«‚ÈˆÚ“®—Ê‚ð‹‚ß‚é
+	////		v.y = fabs(v.y) > fabs(nv.y) ? v.y : nv.y;
+	////		//zennbu‰Ÿ‚µ–ß‚³‚ê‚é
+	////		v.x = fabs(v.x) > fabs(nv.x) ? v.x : nv.x;
+	////		v.z = fabs(v.z) > fabs(nv.z) ? v.z : nv.z;
+	////	}
+	////	//‰Ÿ‚µ–ß‚·
+	////	m_pos += v;
+	////}
+	////break;
+	////break;
+	////default:
+	////	break;
+	////}
+	//}
 }
 Camera::~Camera() {
 	PublicNum::Camera_On = false;

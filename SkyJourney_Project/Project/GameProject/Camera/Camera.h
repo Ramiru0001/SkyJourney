@@ -15,5 +15,6 @@ public :
 public:
 	Camera();
 	~Camera();
-	void Update();
+	void Render();
+	void Collision(Task* a);
 };

@@ -16,9 +16,31 @@ void Whale::Render() {
 	m_model.SetPos(m_pos);
 	m_model.UpdateAnimation();
 	m_model.Render();
+	Search();
 }
 void Whale::Search() {
+	// 円錐のパラメータ
+	float coneAngle = DtoR(60);  // 円錐の角度（ラジアン）
+	float coneDistance = 100.0f;  // 円錐の最大距離
 
+	// 敵の回転に基づく円錐の方向
+	CVector3D coneDirection = CVector3D(cos(m_rot.y), 0.0f, sin(-m_rot.y)).GetNormalize();
+
+	// 円錐の頂点を計算
+	CVector3D coneVertex1 = m_pos;  // 敵の位置を頂点にする
+	CVector3D coneVertex2 = m_pos + coneDirection * coneDistance;
+
+	// 円錐を描画
+	DrawCone(10.0f, coneDistance, 16, 16);  // ここで円錐の半径や分割数を調整してください
+
+	// プレイヤーが円錐の中にいるかどうかをチェック
+	CVector3D playerToEnemy = PublicNum::Player_pos - m_pos;
+	float angleBetween = acos(coneDirection.Dot(playerToEnemy.GetNormalize()));
+
+	if (angleBetween <= coneAngle / 2 && playerToEnemy.Length() <= coneDistance) {
+		// プレイヤーが円錐の中にいる場合、適切なアクションを実行
+		// たとえば、プレイヤーが検出されたことを示すフラグを設定するなど
+	}
 }
 void Whale::Move() {
 	CVector3D point_pos[] = {
@@ -86,4 +108,46 @@ void Whale::Move() {
 }
 CModel* Whale::GetModel() {
 	return  &m_model;
+}
+void Whale::DrawCone(const GLfloat& radius, const GLfloat& height, const GLint& slices, const GLint& stacks) {
+	const GLfloat PI = 3.14159265358979323846;
+
+	glBegin(GL_TRIANGLES);
+
+	for (int i = 0; i < slices; ++i) {
+		GLfloat theta1 = (GLfloat)i * 2.0f * PI / slices;
+		GLfloat theta2 = (GLfloat)(i + 1) * 2.0f * PI / slices;
+
+		for (int j = 0; j < stacks; ++j) {
+			GLfloat phi1 = (GLfloat)j * PI / stacks;
+			GLfloat phi2 = (GLfloat)(j + 1) * PI / stacks;
+
+			GLfloat x1 = radius * sin(phi1) * cos(theta1);
+			GLfloat y1 = radius * cos(phi1);
+			GLfloat z1 = radius * sin(phi1) * sin(theta1);
+
+			GLfloat x2 = radius * sin(phi1) * cos(theta2);
+			GLfloat y2 = radius * cos(phi1);
+			GLfloat z2 = radius * sin(phi1) * sin(theta2);
+
+			GLfloat x3 = radius * sin(phi2) * cos(theta2);
+			GLfloat y3 = radius * cos(phi2);
+			GLfloat z3 = radius * sin(phi2) * sin(theta2);
+
+			GLfloat x4 = radius * sin(phi2) * cos(theta1);
+			GLfloat y4 = radius * cos(phi2);
+			GLfloat z4 = radius * sin(phi2) * sin(theta1);
+
+			// Draw the triangles
+			glVertex3f(x1, y1, z1);
+			glVertex3f(x2, y2, z2);
+			glVertex3f(x3, y3, z3);
+
+			glVertex3f(x3, y3, z3);
+			glVertex3f(x4, y4, z4);
+			glVertex3f(x1, y1, z1);
+		}
+	}
+
+	glEnd();
 }

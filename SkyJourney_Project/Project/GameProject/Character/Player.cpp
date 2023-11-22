@@ -153,6 +153,7 @@ void Player::Collision(Task* a) {
 		}
 		//‰Ÿ‚µ–ß‚·
 		m_pos += v; 
+		PublicNum::Player_pos = m_pos;
 	}
 	//std::cout << "OffGround1" << std::endl;
 		break;

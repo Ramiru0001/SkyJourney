@@ -10,6 +10,7 @@ public:
 	void Render();
 	void Search();
 	void Move();
+	void DrawCone(const GLfloat& radius, const GLfloat& height, const GLint& slices, const GLint& stacks);
 	CModel* GetModel();
 };
 

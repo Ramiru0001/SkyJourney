@@ -1,5 +1,6 @@
 #pragma once
 enum class ETaskPrio : int {
+	eCamera,
 	eSystem,
 	eSky,
 	eField,
@@ -9,7 +10,6 @@ enum class ETaskPrio : int {
 	eCharacter,
 	ePlayer,
 	eEnemy,
-	eCamera,
 	eEffectUnderUI,
 	eUI,
 	eEffect,

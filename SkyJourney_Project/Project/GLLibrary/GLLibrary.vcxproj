@@ -61,6 +61,11 @@
     <ClInclude Include="GLLibrary\CTextureFrame.h" />
     <ClInclude Include="GLLibrary\CVector.h" />
     <ClInclude Include="GLLibrary\GL.h" />
+    <ClInclude Include="GLLibrary\GL\freeglut.h" />
+    <ClInclude Include="GLLibrary\GL\freeglut_ext.h" />
+    <ClInclude Include="GLLibrary\GL\freeglut_std.h" />
+    <ClInclude Include="GLLibrary\GL\freeglut_ucall.h" />
+    <ClInclude Include="GLLibrary\GL\glut.h" />
     <ClInclude Include="GLLibrary\Utility.h" />
     <ClInclude Include="GLLibrary\Vertex.h" />
   </ItemGroup>

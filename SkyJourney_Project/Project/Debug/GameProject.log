@@ -1,43 +1,12 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: 中間ディレクトリ (C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\Debug\) に別のプロジェクト (GLLibrary.vcxproj) と共有されているファイルが含まれています。これにより、クリーンしてリビルド動作が適切に行われない可能性があります。
-  UI.cpp
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(9,18): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(10,18): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(13,17): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(27,20): warning C4244: '初期化中': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(28,20): warning C4244: '初期化中': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(30,18): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(47,20): warning C4244: '初期化中': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(48,20): warning C4244: '初期化中': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(50,18): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(53,56): warning C4244: '引数': 'int' から 'const float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(53,88): warning C4244: '引数': 'int' から 'const float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(82,13): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(88,43): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(90,43): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(92,43): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(94,43): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(98,43): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(100,43): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(102,43): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(106,43): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(108,43): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(112,30): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(116,43): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(118,43): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(120,43): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(122,43): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(126,43): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(128,43): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(130,43): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(134,43): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\System\UI.cpp(136,43): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+  Camera.cpp
 GLFW.lib(init.obj) : warning LNK4099: PDB '' が 'GLFW.lib(init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(window.obj) : warning LNK4099: PDB '' が 'GLFW.lib(window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(input.obj) : warning LNK4099: PDB '' が 'GLFW.lib(input.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(win32_init.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-GLFW.lib(win32_monitor.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_monitor.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
   glew.lib(glew.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
+GLFW.lib(win32_monitor.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_monitor.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(win32_time.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_time.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(monitor.obj) : warning LNK4099: PDB '' が 'GLFW.lib(monitor.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(vulkan.obj) : warning LNK4099: PDB '' が 'GLFW.lib(vulkan.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。

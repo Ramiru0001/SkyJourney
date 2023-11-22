@@ -5,6 +5,9 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="GL">
+      <UniqueIdentifier>{a632e1d2-e5af-4178-96df-56f6de4da662}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GLLibrary\CCamera.cpp">
@@ -156,6 +159,21 @@
     <ClInclude Include="GLLibrary.h" />
     <ClInclude Include="GLLibrary\CTextureFrame.h">
       <Filter>GLLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="GLLibrary\GL\freeglut_ucall.h">
+      <Filter>GL</Filter>
+    </ClInclude>
+    <ClInclude Include="GLLibrary\GL\freeglut_ext.h">
+      <Filter>GL</Filter>
+    </ClInclude>
+    <ClInclude Include="GLLibrary\GL\freeglut_std.h">
+      <Filter>GL</Filter>
+    </ClInclude>
+    <ClInclude Include="GLLibrary\GL\freeglut.h">
+      <Filter>GL</Filter>
+    </ClInclude>
+    <ClInclude Include="GLLibrary\GL\glut.h">
+      <Filter>GL</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
