@@ -19,28 +19,6 @@ void Whale::Render() {
 	Search();
 }
 void Whale::Search() {
-	// 円錐のパラメータ
-	float coneAngle = DtoR(60);  // 円錐の角度（ラジアン）
-	float coneDistance = 100.0f;  // 円錐の最大距離
-
-	// 敵の回転に基づく円錐の方向
-	CVector3D coneDirection = CVector3D(cos(m_rot.y), 0.0f, sin(-m_rot.y)).GetNormalize();
-
-	// 円錐の頂点を計算
-	CVector3D coneVertex1 = m_pos;  // 敵の位置を頂点にする
-	CVector3D coneVertex2 = m_pos + coneDirection * coneDistance;
-
-	// 円錐を描画
-	DrawCone(10.0f, coneDistance, 16, 16);  // ここで円錐の半径や分割数を調整してください
-
-	// プレイヤーが円錐の中にいるかどうかをチェック
-	CVector3D playerToEnemy = PublicNum::Player_pos - m_pos;
-	float angleBetween = acos(coneDirection.Dot(playerToEnemy.GetNormalize()));
-
-	if (angleBetween <= coneAngle / 2 && playerToEnemy.Length() <= coneDistance) {
-		// プレイヤーが円錐の中にいる場合、適切なアクションを実行
-		// たとえば、プレイヤーが検出されたことを示すフラグを設定するなど
-	}
 }
 void Whale::Move() {
 	CVector3D point_pos[] = {
