@@ -119,6 +119,8 @@ void Init(void)
 	Task::Add(new Progress());
 	CShadow::CreateInscance(200.0f, 200.0f, 2048, 2046);
 	glDisable(GL_SPECULAR);
+	Shader::CreateInstance("Test", "shader\\test.vert", "shader\\test.frag");
+
 }
 void Release()
 {

@@ -21,6 +21,7 @@
     <ClInclude Include="Management\Progress.h" />
     <ClInclude Include="Management\Task.h" />
     <ClInclude Include="Public\PublicFile.h" />
+    <ClInclude Include="Shader.h" />
     <ClInclude Include="Stage\DesertStage.h" />
     <ClInclude Include="Stage\SkyIslandStage.h" />
     <ClInclude Include="System\Effect.h" />
@@ -38,6 +39,7 @@
     <ClCompile Include="Management\Progress.cpp" />
     <ClCompile Include="Management\Task.cpp" />
     <ClCompile Include="Public\PublicFile.cpp" />
+    <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Stage\DesertStage.cpp" />
     <ClCompile Include="Stage\SkyIslandStage.cpp" />
     <ClCompile Include="System\Effect.cpp" />

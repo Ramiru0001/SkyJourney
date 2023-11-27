@@ -1,7 +1,6 @@
 	#pragma once
 
-
-#include "GL.h"
+//#include "GL.h"
 #include <map>
 #include <string>
 class Shader {

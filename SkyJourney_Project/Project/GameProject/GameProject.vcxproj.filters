@@ -44,6 +44,7 @@
     <ClInclude Include="System\UI.h">
       <Filter>System</Filter>
     </ClInclude>
+    <ClInclude Include="Shader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -89,6 +90,7 @@
     <ClCompile Include="System\UI.cpp">
       <Filter>System</Filter>
     </ClCompile>
+    <ClCompile Include="Shader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Character">
