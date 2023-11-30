@@ -9,6 +9,8 @@
 #include <cmath>
 //#include <GL/glut>
 #include <algorithm>
+
+#include "Shader.h"
 #include "Management/Task.h"
 #include "Management/Progress.h"
 #include "Public/PublicFile.h"

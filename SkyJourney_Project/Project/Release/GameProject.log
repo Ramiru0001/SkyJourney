@@ -16,52 +16,54 @@ C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Chara
 C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Player.cpp(323,95): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
 C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Player.cpp(323,61): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
   Whale.cpp
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(47,30): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(47,21): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(47,13): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(48,30): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(48,21): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(48,13): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(49,30): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(49,21): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(49,13): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(50,31): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(50,22): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(50,14): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(51,30): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(51,21): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(51,13): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(52,31): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(52,22): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(52,14): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(53,31): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(53,22): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(53,14): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(54,30): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(54,22): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(54,14): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(55,30): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(55,22): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(55,14): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(56,29): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(56,21): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(56,13): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(57,29): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(57,21): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(57,13): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(58,29): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(58,21): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(58,13): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(113,21): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(25,30): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(25,21): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(25,13): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(26,30): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(26,21): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(26,13): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(27,30): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(27,21): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(27,13): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(28,31): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(28,22): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(28,14): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(29,30): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(29,21): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(29,13): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(30,31): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(30,22): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(30,14): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(31,31): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(31,22): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(31,14): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(32,30): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(32,22): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(32,14): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(33,30): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(33,22): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(33,14): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(34,29): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(34,21): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(34,13): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(35,29): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(35,21): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(35,13): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(36,29): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(36,21): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(36,13): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Character\Whale.cpp(91,21): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
   Field.cpp
   Object.cpp
   SkyBox.cpp
   main.cpp
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\main.cpp(140,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\main.cpp(140,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\main.cpp(142,42): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\main.cpp(142,39): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
   Progress.cpp
   Task.cpp
   PublicFile.cpp
+  Shader.cpp
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Shader.cpp(25,11): warning C4267: '初期化中': 'size_t' から 'int' に変換しました。データが失われているかもしれません。
   DesertStage.cpp
 C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Stage\DesertStage.cpp(7,32): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
 C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GameProject\Stage\DesertStage.cpp(7,22): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
@@ -148,7 +150,6 @@ GLFW.lib(init.obj) : warning LNK4099: PDB '' が 'GLFW.lib(init.obj)' で、ま�
 GLFW.lib(window.obj) : warning LNK4099: PDB '' が 'GLFW.lib(window.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(input.obj) : warning LNK4099: PDB '' が 'GLFW.lib(input.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-  glew.lib(glew.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
 GLFW.lib(win32_init.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_init.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(win32_monitor.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_monitor.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(win32_time.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_time.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
@@ -159,6 +160,7 @@ GLFW.lib(win32_tls.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_tls.obj)' 
 GLFW.lib(win32_joystick.obj) : warning LNK4099: PDB '' が 'GLFW.lib(win32_joystick.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(wgl_context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(wgl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
 GLFW.lib(egl_context.obj) : warning LNK4099: PDB '' が 'GLFW.lib(egl_context.obj)' で、または '' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
+  glew.lib(glew.obj) : MSIL .netmodule または /GL を伴ってコンパイルされたモジュールが見つかりました。/LTCG を使用して再開始してください。リンカーのパフォーマンスを向上させるためには、コマンドラインに /LTCG を追加してください。
      ライブラリ C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\/../Game/GameProject.lib とオブジェクト C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\/../Game/GameProject.exp を作成中
   コード生成しています。
   コード生成が終了しました。
