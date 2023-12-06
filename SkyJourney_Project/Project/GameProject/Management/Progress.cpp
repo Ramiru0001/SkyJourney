@@ -4,8 +4,6 @@
 Progress::Progress():Task(ETaskPrio::eSystem, EType::eDefault) {
 	ProgressChange(prog_num = ProgressNum::Tytle);
 	prog_num = ProgressNum::Tytle;
-	Task::Add(new UI);
-
 }
 void Progress::Update() {
 	if (PublicFunction::Observer(Whiteout_flag_old,PublicNum::Whiteout_flag)) {
@@ -65,6 +63,7 @@ void Progress::ProgressChange(int Progress) {
 			//呼んだクラスは必要ないので即破棄
 			delete SkyIslandStage_Instance;
 		}
+		Task::Add(new UI);
 		break;
 	case ProgressNum::Desert:
 		if (PublicNum::Camera_On == false) {

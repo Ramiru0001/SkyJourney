@@ -5,9 +5,6 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="GL">
-      <UniqueIdentifier>{a632e1d2-e5af-4178-96df-56f6de4da662}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GLLibrary\CCamera.cpp">
@@ -76,10 +73,13 @@
     <ClCompile Include="GLLibrary\Utility.cpp">
       <Filter>GLLibrary</Filter>
     </ClCompile>
-    <ClCompile Include="GLLibrary\CRect.cpp">
+    <ClCompile Include="GLLibrary\CTextureFrame.cpp">
       <Filter>GLLibrary</Filter>
     </ClCompile>
-    <ClCompile Include="GLLibrary\CTextureFrame.cpp">
+    <ClCompile Include="GLLibrary\CRendaring.cpp">
+      <Filter>GLLibrary</Filter>
+    </ClCompile>
+    <ClCompile Include="GLLibrary\CRect.cpp">
       <Filter>GLLibrary</Filter>
     </ClCompile>
   </ItemGroup>
@@ -160,20 +160,8 @@
     <ClInclude Include="GLLibrary\CTextureFrame.h">
       <Filter>GLLibrary</Filter>
     </ClInclude>
-    <ClInclude Include="GLLibrary\GL\freeglut_ucall.h">
-      <Filter>GL</Filter>
-    </ClInclude>
-    <ClInclude Include="GLLibrary\GL\freeglut_ext.h">
-      <Filter>GL</Filter>
-    </ClInclude>
-    <ClInclude Include="GLLibrary\GL\freeglut_std.h">
-      <Filter>GL</Filter>
-    </ClInclude>
-    <ClInclude Include="GLLibrary\GL\freeglut.h">
-      <Filter>GL</Filter>
-    </ClInclude>
-    <ClInclude Include="GLLibrary\GL\glut.h">
-      <Filter>GL</Filter>
+    <ClInclude Include="GLLibrary\CRendaring.h">
+      <Filter>GLLibrary</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

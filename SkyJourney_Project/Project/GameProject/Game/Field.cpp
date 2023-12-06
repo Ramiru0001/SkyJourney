@@ -1,6 +1,6 @@
 #include"Field.h"
 SkyIsland::SkyIsland():Task(ETaskPrio::eField, EType::eField) {
-	if (PublicNum::log_passage == true) {
+	if (PublicNum::Log_passage == true) {
 		std::cout << "Field" << std::endl;
 	}
 	m_Field = COPY_RESOURCE("SkyIsland", CModelObj);

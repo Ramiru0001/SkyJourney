@@ -9,7 +9,7 @@ CShadow::CShadow(float length, float height, int texWidth, int texHeight): m_sta
 	m_lightViewLength = length;
 	m_lightHeight = height;
 
-	mp_render_target = new CTextureFrame(m_depthtexHeight, m_depthtexWidth, CVector4D(1, 1, 1, 1));
+	mp_render_target = new CTextureFrame(m_depthtexWidth, m_depthtexHeight, CVector4D(1, 1, 1, 1),2);
 
 
 }
@@ -17,7 +17,7 @@ CShadow::~CShadow() {
 	delete mp_render_target;
 
 }
-void CShadow::Render(std::function<void()> render) {
+void CShadow::Render(std::function<void()> render, CTextureFrame* gbuffer) {
 
 	CCamera* back = CCamera::GetCurrent();
 	//シャドウマップ描画準備
@@ -25,13 +25,15 @@ void CShadow::Render(std::function<void()> render) {
 	//シャドウマップ用　光源からのカメラに切り替え
 	CCamera::SetCurrent(CCamera::GetCamera(CCamera::eShadowCamera));
 	//投影行列
-	CCamera::GetCurrent()->Ortho(-m_lightViewLength, m_lightViewLength, -m_lightViewLength, m_lightViewLength, 1.0f, 100.0f);
+	CCamera::GetCurrent()->Ortho(-m_lightViewLength, m_lightViewLength, -m_lightViewLength, m_lightViewLength, 1.0f, 1000.0f);
 	//0番目のライトの向き
 	CVector3D ld = CLight::GetDirPointer()[0];
 	//光源の高さ
 	const float dist = m_lightHeight;
 	//ビュー行列
-	CCamera::GetCurrent()->LookAt(cam_pos - ld * dist, cam_pos, CVector3D(0, 1, 0));
+	CVector3D up = CVector3D(0, 1, 0);
+	if (ld.x * ld.z == 0) up = CVector3D(0, 0, 1);
+	CCamera::GetCurrent()->LookAt(cam_pos - ld * dist, cam_pos, up);
 	//テクスチャ行列
 	static  const CMatrix texMat(0.5f, 0.0f, 0.0f, 0.5f,
 		0.0f, 0.5f, 0.0f, 0.5f,
@@ -58,10 +60,11 @@ void CShadow::Render(std::function<void()> render) {
 	glEnable(GL_TEXTURE_2D);
 	//0番テクスチャー操作に戻す
 	glActiveTexture(GL_TEXTURE0);
-
+	if (gbuffer) gbuffer->BeginDraw();
 	m_state = eNone;
 	//通常描画
 	render();
+	if (gbuffer) gbuffer->EndDraw();
 }
 
 void CShadow::DrawDepthTex(int x,int y,int w, int h)
@@ -76,7 +79,6 @@ void CShadow::CreateInscance(float length, float height, int texWidth, int texHe
 
 CShadow* CShadow::GetInstance()
 {
-	if (!m_shadow) CreateInscance();
 	return m_shadow;
 }
 

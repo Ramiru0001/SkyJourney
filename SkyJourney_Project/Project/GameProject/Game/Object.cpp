@@ -1,6 +1,6 @@
 #include"Object.h"
 Feather::Feather(CVector3D& pos) :Task(ETaskPrio::eFeather, EType::eFeather) {
-	if (PublicNum::log_passage == true) {
+	if (PublicNum::Log_passage == true) {
 		std::cout << "Feather" << std::endl;
 	}
 	m_model = COPY_RESOURCE("Feather", CModelObj);

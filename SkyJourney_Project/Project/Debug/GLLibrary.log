@@ -1,4 +1,31 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(516,5): warning MSB8004: Intermediate ディレクトリの末尾がスラッシュではありません。Intermediate ディレクトリが適切に評価されるようにするために、このビルド インスタンスによってスラッシュが追加されます。
 C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: Output ディレクトリの末尾がスラッシュではありません。Output ディレクトリが適切に評価されるようにするために、このビルド インスタンスによってスラッシュが追加されます。
 C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: 中間ディレクトリ (C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\Debug\) に別のプロジェクト (GameProject.vcxproj) と共有されているファイルが含まれています。これにより、クリーンしてリビルド動作が適切に行われない可能性があります。
+  CCollision.cpp
+  CImage.cpp
+  CInput.cpp
+  CModel.cpp
+  CModelA3M.cpp
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GLLibrary\GLLibrary\CModelA3M.cpp(2962,23): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+  CModelField.cpp
+  CModelObj.cpp
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GLLibrary\GLLibrary\CModelObj.cpp(300,32): warning C4267: '初期化中': 'size_t' から 'unsigned int' に変換しました。データが失われているかもしれません。
+  CRendaring.cpp
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GLLibrary\GLLibrary\CRendaring.cpp(76,11): warning C4244: '初期化中': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GLLibrary\GLLibrary\CRendaring.cpp(77,11): warning C4244: '初期化中': 'double' から 'float' への変換です。データが失われる可能性があります。
+  CShader.cpp
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GLLibrary\GLLibrary\CShader.cpp(599,11): warning C4267: '初期化中': 'size_t' から 'int' に変換しました。データが失われているかもしれません。
+  CShadow.cpp
+  CTextureFrame.cpp
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GLLibrary\GLLibrary\CTextureFrame.cpp(58,35): warning C4267: '引数': 'size_t' から 'GLsizei' に変換しました。データが失われているかもしれません。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GLLibrary\GLLibrary\CTextureFrame.cpp(112,48): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GLLibrary\GLLibrary\CTextureFrame.cpp(112,45): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GLLibrary\GLLibrary\CTextureFrame.cpp(112,75): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GLLibrary\GLLibrary\CTextureFrame.cpp(112,72): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+  Utility.cpp
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GLLibrary\GLLibrary\Utility.cpp(402,10): warning C4244: '初期化中': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GLLibrary\GLLibrary\Utility.cpp(411,11): warning C4244: '初期化中': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GLLibrary\GLLibrary\Utility.cpp(412,11): warning C4244: '初期化中': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GLLibrary\GLLibrary\Utility.cpp(437,67): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+  コードを生成中...
   GLLibrary.vcxproj -> C:\AnabukiSchool\GC2_C++\SkyJourney\SkyJourney_Project\Project\GLLibrary\Debug\GLLibrary.lib

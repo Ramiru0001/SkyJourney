@@ -1,7 +1,7 @@
 #include "Player.h"
 
 Player::Player(CVector3D &pos):Task(ETaskPrio::ePlayer, EType::ePlayer){
-	if (PublicNum::log_passage == true) {
+	if (PublicNum::Log_passage == true) {
 		std::cout << "Player" << std::endl;
 	}
 	PublicNum::Player_On = true;
@@ -56,7 +56,7 @@ void Player::Update() {
 	else {
 		m_pos = Stage_Pos[PublicNum::Stage_Num];
 	}
-	if (PublicNum::log_pos == true) {
+	if (PublicNum::Log_pos == true) {
 		std::cout << "À•WF" << m_pos.x << "," << m_pos.y << "," << m_pos.z << std::endl; 
 	}
 	m_model.UpdateAnimation();

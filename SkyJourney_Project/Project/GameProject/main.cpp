@@ -7,15 +7,12 @@ void MainLoop(void) {
 	//ƒQ[ƒ€’†‚Ì“®‚«‚Í‚±‚±‚É‘‚­
 	//ƒQ[ƒ€’†‚Í‚±‚ÌŠÖ”_‚ğ1•bŠÔ‚É60‰ñŒÄ‚Ño‚µ‚Ä‚¢‚é
 	//--------------------------------------------------------------
-	if (PublicNum::log_passage == true) {
-		std::cout << "mainLoop" << std::endl;
-	}
 	Task::DeleteAll();
 	Task::UpdateAll(); 
 	Task::CollisionAll();
 	//CShadow::GetInstance()->Render([]() {
-		Task::RenderAll();
-		//});
+	Task::RenderAll();
+	//});
 
 
 }
@@ -116,6 +113,7 @@ void Init(void)
 	ADD_RESOURCE("Whale", CModel::CreateModel("Character/whale/whale.a3m"));
 	ADD_RESOURCE("SkyBox", CModel::CreateModel("Field/SkyBox.obj"));
 	ADD_RESOURCE("TitleImage", CImage::CreateImage("Title/Title.png"));
+	ADD_RESOURCE("ExclamationMark", CImage::CreateImage("UI/ExclamationMark.png"));
 	Task::Add(new Progress());
 	CShadow::CreateInscance(200.0f, 200.0f, 2048, 2046);
 	glDisable(GL_SPECULAR);

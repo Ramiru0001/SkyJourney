@@ -118,7 +118,9 @@ CFont* CFont::GetInstance(std::string name)
 	return m_instances[name];
 }
 
-void CFont::CreateInstance(std::string name, const char* font, int size)
+CFont* CFont::CreateInstance(std::string name, const char* font, int size)
 {
 	m_instances[name] = new CFont(font, size);
+
+	return m_instances[name];
 }
