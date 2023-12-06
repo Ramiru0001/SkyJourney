@@ -19,6 +19,24 @@ void Whale::Render() {
 	Search();
 }
 void Whale::Search() {
+	//3.サーチエリアの描画。スポットライトで表現
+	static float view_angle = DtoR(10.0f);
+	if (HOLD(CInput::eButton1))
+		view_angle += 0.01f;
+	if (HOLD(CInput::eButton2))
+		view_angle -= 0.01f;
+	CVector3D eye_pos = CMatrix::MTranselate(m_pos) * CMatrix::MRotation(m_rot) * CVector4D(0, -10, 20.0f, 1);
+	CVector3D eye_dir = CMatrix::MRotation(DtoR(80), m_rot.y, 0).GetFront();
+	CVector3D ep = PublicNum::Player_pos - eye_pos;
+	float d = CVector3D::Dot(eye_dir, ep.GetNormalize());
+	d = min(max(d, 0), 1);
+	float angle = acos(d);
+	CLight::SetType(1, CLight::eLight_Spot);
+	CLight::SetColor(1, CVector3D(1, 0, 0), CVector3D(1, 0, 0));
+	CLight::SetAttenuation(1, 0.01f);
+	CLight::SetRadiationAngle(1, view_angle);
+	CLight::SetDir(1, eye_dir);
+	CLight::SetPos(1, eye_pos);
 }
 void Whale::Move() {
 	CVector3D point_pos[] = {
@@ -35,6 +53,7 @@ void Whale::Move() {
 		CVector3D(175.759,53.0718,144.18),
 		CVector3D(342.818,53.0718,217.323),
 	};
+	Search();
 		if (point_pos[Point_num].x - m_pos.x < 1.0f && point_pos[Point_num].z - m_pos.z < 1.0f) {
 			if (Point_num < 12) {
 				Point_num++;

@@ -23,7 +23,7 @@ void Camera::Render() {
 	case PublicNum::WithPlayer:
 		//Task* p = Task::FindObject(EType::ePlayer);
 		//CVector3D p_pos = p->m_pos;//プレイヤーの座標
-		CVector3D p_pos = PublicNum::Player_pos;
+		CVector3D p_pos = PublicNum::Player_pos + CVector3D(0, 1.8, 0);
 		mouse_vec = CInput::GetMouseVec();
 		m_rot += CVector3D(mouse_vec.y, -mouse_vec.x, 0) * m_speed;
 		//上下角制限

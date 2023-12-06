@@ -26,15 +26,10 @@ Player::~Player() {
 	PublicNum::Player_On = false;
 }
 void Player::Render() {
-	if (CShadow::GetInstance()->GetState() != CShadow::eShadow) {
-		//マントへ羽を描画
-		FeatherDraw();
-	}
 	//プレイヤーモデルの描画
 	m_model.SetPos(m_pos);
 	m_model.SetScale(0.01f,0.01f,0.01f);
 	m_model.SetRot(m_rot);;
-	CLight::SetColor(0, CVector3D(.9f, .9f, .9f), CVector3D(0.3f, 0.3f, 0.3f));
 	glDisable(GL_CULL_FACE);
 	m_model.Render();
 	glEnable(GL_CULL_FACE);
@@ -60,6 +55,8 @@ void Player::Update() {
 		std::cout << "座標：" << m_pos.x << "," << m_pos.y << "," << m_pos.z << std::endl; 
 	}
 	m_model.UpdateAnimation();
+	//マントへ羽を描画
+	FeatherDraw();
 }
 void Player::FeatherSetDraw(int Count, int LightCount) {
 	CVector2D pos[] = { CVector2D(256, 370) ,CVector2D(256, 290) ,CVector2D(256, 210) ,CVector2D(256, 130), CVector2D(256, 50) };
@@ -254,9 +251,10 @@ void Player::Move() {
 		}
 	};
 	//m_rot.y = c_rot.y;
+	m_vec.y -= GRAVITY;
 	m_pos.y += m_vec.y;
 	//m_pos += m_vec;
-	m_vec.y -= GRAVITY; }
+	}
 }
 void Player::DebugMove() {
 	{CVector3D c_rot = PublicNum::Camera_rot;

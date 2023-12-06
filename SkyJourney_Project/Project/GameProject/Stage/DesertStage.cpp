@@ -1,7 +1,7 @@
 #include "DesertStage.h"
 DesertStage::DesertStage() :Task(ETaskPrio::eSystem, EType::eDefault) {
 	Task::AddStage(new Desert());
-	Task::AddStage(new Sandstorm());
+	//Task::AddStage(new Sandstorm());
 	CVector3D FeatherPos[] = { 
 		CVector3D(392.228f, 0.0718331f, -68.0385f),
 		CVector3D(248.269, 28.2336, -58.8655),
