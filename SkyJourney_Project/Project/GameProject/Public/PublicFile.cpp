@@ -14,6 +14,7 @@ bool PublicNum::Camera_On = false;
 bool PublicNum::Stage_Change = false;
 bool PublicNum::Debug_mode = false;
 bool PublicNum::Whiteout_flag = false;
+bool PublicNum::stage_change_flag = false;
 CVector3D PublicNum::Player_pos = CVector3D(0, 0, 0);
 CVector3D PublicNum::Camera_pos = CVector3D(0, 0, 0);
 CVector3D PublicNum::Camera_rot = CVector3D(0, 0, 0);

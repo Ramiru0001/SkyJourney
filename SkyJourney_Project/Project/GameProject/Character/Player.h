@@ -22,6 +22,8 @@ public:
 	float move_speed = 0.2f;
 	float fly_speed = 0.25f;
 	float jump_speed = 0.21f;
+	bool return_whiteout_flag=false;
+	int whiteout_count = 0;
 public:
 	bool OnGround = true;
 	Player(CVector3D &pos);
@@ -45,5 +47,6 @@ public:
 	/// マップチェンジをするエリアに入ったらtrue
 	/// </summary>
 	bool MapChangeCheck();
+	void Return_Whiteout();
 	CModel* GetModel();
 };

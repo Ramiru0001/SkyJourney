@@ -24,6 +24,7 @@ public:
 	static bool Whiteout_flag;//trueになったらホワイトアウト処理
 	static bool Stage_Change;//通常はfalse。stageが変わった時にtrueになる。
 	static bool Debug_mode;
+	static bool stage_change_flag;//stageChangeをするホワイトアウトのときにon
 	static int Feather_Count;//総羽の数
 	static int LightFeather_Count;//使える羽の数
 	static int Stage_Num;//現在のステージnumber

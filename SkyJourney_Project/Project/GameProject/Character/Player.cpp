@@ -39,6 +39,7 @@ void Player::Update() {
 	PublicNum::Player_pos = m_pos;
 	if (MapChangeCheck()) {
 		PublicNum::Whiteout_flag = true;
+		PublicNum::stage_change_flag = true;
 	}
 	if (PublicNum::Stage_Change == false) {
 		if (PublicNum::Debug_mode) {
@@ -53,6 +54,24 @@ void Player::Update() {
 	}
 	if (PublicNum::Log_pos == true) {
 		std::cout << "座標：" << m_pos.x << "," << m_pos.y << "," << m_pos.z << std::endl; 
+	}
+	if (return_whiteout_flag == false && PublicNum::Stage_Num == PublicNum::StageNum::SkyIsland && m_pos.y < -28.2083f ) {
+		//ホワイトアウトー＞ステージに戻る
+		PublicNum::Whiteout_flag = true;
+		Task::AddStage(new Whiteout);
+		return_whiteout_flag = true;
+	}
+	if (return_whiteout_flag) {
+		if (whiteout_count == PublicNum::MaxWhite_Count / 2) {
+			m_pos = CVector3D(88.5f, 1.7f, 4.37f);
+		}
+		if(whiteout_count<PublicNum::MaxWhite_Count){
+			whiteout_count++;
+		}
+		else {
+			whiteout_count = 0;
+			return_whiteout_flag = false;
+		}
 	}
 	m_model.UpdateAnimation();
 	//マントへ羽を描画
@@ -257,7 +276,7 @@ void Player::Move() {
 	}
 }
 void Player::DebugMove() {
-	{CVector3D c_rot = PublicNum::Camera_rot;
+	CVector3D c_rot = PublicNum::Camera_rot;
 	CVector2D mouse_vec = CInput::GetMouseVec();
 	CVector3D key_dir = CVector3D(0, 0, 0);
 	if (HOLD(CInput::eUp))key_dir.z = 1;
@@ -284,34 +303,7 @@ void Player::DebugMove() {
 	if (HOLD(CInput::eShift)) {
 		m_pos.y -= 0.5f;
 	}
-	//	space_count = 0;
-	//}
-	//飛ぶ処理
-	//if (HOLD(CInput::eButton5/*space*/)) {
-	//	if (space_count == 10) {
-	//		if (PublicNum::LightFeather_Count > 0) {
-	//			//if(OnGround == true)
-	//			m_vec.y = FLY;
-	//			state = Fly;
-	//			m_model.ChangeAnimation(2);
-	//			PublicNum::LightFeather_Count--;
-	//		}
-	//	}
-	//	space_count++;
-	//}
-	//ジャンプ処理
-	//if (PULL(CInput::eButton5/*space*/)) {
-	//	if (space_count < 10 && state != Jump && state != Fly) {
-	//		state = Jump;
-	//		m_model.ChangeAnimation(2);//ジャンプアニメーション
-	//		m_vec.y = JUMP;
-	//	}
-	//};
-	//m_rot.y = c_rot.y;
 	m_pos.y += m_vec.y;
-	//m_pos += m_vec;
-	//m_vec.y -= GRAVITY; 
-	}
 }
 void Player::FeatherDraw() {
 	//現在のカメラをコピー

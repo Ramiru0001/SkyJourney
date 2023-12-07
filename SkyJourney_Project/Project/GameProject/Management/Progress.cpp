@@ -6,9 +6,10 @@ Progress::Progress():Task(ETaskPrio::eSystem, EType::eDefault) {
 	prog_num = ProgressNum::Tytle;
 }
 void Progress::Update() {
-	if (PublicFunction::Observer(Whiteout_flag_old,PublicNum::Whiteout_flag)) {
+	if (PublicFunction::Observer(Whiteout_flag_old, PublicNum::Whiteout_flag) && PublicNum::stage_change_flag) {
 		Task::Add(new Whiteout);
 		TimerStart();
+		PublicNum::stage_change_flag = false;
 	}
 	Whiteout_flag_old = PublicNum::Whiteout_flag;
 	PublicNum::Stage_Change=StageChangeTimer(TimerOn);
