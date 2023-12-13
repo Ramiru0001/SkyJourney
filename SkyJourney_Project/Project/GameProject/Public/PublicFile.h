@@ -14,6 +14,7 @@ public:
 		Tytle,
 		SkyIsland,
 		Desert,
+		Volcano,
 	};
 	static bool Player_On;//プレイヤーがいるかいないか。いたらtrue
 	static bool Camera_On;//カメラがあるかないか。あったらtrue

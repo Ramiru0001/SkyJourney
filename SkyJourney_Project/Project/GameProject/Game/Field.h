@@ -6,7 +6,6 @@ public:
 public:
 	SkyIsland();
 	void Render();
-	void Update();
 	CModel* GetModel();
 };
 class Desert :public Task {
@@ -16,6 +15,14 @@ public:
 public:
 	Desert();
 	void Render();
-	void Update();
+	CModel* GetModel();
+};
+class Volcano :public Task {
+public:
+	CModelObj m_Field;
+	CModelObj m_Sky;
+public:
+	Volcano();
+	void Render();
 	CModel* GetModel();
 };

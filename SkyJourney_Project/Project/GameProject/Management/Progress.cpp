@@ -1,6 +1,7 @@
 #include "progress.h"
 #include "../Stage/SkyIslandStage.h"
 #include "../Stage/DesertStage.h"
+#include "../Stage/VolcanoStage.h"
 Progress::Progress():Task(ETaskPrio::eSystem, EType::eDefault) {
 	ProgressChange(prog_num = ProgressNum::Tytle);
 	prog_num = ProgressNum::Tytle;
@@ -18,8 +19,8 @@ void Progress::Update() {
 	case ProgressNum::Tytle:
 	{
 		if (PUSH(CInput::eButton1)) {
-			prog_num = ProgressNum::SkyIsland;
-			PublicNum::Stage_Num=PublicNum::StageNum::SkyIsland;
+			prog_num = ProgressNum::Volcano;
+			PublicNum::Stage_Num=PublicNum::StageNum::Volcano;
 			ProgressChange(prog_num);
 		}
 	}
@@ -33,9 +34,9 @@ void Progress::Update() {
 		break;
 	case ProgressNum::Desert:
 		if (PublicNum::Stage_Change) {
-			/*prog_num = ProgressNum::Desert;
-			PublicNum::Stage_Num = PublicNum::StageNum::Desert;
-			ProgressChange(prog_num);*/
+			prog_num = ProgressNum::Volcano;
+			PublicNum::Stage_Num = PublicNum::StageNum::Volcano;
+			ProgressChange(prog_num);
 		}
 		break;
 	}
@@ -78,6 +79,21 @@ void Progress::ProgressChange(int Progress) {
 			DesertStage* DesertStage_Instance = new DesertStage;
 			//呼んだクラスは必要ないので即破棄
 			delete DesertStage_Instance; 
+		}
+		break;
+	case ProgressNum::Volcano:
+		if (PublicNum::Camera_On == false) {
+			Task::Add(new Camera());
+		}
+		if (PublicNum::Player_On == false) {
+			Task::Add(new Player(CVector3D(468.5f, 0.07f, -11.7f)));
+		}
+		Task::Add(new SkyBox());
+		{
+			//VolcanoStageのコンストラクタを呼んでstageタスクリストに追加
+			VolcanoStage* VolcanoStage_Instance = new VolcanoStage;
+			//呼んだクラスは必要ないので即破棄
+			delete VolcanoStage_Instance;
 		}
 		break;
 	}

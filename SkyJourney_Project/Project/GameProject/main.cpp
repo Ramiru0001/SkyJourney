@@ -67,7 +67,7 @@ void Init(void)
 	CLight::SetType(0, CLight::eLight_Direction);
 	CLight::SetPos(0, CVector3D(50, 200, 200));
 	CLight::SetDir(0, CVector3D(0, -2, 0).GetNormalize());
-	CLight::SetColor(0, CVector3D(.9f, .9f, .9f), CVector3D(0.3f, 0.3f, 0.3f));
+	CLight::SetColor(0, CVector3D(0.41f, 0.41f, 0.41f), CVector3D(0.68f, 0.68f, 0.68f));
 	static GLfloat lightSpecular[3] = { 0.0f,0.0f,0.0f }; //鏡面光
 	glLightfv(GL_LIGHT0, GL_SPECULAR, lightSpecular);
 	static GLfloat lightAmbient[3] = { 1.0f,1.0f,1.0f };
@@ -115,12 +115,12 @@ void Init(void)
 	ADD_RESOURCE("SkyBox", CModel::CreateModel("Field/SkyBox.obj"));
 	ADD_RESOURCE("TitleImage", CImage::CreateImage("Title/Title.png"));
 	ADD_RESOURCE("ExclamationMark", CImage::CreateImage("UI/ExclamationMark.png"));
+	ADD_RESOURCE("Volcano", CModel::CreateModel("Field/volcano/volcano.obj",10, 5, 5));
 	Task::Add(new Progress());
 	//影描画機能を生成		描画範囲　光源の高さ 解像度
 	CShadow::CreateInscance(200.0f, 200.0f, 2048, 2046);
 	//ポストエフェクトを生成		画面解像度
 	CRendaring::CreatInstance(SCREEN_WIDTH, SCREEN_HEIGHT);
-
 }
 void Release()
 {

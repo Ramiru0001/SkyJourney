@@ -1,0 +1,13 @@
+# Blender 3.5.0 MTL File: 'Volcano.blend'
+# www.blender.org
+
+newmtl Volcano
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd Volcano_Tex/Volcano_albedo.png
+map_Ks Volcano_Tex/Volcano_specular.png
+map_Ke Volcano_Tex/Volcano_emissive.png
+map_Bump -bm 1.000000 Volcano_Tex/Volcano_normal.png

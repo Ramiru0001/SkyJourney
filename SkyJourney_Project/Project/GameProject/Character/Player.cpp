@@ -143,7 +143,7 @@ void Player::Collision(Task* a) {
 	switch (a->GetType()) {
 	case EType::eField:
 	{
-		OnGround = false;
+		//OnGround = false;
 		auto tri = a->GetModel()->CollisionSphere(m_pos + CVector3D(0, m_rad, 0), m_rad);
 		for (auto& t : tri) {
 			if (t.m_normal.y < -0.5f) {
@@ -254,6 +254,7 @@ void Player::Move() {
 		if (space_count == 10) {
 			if (PublicNum::LightFeather_Count > 0) {
 				//if(OnGround == true)
+				OnGround = false;
 				m_vec.y = FLY;
 				state = Fly;
 				m_model.ChangeAnimation(2);
@@ -264,12 +265,16 @@ void Player::Move() {
 	}
 	if (PULL(CInput::eButton5/*space*/)) {
 		if (space_count < 10 && state != Jump && state != Fly) {
+			OnGround = false;
 			state = Jump;
 			m_model.ChangeAnimation(2);//ジャンプアニメーション
 			m_vec.y = JUMP;
 		}
 	};
 	//m_rot.y = c_rot.y;
+	if (m_vec.y < -GRAVITY * 5) {
+		OnGround = false;
+	}
 	m_vec.y -= GRAVITY;
 	m_pos.y += m_vec.y;
 	//m_pos += m_vec;

@@ -1,0 +1,13 @@
+# Blender 3.5.0 MTL File: 'volcano_ckanbac.blend'
+# www.blender.org
+
+newmtl volcano
+Ka 1.000000 1.000000 1.000000
+Ks 0.050000 0.050000 0.050000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd textures/tex lava diffuse.png
+map_Ns textures/tex roughness.png
+map_Ke textures/tex lava diffuse.png
+map_Bump -bm 1.000000 textures/tex nor.png

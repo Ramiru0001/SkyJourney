@@ -45,6 +45,9 @@
       <Filter>System</Filter>
     </ClInclude>
     <ClInclude Include="Shader.h" />
+    <ClInclude Include="Stage\VolcanoStage.h">
+      <Filter>Stage</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -91,6 +94,9 @@
       <Filter>System</Filter>
     </ClCompile>
     <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="Stage\VolcanoStage.cpp">
+      <Filter>Stage</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Character">

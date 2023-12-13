@@ -138,17 +138,19 @@ void UI::FeatherRender() {
 }
 void UI::DestinationRender() {
 	//ステージごとにゴールの位置を取得し、2Dベクトルに治し、その方向に描画
-	ExclamationMark_img.SetPos(Ex_pos2D);
-	ExclamationMark_img.SetSize(50, 50);
-	ExclamationMark_img.Draw();
-}
-void UI::DestinationUpdate() {
 	CVector3D Goal_pos[] = { DEFAULT_POS,
 		CVector3D(-120.194,34.3038,8.14138),
 	};
 	Ex_pos3D = Goal_pos[PublicNum::Stage_Num];
-	//座標更新
-	// ゴールの座標ーカメラの座標で、ゴールへのベクトルを出す
-	// 
-	//Ex_pos=
+	//2D画像の表示。
+	CVector3D pos2d = Utility::WorldToScreen(Ex_pos3D);
+	if (pos2d.z < 0) return;
+	pos2d.x = min(max(pos2d.x, 0+25), SCREEN_WIDTH - 50+25);
+	pos2d.y = min(max(pos2d.y, 0+30+25), SCREEN_HEIGHT - 50 - 80+25);
+	ExclamationMark_img.SetSize(50, 50);
+	ExclamationMark_img.SetPos(pos2d.x-25, pos2d.y-25);
+	ExclamationMark_img.Draw();
+}
+void UI::DestinationUpdate() {
+	
 }

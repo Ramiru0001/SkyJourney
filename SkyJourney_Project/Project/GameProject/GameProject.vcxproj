@@ -24,6 +24,7 @@
     <ClInclude Include="Shader.h" />
     <ClInclude Include="Stage\DesertStage.h" />
     <ClInclude Include="Stage\SkyIslandStage.h" />
+    <ClInclude Include="Stage\VolcanoStage.h" />
     <ClInclude Include="System\Effect.h" />
     <ClInclude Include="System\UI.h" />
     <ClInclude Include="Title\Title.h" />
@@ -42,6 +43,7 @@
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Stage\DesertStage.cpp" />
     <ClCompile Include="Stage\SkyIslandStage.cpp" />
+    <ClCompile Include="Stage\VolcanoStage.cpp" />
     <ClCompile Include="System\Effect.cpp" />
     <ClCompile Include="System\UI.cpp" />
     <ClCompile Include="Title\Title.cpp" />

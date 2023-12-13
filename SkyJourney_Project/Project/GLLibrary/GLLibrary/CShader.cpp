@@ -181,7 +181,7 @@ const char* mesh_frag = "#version 430\n\n"\
 "		}\n"\
 "		float l = length(eyePos - V);\n"\
 "		float f = clamp((fogFar - l) / (fogFar - fogNear), 0.0, 1.0);\n"\
-"		color = texColor.xyz * (visibility * Diffuse.xyz * clamp(D, 0.0, 1.0) + Diffuse.xyz * clamp(A, 0.0, 1.0)) /*+ visibility * Specular * clamp(S, 0.0, 1.0) + Emissive*/;\n"\
+"		color = texColor.xyz * (visibility * Diffuse.xyz * clamp(D, 0.0, 1.0) + Ambient.xyz * clamp(A, 0.0, 1.0)) /*+ visibility * Specular * clamp(S, 0.0, 1.0) + Emissive*/;\n"\
 "		out_color[0] = vec4(color + fogColor.xyz * (1.0 - f), clamp((texColor.w * Diffuse.w * alpha) - ((1.0 - fogColor.w) * (1.0 - f)), 0.0f, 1.0f));\n"\
 "		out_color[1] = vec4(visibility * Specular * clamp(S, 0.0, 1.0)+ Emissive,1);\n"\
 "	}\n"\
