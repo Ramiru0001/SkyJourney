@@ -43,7 +43,7 @@ void Feather::Collision(Task* a) {
 }
 Feather::~Feather() {
 }
-Candle::Candle(CVector3D& pos/*, float rotY*/) :Task(ETaskPrio::eObject, EType::eObject) {
+Candle::Candle(const CVector3D& pos/*, float rotY*/) :Task(ETaskPrio::eObject, EType::eObject) {
 	candle_model = COPY_RESOURCE("Glass1", CModelObj); 
 	fire_model = COPY_RESOURCE("Hinokon", CModelObj);
 	m_pos = pos;

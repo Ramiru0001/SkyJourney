@@ -19,7 +19,7 @@ void Progress::Update() {
 	case ProgressNum::Tytle:
 	{
 		if (PUSH(CInput::eButton1)) {
-			prog_num = ProgressNum::Volcano;
+			prog_num = ProgressNum::Desert;
 			PublicNum::Stage_Num=PublicNum::StageNum::Volcano;
 			ProgressChange(prog_num);
 		}

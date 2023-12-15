@@ -43,4 +43,5 @@ public:
 	/// </summary>
 	/// <returns></returns>
 	static bool Observer(int old,int now);
+	static CVector3D DoubleToVector3D(double[]);
 };

@@ -170,11 +170,11 @@ void Task::AddFeathers(CVector3D FeatherPos[]) {
 		Task::AddStage(new Feather(FeatherPos[i]));
 	}
 }
-void Task::AddCandles(CVector3D CandlePos[]) {
+void Task::AddCandles(const std::vector<CVector3D>& CandlePos) {
 	int PosCount = sizeof(CandlePos);
-	for (int i = 0; i < PosCount; i++) {
-		Task::AddStage(new Candle(CandlePos[i]));
-	}
+	for (const auto& pos : CandlePos) {
+        AddStage(new Candle(pos));
+    }
 }
 bool Task::CheckKill() {
 	if (m_kill = true) {

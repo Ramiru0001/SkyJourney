@@ -8,7 +8,7 @@ int PublicNum::MaxWhite_Count = 120;
 int PublicNum::FeatherDetail_Count = 0;
 int PublicNum::FeatherDetail_CountMax = 300;
 bool PublicNum::Log_passage = false;
-bool PublicNum::Log_pos = false;
+bool PublicNum::Log_pos = true;
 bool PublicNum::Player_On = false;
 bool PublicNum::Camera_On = false;
 bool PublicNum::Stage_Change = false;
@@ -23,4 +23,17 @@ bool PublicFunction::Observer(int old,int now) {
 		return true;
 	}
 	return false;
+}
+CVector3D PublicFunction::DoubleToVector3D(double part[]) {
+	int PosCount = sizeof(part);
+	if (PosCount % 3 != 0) {
+		return CVector3D(0,0,0);
+	}
+	int num = 0;
+	CVector3D list[100];
+	for (int i = 0; i < PosCount; i+=3) {
+		list[num] = CVector3D(part[i],part[i+1],part[i+2]);
+		num++;
+		list[num];
+	}
 }

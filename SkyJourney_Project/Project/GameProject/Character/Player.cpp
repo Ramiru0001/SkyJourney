@@ -15,6 +15,7 @@ Player::Player(CVector3D &pos):Task(ETaskPrio::ePlayer, EType::ePlayer){
 	Stage_Pos[PublicNum::StageNum::Tytle] = CVector3D(0, 0, 0);
 	Stage_Pos[PublicNum::StageNum::SkyIsland] = SkyIslandPos;
 	Stage_Pos[PublicNum::StageNum::Desert] = DesertPos;
+	Stage_Pos[PublicNum::StageNum::Volcano] = VolcanoPos;
 	//レンダーターゲット生成
 	texture_frame_rader = new CTextureFrame(512, 512, CVector4D(1, 0, 0, 1)/*マントを赤に塗りつぶし*/);
 	//レンダーターゲットのテクスチャーと差し替え
@@ -33,7 +34,6 @@ void Player::Render() {
 	glDisable(GL_CULL_FACE);
 	m_model.Render();
 	glEnable(GL_CULL_FACE);
-
 }
 void Player::Update() {
 	PublicNum::Player_pos = m_pos;
@@ -332,6 +332,11 @@ bool Player::MapChangeCheck() {
 		break;
 	case PublicNum::StageNum::Desert:
 		if (m_pos.z<8.6 && m_pos.z>-17.0 && m_pos.y > 1.7 && m_pos.y < 57.2 && m_pos.x < -313&& m_pos.x > -323) {
+			return true;
+		}
+		break;
+	case PublicNum::StageNum::Volcano:
+		if ((m_pos - Goalpos).Length() <= 2.5f) {
 			return true;
 		}
 		break;

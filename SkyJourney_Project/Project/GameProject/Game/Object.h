@@ -20,7 +20,7 @@ public:
 	CModelObj candle_model;
 	CModelObj fire_model;
 public:
-	Candle(CVector3D& pos);
+	Candle(const CVector3D& pos);
 	~Candle();
 	void Render();
 	void Update();

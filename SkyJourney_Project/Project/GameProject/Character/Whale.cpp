@@ -1,13 +1,15 @@
 #include "Whale.h"
-Whale::Whale(/*CVector3D& pos*/) :Task(ETaskPrio::eCharacter, EType::eCharacter) {
+Whale::Whale(const std::vector<CVector3D>& MovePos) :Task(ETaskPrio::eCharacter, EType::eCharacter) {
 	//m_pos = pos;
 	m_model= COPY_RESOURCE("Whale", CModelA3M);
 	m_model.ChangeAnimation(0);
 	m_pos = DEFAULT_POS;
+	MovePos_List = MovePos;
+	auto itr = MovePos_List.begin();
 }
 void Whale::Update() {
 	// サーチ範囲の中にプレイヤーがいるか判定
-	if (!CheckPlayerInSearchRange()) {
+	if (!CheckPlayerInSearchRange(view_angle)) {
 		// プレイヤーがサーチ範囲内にいない場合は周回
 		Move(DestinationSelection());
 	}
@@ -28,6 +30,8 @@ void Whale::Render() {
 void Whale::Search() {
 	//3.サーチエリアの描画。スポットライトで表現
 	view_angle = DtoR(10.0f);
+	CVector3D ep = PublicNum::Player_pos - eye_pos;
+	CVector3D default_dir= CMatrix::MRotation(DtoR(70), m_rot.y, 0).GetFront();;
 	/*if (HOLD(CInput::eButton1))
 		view_angle += 0.01f;
 	if (HOLD(CInput::eButton2))
@@ -35,25 +39,43 @@ void Whale::Search() {
 	eye_pos = CMatrix::MTranselate(m_pos) * CMatrix::MRotation(m_rot) * CVector4D(0, -10, 20.0f, 1);
 	//前後の角度
 	//もしプレイヤーが視界に入っている場合、サーチエリア中央にとらえるようにエリアを動かす
-	if (!CheckPlayerInSearchRange()) {
+	CVector3D new_dir;
+	float r;
+	if (CheckPlayerInSearchRange(view_angle)) {
+		new_dir = ep.GetNormalize();
+		r = 0.9;
+	}
+	else{
 		//プレイヤーがサーチエリア外の場合
-		eye_dir = CMatrix::MRotation(DtoR(70), m_rot.y, 0).GetFront();
+		new_dir = CMatrix::MRotation(DtoR(70), m_rot.y, 0).GetFront();
+		r = 0;
+	};
+	if (CVector3D::Dot(new_dir, default_dir)>cos(DtoR(15))) {
+		eye_dir = (eye_dir * r + new_dir * (1.0-r)).GetNormalize();
 	}
-	else {
-		//プレイヤーがサーチエリア内の場合
-		//視点からプレイヤーのベクトル、視点からサーチの中央へのベクトルを入手
-		//両方ともプレイヤーのY座標の高さで計算して、プレイヤーから中央へのベクトルを割り出す
-		//その方向へサーチエリアを動かす
-	}
+	float a = CVector3D::Dot(new_dir, default_dir);
+	std::cout << "Dot : " << a << std::endl;
+	std::cout << "cos : " << cos(DtoR(60)) << std::endl;
+	//else {
+	//	//プレイヤーがサーチエリア内の場合
+	//	CVector3D ep = PublicNum::Player_pos - eye_pos;
+	//	CVector3D EpNormalize = ep.GetNormalize();
+	//	float d = CVector3D::Dot(eye_dir, ep.GetNormalize());
+	//	float angle = acos(d);
+	//	float MaxView_Angle;
+	//	eye_dir = ep.GetNormalize();
+	//	//視点からプレイヤーのベクトル、視点からサーチの中央へのベクトルを入手
+	//	//両方ともプレイヤーのY座標の高さで計算して、プレイヤーから中央へのベクトルを割り出す
+	//	//その方向へサーチエリアを動かす
+	//}
 	{//くじらさんの目からプレイヤーの角度を求める
-		CVector3D ep = PublicNum::Player_pos - eye_pos;
 		float d = CVector3D::Dot(eye_dir, ep.GetNormalize());
 		d = min(max(d, 0), 1);
 		//プレイヤーの角度
 		player_angle = acos(d); }
 	CLight::SetType(1, CLight::eLight_Spot);
 	//プレイヤーが視界に入っていたら
-	if (CheckPlayerInSearchRange()) {
+	if (CheckPlayerInSearchRange(view_angle)) {
 		// 視界に入った時のサーチライトの色を変更
 		CLight::SetColor(1, CVector3D(1, 0, 0), CVector3D(1, 0, 0));
 	}
@@ -134,7 +156,7 @@ void Whale::SearchAreaChange() {
 	//サーチ範囲から外れたらしばらくあたりを見渡して、範囲に入らなければ視点を戻し順路を進む
 }
 CVector3D Whale::DestinationSelection() {
-	CVector3D point_pos[] = {
+	/*CVector3D point_pos[] = {
 		CVector3D(344.873,53.0718,-8.48718),
 		CVector3D(248.225,53.0718,-58.3277),
 		CVector3D(117.756,53.0718,-1.22288),
@@ -147,18 +169,17 @@ CVector3D Whale::DestinationSelection() {
 		CVector3D(39.7592,53.0718,84.0604),
 		CVector3D(175.759,53.0718,144.18),
 		CVector3D(342.818,53.0718,217.323),
-	};
-	if (point_pos[Point_num].x - m_pos.x < 1.0f && point_pos[Point_num].z - m_pos.z < 1.0f) {
-		if (Point_num < 12) {
-			Point_num++;
-		}
-		else {
-			Point_num = 0;
-		}
+	};*/
+	if (Point_num >= MovePos_List.size()) {
+		Point_num = 0;
 	}
-	return point_pos[Point_num];
+	CVector3D pos = MovePos_List.at(Point_num);
+	if (pos.x - m_pos.x < 1.0f && pos.z - m_pos.z < 1.0f) {
+		Point_num++;
+	}
+	return pos;
 }
-bool Whale::CheckPlayerInSearchRange() {
+bool Whale::CheckPlayerInSearchRange(float View_Angle) {
 	// サーチエリアの角度とプレイヤーの角度を比較して判定
 	//eye_pos = CMatrix::MTranselate(m_pos) * CMatrix::MRotation(m_rot) * CVector4D(0, -10, 20.0f, 1);
 	//eye_dir = CMatrix::MRotation(DtoR(70), m_rot.y, 0).GetFront();
@@ -167,5 +188,5 @@ bool Whale::CheckPlayerInSearchRange() {
 	float angle = acos(d);
 
 	// サーチ範囲内にプレイヤーがいる場合はtrueを返す
-	return angle <= view_angle;
+	return angle <= View_Angle;
 }

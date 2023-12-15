@@ -8,6 +8,7 @@
 #include <math.h>
 #include <cmath>
 #include <algorithm>
+#include <Vector>
 #include "Shader.h"
 #include "Management/Task.h"
 #include "Management/Progress.h"

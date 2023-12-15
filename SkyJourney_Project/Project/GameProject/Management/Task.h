@@ -65,7 +65,7 @@ public:
 	/// <param name="a"></param>
 	static void AddStage(Task* a);
 	static void AddFeathers(CVector3D[]);
-	static void AddCandles(CVector3D[]);
+	static void AddCandles(const std::vector<CVector3D>& CandlePos);
 	/// <summary>
 	/// íœƒtƒ‰ƒOtrue
 	/// </summary>
