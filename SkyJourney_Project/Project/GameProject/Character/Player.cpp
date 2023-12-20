@@ -152,10 +152,7 @@ void Player::Collision(Task* a) {
 				}
 			}
 			else if (t.m_normal.y > 0.5f) {
-				OnGround = true; /*
-				if (PublicNum::log_passage == true) {
-					std::cout << "OnGround" << std::endl;
-				}*/
+				OnGround = true; 
 				if (m_vec.y < 0)m_vec.y = 0;
 			}
 			float max_y = max(t.m_vertex[0].y, max(t.m_vertex[1].y, t.m_vertex[2].y));
@@ -163,32 +160,35 @@ void Player::Collision(Task* a) {
 			CVector3D nv = t.m_normal * (m_rad - t.m_dist);
 			//Å‚à‘å‚«‚ÈˆÚ“®—Ê‚ð‹‚ß‚é
 			v.y = fabs(v.y) > fabs(nv.y) ? v.y : nv.y;
-			//zennbu‰Ÿ‚µ–ß‚³‚ê‚é
+			//‘S‚Ä‰Ÿ‚µ–ß‚³‚ê‚é
 			v.x = fabs(v.x) > fabs(nv.x) ? v.x : nv.x;
 			v.z = fabs(v.z) > fabs(nv.z) ? v.z : nv.z;
 		}
 		//‰Ÿ‚µ–ß‚·
 		m_pos += v; 
 		PublicNum::Player_pos = m_pos;
+		break;
 	}
-	//std::cout << "OffGround1" << std::endl;
-		break;
 	case EType::eEnemy:
+	{
 		if ((a->m_pos - m_pos).Length() < a->m_rad + m_rad) {
-			CVector3D PEVec = a->m_pos - m_pos;
-			m_pos += PEVec.GetNormalize() * 0.5f* move_speed;
-			a->m_pos -= PEVec.GetNormalize() * 0.5f* move_speed;
+		CVector3D PEVec = a->m_pos - m_pos;
+		m_pos += PEVec.GetNormalize() * 0.5f * move_speed;
+		a->m_pos -= PEVec.GetNormalize() * 0.5f * move_speed;
 		}
-		break;
+		break; 
+	}
 	case EType::eObject:
+	{
 		if (a->GetCollision() == true) {
 			if ((a->m_pos - m_pos).Length() < a->m_rad + m_rad) {
 				CVector3D PEVec = a->m_pos - m_pos;
-				m_pos -= PEVec.GetNormalize()* move_speed;
+				m_pos -= PEVec.GetNormalize() * move_speed;
 			}
 		}
 		break;
-	case eCharacter:
+	}
+	case EType::eCharacter:
 	{
 		auto tri = a->GetModel()->CollisionSphere(m_pos + CVector3D(0, m_rad, 0), m_rad);
 		for (auto& t : tri) {
@@ -211,9 +211,8 @@ void Player::Collision(Task* a) {
 		}
 		//‰Ÿ‚µ–ß‚·
 		m_pos += v;
-	}
-	break;
 		break;
+	}
 	default:
 		break;
 	}

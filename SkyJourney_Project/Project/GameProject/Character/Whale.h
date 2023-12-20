@@ -19,6 +19,11 @@ public:
 	void Move(CVector3D pos);
 	void SearchAreaChange();
 	void DrawCone(const GLfloat& radius, const GLfloat& height, const GLint& slices, const GLint& stacks);
+	/*!
+		@brief サーチとプレイヤーの間にオブジェクトがあるかどうかの判定
+		@retval true:オブジェクト接触
+	**/
+	bool LightObjectPlayer();
 	//目的地選択
 	CVector3D DestinationSelection();
 	CModel* GetModel();

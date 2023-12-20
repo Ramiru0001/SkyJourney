@@ -8,12 +8,18 @@ Whale::Whale(const std::vector<CVector3D>& MovePos) :Task(ETaskPrio::eCharacter,
 	auto itr = MovePos_List.begin();
 }
 void Whale::Update() {
-	// サーチ範囲の中にプレイヤーがいるか判定
-	if (!CheckPlayerInSearchRange(view_angle)) {
-		// プレイヤーがサーチ範囲内にいない場合は周回
+	//プレイヤーがサーチの外側にいる場合
+	if (!CheckPlayerInSearchRange(view_angle)){
 		Move(DestinationSelection());
+		std::cout << "サーチの外" << std::endl;
+	}
+	else if (LightObjectPlayer()) {
+		//プレイヤーとの間に障害物がある場合
+		Move(DestinationSelection());
+		std::cout << "オブジェクトあり" << std::endl;
 	}
 	else {
+		// プレイヤーがサーチ範囲内にいない場合は周回
 		m_vec = CVector3D(0,0,0);
 	}
 	Search();
@@ -41,7 +47,7 @@ void Whale::Search() {
 	//もしプレイヤーが視界に入っている場合、サーチエリア中央にとらえるようにエリアを動かす
 	CVector3D new_dir;
 	float r;
-	if (CheckPlayerInSearchRange(view_angle)) {
+	if (CheckPlayerInSearchRange(view_angle)&& !LightObjectPlayer()) {
 		new_dir = ep.GetNormalize();
 		r = 0.9;
 	}
@@ -54,8 +60,8 @@ void Whale::Search() {
 		eye_dir = (eye_dir * r + new_dir * (1.0-r)).GetNormalize();
 	}
 	float a = CVector3D::Dot(new_dir, default_dir);
-	std::cout << "Dot : " << a << std::endl;
-	std::cout << "cos : " << cos(DtoR(60)) << std::endl;
+	//std::cout << "Dot : " << a << std::endl;
+	//std::cout << "cos : " << cos(DtoR(60)) << std::endl;
 	//else {
 	//	//プレイヤーがサーチエリア内の場合
 	//	CVector3D ep = PublicNum::Player_pos - eye_pos;
@@ -77,6 +83,7 @@ void Whale::Search() {
 	//プレイヤーが視界に入っていたら
 	if (CheckPlayerInSearchRange(view_angle)) {
 		// 視界に入った時のサーチライトの色を変更
+
 		CLight::SetColor(1, CVector3D(1, 0, 0), CVector3D(1, 0, 0));
 	}
 	else {
@@ -189,4 +196,11 @@ bool Whale::CheckPlayerInSearchRange(float View_Angle) {
 
 	// サーチ範囲内にプレイヤーがいる場合はtrueを返す
 	return angle <= View_Angle;
+}
+bool Whale::LightObjectPlayer() {
+	auto tri = m_model.CollisionRay(m_pos, PublicNum::Player_pos);
+	if (tri.empty()) {
+		return false;
+	}
+	return true;
 }
