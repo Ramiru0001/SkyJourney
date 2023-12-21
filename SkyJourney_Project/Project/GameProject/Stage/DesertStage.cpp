@@ -26,18 +26,18 @@ DesertStage::DesertStage() :Task(ETaskPrio::eSystem, EType::eDefault) {
 	Task::AddFeathers(FeatherPos);
 	Task::AddCandles(CandleList);
 	std::vector<CVector3D>WhalePos = {
-		CVector3D(344.873,53.0718,-8.48718),
-		CVector3D(248.225,53.0718,-58.3277),
-		CVector3D(117.756,53.0718,-1.22288),
-		CVector3D(-14.4411,53.0718,-97.8118),
-		CVector3D(45.2624,53.0718,-270.918),
-		CVector3D(-218.738,53.0718,-277.225),
-		CVector3D(-273.647,53.0718,-64.9262),
-		CVector3D(-251.047,53.0718,173.825),
-		CVector3D(-81.6449,53.0718,133.62),
-		CVector3D(39.7592,53.0718,84.0604),
-		CVector3D(175.759,53.0718,144.18),
-		CVector3D(342.818,53.0718,217.323),
+		CVector3D(344.873,160,-8.48718),
+		CVector3D(248.225,160,-58.3277),
+		CVector3D(117.756,160,-1.22288),
+		CVector3D(-14.4411,160,-97.8118),
+		CVector3D(45.2624,160,-270.918),
+		CVector3D(-218.738,160,-277.225),
+		CVector3D(-273.647,160,-64.9262),
+		CVector3D(-251.047,160,173.825),
+		CVector3D(-81.6449,160,133.62),
+		CVector3D(39.7592,160,84.0604),
+		CVector3D(175.759,160,144.18),
+		CVector3D(342.818,160,217.323),
 	};
 	Task::AddStage(new Whale(WhalePos));
 }

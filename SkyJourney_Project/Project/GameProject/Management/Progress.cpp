@@ -88,7 +88,7 @@ void Progress::ProgressChange(int Progress) {
 		if (PublicNum::Player_On == false) {
 			Task::Add(new Player(CVector3D(468.5f, 0.07f, -11.7f)));
 		}
-		Task::Add(new SkyBox());
+		//Task::Add(new SkyBox());
 		{
 			//VolcanoStageのコンストラクタを呼んでstageタスクリストに追加
 			VolcanoStage* VolcanoStage_Instance = new VolcanoStage;

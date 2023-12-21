@@ -6,25 +6,53 @@ Whale::Whale(const std::vector<CVector3D>& MovePos) :Task(ETaskPrio::eCharacter,
 	m_pos = DEFAULT_POS;
 	MovePos_List = MovePos;
 	auto itr = MovePos_List.begin();
+	StateNow = eGoAround;
 }
 void Whale::Update() {
-	//プレイヤーがサーチの外側にいる場合
-	if (!CheckPlayerInSearchRange(view_angle)){
-		Move(DestinationSelection());
-		std::cout << "サーチの外" << std::endl;
+	bool oldSearchFlag = SearchFlag;
+	switch (StateNow) {
+	case eGoAround:
+	case eChaseSearch:
+		//プレイヤーがサーチの外側にいる場合
+		if (!CheckPlayerInSearchRange(view_angle)) {
+			// プレイヤーがサーチ範囲内にいない場合は周回
+			Move(DestinationSelection());
+			SearchFlag = false;
+			StateNow = eGoAround;
+			std::cout << "サーチの外" << std::endl;
+		}
+		else if (LightObjectPlayer()) {
+			//プレイヤーとの間に障害物がある場合
+			Move(DestinationSelection());
+			SearchFlag = false;
+			StateNow = eGoAround;
+			std::cout << "オブジェクトあり" << std::endl;
+		}
+		else {
+			//プレイヤーがサーチ内にいて、障害物にかくれていない場合
+			m_vec = CVector3D(0, 0, 0);
+			SearchFlag = true;
+			StateNow = eChaseSearch;
+			if (PublicFunction::Observer(oldSearchFlag, SearchFlag)) {
+				SearchCount = 0;
+			}
+			SearchCount++;
+			std::cout << "サーチ中" << std::endl;
+			Search();
+		}
+		break;
+	case eAttack:
+		break;
+	case eReturnToRoute:
+		break;
+	default:
+		break;
 	}
-	else if (LightObjectPlayer()) {
-		//プレイヤーとの間に障害物がある場合
-		Move(DestinationSelection());
-		std::cout << "オブジェクトあり" << std::endl;
-	}
-	else {
-		// プレイヤーがサーチ範囲内にいない場合は周回
-		m_vec = CVector3D(0,0,0);
-	}
-	Search();
 	// 移動処理
 	m_pos += m_vec;
+	if (SearchCount >= 180) {
+		StateNow = eAttack;
+	}
 }
 void Whale::Render() {
 	m_model.SetScale(0.1f,0.1f, 0.1f);
@@ -163,20 +191,6 @@ void Whale::SearchAreaChange() {
 	//サーチ範囲から外れたらしばらくあたりを見渡して、範囲に入らなければ視点を戻し順路を進む
 }
 CVector3D Whale::DestinationSelection() {
-	/*CVector3D point_pos[] = {
-		CVector3D(344.873,53.0718,-8.48718),
-		CVector3D(248.225,53.0718,-58.3277),
-		CVector3D(117.756,53.0718,-1.22288),
-		CVector3D(-14.4411,53.0718,-97.8118),
-		CVector3D(45.2624,53.0718,-270.918),
-		CVector3D(-218.738,53.0718,-277.225),
-		CVector3D(-273.647,53.0718,-64.9262),
-		CVector3D(-251.047,53.0718,173.825),
-		CVector3D(-81.6449,53.0718,133.62),
-		CVector3D(39.7592,53.0718,84.0604),
-		CVector3D(175.759,53.0718,144.18),
-		CVector3D(342.818,53.0718,217.323),
-	};*/
 	if (Point_num >= MovePos_List.size()) {
 		Point_num = 0;
 	}
@@ -198,9 +212,13 @@ bool Whale::CheckPlayerInSearchRange(float View_Angle) {
 	return angle <= View_Angle;
 }
 bool Whale::LightObjectPlayer() {
-	auto tri = m_model.CollisionRay(m_pos, PublicNum::Player_pos);
+	auto tri = m_model.CollisionRay(eye_pos, PublicNum::Player_pos);
 	if (tri.empty()) {
+		std::cout << "NoObject" << std::endl;
 		return false;
 	}
 	return true;
+}
+void Whale::Attack() {
+
 }
