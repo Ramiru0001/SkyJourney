@@ -19,7 +19,7 @@ void Progress::Update() {
 	case ProgressNum::Tytle:
 	{
 		if (PUSH(CInput::eButton1)) {
-			prog_num = ProgressNum::Desert;
+			prog_num = ProgressNum::Volcano;
 			PublicNum::Stage_Num=PublicNum::StageNum::Volcano;
 			ProgressChange(prog_num);
 		}
@@ -86,7 +86,7 @@ void Progress::ProgressChange(int Progress) {
 			Task::Add(new Camera());
 		}
 		if (PublicNum::Player_On == false) {
-			Task::Add(new Player(CVector3D(468.5f, 0.07f, -11.7f)));
+			Task::Add(new Player(CVector3D(-334.372, 3.34898, -260.065)));
 		}
 		//Task::Add(new SkyBox());
 		{

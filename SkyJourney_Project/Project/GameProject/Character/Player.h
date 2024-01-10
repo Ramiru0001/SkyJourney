@@ -26,6 +26,7 @@ public:
 	bool return_whiteout_flag=false;
 	bool OnGround = true;
 	int whiteout_count = 0;
+	bool Whale_attack_now=false;
 public:
 	Player(CVector3D &pos);
 	~Player();
@@ -49,5 +50,6 @@ public:
 	/// </summary>
 	bool MapChangeCheck();
 	void Return_Whiteout();
+	void AttackMove();
 	CModel* GetModel();
 };

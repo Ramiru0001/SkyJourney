@@ -30,4 +30,25 @@ VolcanoStage::VolcanoStage() :Task(ETaskPrio::eSystem, EType::eDefault) {
 		CVector3D(- 287.356,66.1894,113.983),
 	};
 	Task::AddCandles(CandleList);
-}
+	std::vector<CVector3D> WhalePoslist = {
+		CVector3D(420.124,90.5641,-196.478),
+		CVector3D(338.392,90.5641,-338.073),
+		CVector3D(209.375,90.5641,-404.957),
+		CVector3D(-55.065,71.5641,-392.891),
+		CVector3D(-250.93,72.0641,-409.96),
+		CVector3D(-332.751,84.0641,-285.898),
+		CVector3D(-394.88,59.5641,-185.572),
+		CVector3D(-388.091,119.064,-52.0549),
+		CVector3D(-408.449,87.0641,119.092),
+		CVector3D(-348.671,101.064,205.243),
+		CVector3D(-333.03,83.0641,345.425),
+		CVector3D(-202.04,68.5641,423.033),
+		CVector3D(-54.6453,139.564,367.798),
+		CVector3D(64.686,145.564,352.254),
+		CVector3D(259.505,123.564,315.348),
+		CVector3D(436.49,138.564,178.923),
+		CVector3D(422.397,118.564,22.5089),
+		CVector3D(441.887,104.064,-124.237),
+	};
+	Task::AddStage(new Whale(WhalePoslist));
+};

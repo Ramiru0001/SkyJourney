@@ -11,9 +11,6 @@
     <ClInclude Include="Camera\Camera.h">
       <Filter>Camera</Filter>
     </ClInclude>
-    <ClInclude Include="Public\PublicFile.h">
-      <Filter>Puglic</Filter>
-    </ClInclude>
     <ClInclude Include="Game\Object.h">
       <Filter>Game</Filter>
     </ClInclude>
@@ -47,6 +44,9 @@
     <ClInclude Include="Shader.h" />
     <ClInclude Include="Stage\VolcanoStage.h">
       <Filter>Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\PublicFile.h">
+      <Filter>Puglic</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

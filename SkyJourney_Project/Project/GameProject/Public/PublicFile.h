@@ -26,6 +26,7 @@ public:
 	static bool Stage_Change;//通常はfalse。stageが変わった時にtrueになる。
 	static bool Debug_mode;
 	static bool stage_change_flag;//stageChangeをするホワイトアウトのときにon
+	static bool WhaleAttack;//くじらさんがアタックしたらtrue;
 	static int Feather_Count;//総羽の数
 	static int LightFeather_Count;//使える羽の数
 	static int Stage_Num;//現在のステージnumber
@@ -35,6 +36,7 @@ public:
 	static CVector3D Player_pos;
 	static CVector3D Camera_pos;
 	static CVector3D Camera_rot;
+	static CVector3D WhaleVec;
 };
 class PublicFunction {
 public:

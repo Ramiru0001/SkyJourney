@@ -38,12 +38,20 @@ void Whale::Update() {
 			}
 			SearchCount++;
 			std::cout << "サーチ中" << std::endl;
-			Search();
 		}
+		Search();
 		break;
 	case eAttack:
+		std::cout << "Attack" << std::endl;
+		Attack();
+		break;
+	case eAfterAttack:
+		std::cout << "AfterAttack" << std::endl;
+		AfterAttack();
 		break;
 	case eReturnToRoute:
+		std::cout << "ReturnToRoute" << std::endl;
+		ReturnToRoute();
 		break;
 	default:
 		break;
@@ -52,6 +60,7 @@ void Whale::Update() {
 	m_pos += m_vec;
 	if (SearchCount >= 180) {
 		StateNow = eAttack;
+		SearchCount = 0;
 	}
 }
 void Whale::Render() {
@@ -139,6 +148,7 @@ void Whale::Move(CVector3D pos) {
 	}
 	//前進する
 	m_vec = CVector3D(sin(m_rot.y), 160.0f - m_pos.y, cos(m_rot.y)).GetNormalize();
+	m_rot.z = 0;
 	m_rot.y = Utility::NormalizeAngle(m_rot.y);
 }
 CModel* Whale::GetModel() {
@@ -220,5 +230,40 @@ bool Whale::LightObjectPlayer() {
 	return true;
 }
 void Whale::Attack() {
-
+	//くじらがキャラクターに突撃する
+	//キャラクターのほうに下降して突撃
+	//到着先へのベクトルと角度を入手
+	m_vec = CVector3D((PublicNum::Player_pos.x - m_pos.x), PublicNum::Player_pos.y + 10.0f - m_pos.y, (PublicNum::Player_pos.z - m_pos.z)).GetNormalize()*2.0f;
+	m_rot.y = Utility::NormalizeAngle(std::atan2(m_vec.x, m_vec.z));
+	m_rot.z = m_vec.y;
+	if ((m_pos - PublicNum::Player_pos).Length() <= 15.0f) {
+		StateNow = eAfterAttack;
+		PublicNum::WhaleAttack = true;
+		PublicNum::WhaleVec = m_vec;
+	}
+}
+void Whale::AfterAttack() {
+	//勢いそのままで、本来の高さまで上昇する
+	m_vec = CVector3D(m_vec.x, 160.0f-m_vec.y, m_vec.z).GetNormalize() * 2.0f;
+	m_rot.y = Utility::NormalizeAngle(std::atan2(m_vec.x, m_vec.z));
+	m_rot.z = m_vec.y;
+	if (m_pos.y >= 158.0f) {
+		StateNow = eReturnToRoute;
+	}
+}
+void Whale::ReturnToRoute(){
+	//moveposlistから最寄りのものを探して、	pointnumを更新。ルートへ戻る
+	int size=MovePos_List.size();
+	float MinDistance = (MovePos_List.front() - m_pos).Length();
+	int count = 0;
+	Point_num = 0;
+	for (auto b: MovePos_List) {
+		float distance = (m_pos - b).Length();
+		if (MinDistance > distance) {
+			MinDistance = distance;
+			Point_num = count;
+		}
+		count++;
+	}
+	StateNow = eGoAround;
 }

@@ -4,6 +4,7 @@ class Whale :public Task{
 		eGoAround,
 		eChaseSearch,
 		eAttack,
+		eAfterAttack,
 		eReturnToRoute,
 	};
 private:
@@ -27,6 +28,8 @@ public:
 	void Search();
 	void Move(CVector3D pos);
 	void Attack();
+	void AfterAttack();
+	void ReturnToRoute();
 	void SearchAreaChange();
 	void DrawCone(const GLfloat& radius, const GLfloat& height, const GLint& slices, const GLint& stacks);
 	/*サーチとプレイヤーの間にオブジェクトがあるかどうかの判定
