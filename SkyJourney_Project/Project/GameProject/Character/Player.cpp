@@ -28,7 +28,7 @@ Player::~Player() {
 }
 void Player::Render() {
 	//プレイヤーモデルの描画
-	m_pos += m_vec;
+	//m_pos += m_vec;
 	m_model.SetPos(m_pos);
 	m_model.SetScale(0.01f,0.01f,0.01f);
 	m_model.SetRot(m_rot);;
@@ -52,11 +52,18 @@ void Player::Update() {
 		PublicNum::WhaleAttack = false;
 		Whale_attack_now = true;
 		m_model.ChangeAnimation(2);
+		m_pos += m_vec;
 	}
 	else if (Whale_attack_now) {
 		AttackMove();
 	}
-	if (PublicNum::Stage_Change == false) {
+	if (PublicNum::Stage_Num == PublicNum::StageNum::Ending) {
+		m_pos = CVector3D(0, 0, 0);
+		m_rot = CVector3D(0, DtoR(-45), 0);
+		m_model.ChangeAnimation(1);
+	}
+	else if (PublicNum::Stage_Change == false) 
+	{
 		if (PublicNum::Debug_mode) {
 			DebugMove();
 		}
@@ -68,7 +75,7 @@ void Player::Update() {
 		m_pos = Stage_Pos[PublicNum::Stage_Num];
 	}
 	//if (PublicNum::Log_pos == true) {
-		std::cout << "座標：" << m_pos.x << "," << m_pos.y << "," << m_pos.z << std::endl; 
+		std::cout << "CVector3D(" << m_pos.x << "," << m_pos.y << "," << m_pos.z << ")" << std::endl;
 	//}
 	if (return_whiteout_flag == false && (PublicNum::Stage_Num == PublicNum::StageNum::SkyIsland || PublicNum::Stage_Num == PublicNum::StageNum::Desert|| PublicNum::Stage_Num == PublicNum::StageNum::Volcano) && m_pos.y < -28.2083f ) {
 		//ホワイトアウトー＞ステージに戻る
@@ -301,6 +308,7 @@ void Player::Move() {
 	}
 	m_vec.y -= GRAVITY;
 	}
+	m_pos.y += m_vec.y;
 }
 void Player::DebugMove() {
 	CVector3D c_rot = PublicNum::Camera_rot;
@@ -330,6 +338,7 @@ void Player::DebugMove() {
 	if (HOLD(CInput::eShift)) {
 		m_pos.y -= 0.5f;
 	}
+	//m_pos.y += m_vec.y;
 }
 void Player::FeatherDraw() {
 	//現在のカメラをコピー
@@ -356,6 +365,8 @@ void Player::AttackMove() {
 		OnGround = false;
 	}
 	m_vec.y -= GRAVITY;
+
+	m_pos += m_vec;
 }
 bool Player::MapChangeCheck() {
 	switch (PublicNum::Stage_Num) {

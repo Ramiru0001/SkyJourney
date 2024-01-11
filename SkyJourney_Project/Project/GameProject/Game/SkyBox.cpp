@@ -1,8 +1,23 @@
 #include "SkyBox.h"
-SkyBox::SkyBox():Task(ETaskPrio::eSky, EType::eSky) {
-	SkyBox_model = COPY_RESOURCE("SkyBox", CModelObj);
+SkyBox::SkyBox(int num):Task(ETaskPrio::eSky, EType::eSky) {
+	ColorNum = num;
+	if (ColorNum == Normal) {
+		SkyBox_model = COPY_RESOURCE("SkyBox", CModelObj);
+	}
+	else if(ColorNum==Sand){
+		SkyBox_model = COPY_RESOURCE("SkyBoxSand", CModelObj);
+	}
 }
 void SkyBox::Update() {
+	if (PublicNum::Stage_Num == PublicNum::StageNum::Desert) {
+		ColorNum = Sand;
+	}
+	if (ColorNum == Normal) {
+		SkyBox_model = COPY_RESOURCE("SkyBox", CModelObj);
+	}
+	else if (ColorNum == Sand) {
+		SkyBox_model = COPY_RESOURCE("SkyBoxSand", CModelObj);
+	}
 }
 void SkyBox::Render() {
 	if (CShadow::GetInstance()->GetState() == CShadow::eShadow)return;

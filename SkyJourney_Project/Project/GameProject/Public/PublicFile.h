@@ -2,6 +2,11 @@
 #define RotationalSpeed DtoR(1.0f)
 class PublicNum {
 public:
+	enum SkyNum {
+		Normal,
+		Sand,
+		night,
+	};
 	enum CMode {
 		FixedPoint,//固定カメラ
 		WithPlayer,//プレイヤーの後方
@@ -15,6 +20,7 @@ public:
 		SkyIsland,
 		Desert,
 		Volcano,
+		Ending,
 	};
 	static bool Player_On;//プレイヤーがいるかいないか。いたらtrue
 	static bool Camera_On;//カメラがあるかないか。あったらtrue

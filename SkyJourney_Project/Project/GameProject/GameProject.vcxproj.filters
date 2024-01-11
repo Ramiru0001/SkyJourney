@@ -48,6 +48,9 @@
     <ClInclude Include="Public\PublicFile.h">
       <Filter>Puglic</Filter>
     </ClInclude>
+    <ClInclude Include="Ending\Ending.h">
+      <Filter>Ending</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -97,6 +100,9 @@
     <ClCompile Include="Stage\VolcanoStage.cpp">
       <Filter>Stage</Filter>
     </ClCompile>
+    <ClCompile Include="Ending\Ending.cpp">
+      <Filter>Ending</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Character">
@@ -122,6 +128,9 @@
     </Filter>
     <Filter Include="System">
       <UniqueIdentifier>{9a236e8e-73fd-4e5d-be20-7e4622d2de0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ending">
+      <UniqueIdentifier>{2d79bdca-cb68-4de4-8524-ee5e9852154c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

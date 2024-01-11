@@ -19,8 +19,8 @@ void Progress::Update() {
 	case ProgressNum::Tytle:
 	{
 		if (PUSH(CInput::eButton1)) {
-			prog_num = ProgressNum::Volcano;
-			PublicNum::Stage_Num=PublicNum::StageNum::Volcano;
+			prog_num = ProgressNum::SkyIsland;
+			PublicNum::Stage_Num=PublicNum::StageNum::	SkyIsland;
 			ProgressChange(prog_num);
 		}
 	}
@@ -36,6 +36,13 @@ void Progress::Update() {
 		if (PublicNum::Stage_Change) {
 			prog_num = ProgressNum::Volcano;
 			PublicNum::Stage_Num = PublicNum::StageNum::Volcano;
+			ProgressChange(prog_num);
+		}
+		break;
+	case ProgressNum::Volcano:
+		if (PublicNum::Stage_Change) {
+			prog_num = ProgressNum::Ending;
+			PublicNum::Stage_Num = PublicNum::StageNum::Ending;
 			ProgressChange(prog_num);
 		}
 		break;
@@ -57,7 +64,7 @@ void Progress::ProgressChange(int Progress) {
 		if (PublicNum::Player_On == false) {
 			Task::Add(new Player(CVector3D(88.5f, 1.7f, 4.37f)));
 		}
-		Task::Add(new SkyBox());
+		Task::Add(new SkyBox(PublicNum::SkyNum::Normal));
 		Task::AddStage(new Whiteout());
 		{
 			//SkyIslandStageのコンストラクタを呼んでstageタスクリストに追加
@@ -95,6 +102,10 @@ void Progress::ProgressChange(int Progress) {
 			//呼んだクラスは必要ないので即破棄
 			delete VolcanoStage_Instance;
 		}
+		break;
+	case ProgressNum::Ending:
+		Task::DeleteAllStage();
+		Task::AddStage(new class Ending());
 		break;
 	}
 }

@@ -114,7 +114,7 @@ void Task::CollisionAll() {
 		itr3++;
 	}
 }
-void Task::DeleteAll() {
+void Task::DeleteChoiceTask() {
 	auto itr = m_TaskList.begin();
 	//––”ö‚Ü‚ÅŒJ‚è•Ô‚·
 	while (itr != m_TaskList.end()) {

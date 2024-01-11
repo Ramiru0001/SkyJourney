@@ -108,7 +108,7 @@ public:
 	/// <summary>
 	/// 削除フラグONのタスクをすべて削除
 	/// </summary>
-	static void DeleteAll();
+	static void DeleteChoiceTask();
 	/// <summary>
 	/// 当たり判定の有無を入手
 	/// </summary>

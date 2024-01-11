@@ -6,7 +6,7 @@ UI::UI() :Task(ETaskPrio::eUI, EType::eUI) {
 }
 void UI::Render() {
 	FeatherRender();
-	if (HOLD(CInput::eMouseR)) {
+	if (HOLD(CInput::eMouseR)&&PublicNum::Stage_Num!= PublicNum::StageNum::Ending && PublicNum::Stage_Num != PublicNum::StageNum::Tytle) {
 		//画面にマークを表示
 		DestinationRender();
 	}
@@ -140,6 +140,8 @@ void UI::DestinationRender() {
 	//ステージごとにゴールの位置を取得し、2Dベクトルに治し、その方向に描画
 	CVector3D Goal_pos[] = { DEFAULT_POS,
 		CVector3D(-120.194,34.3038,8.14138),
+		CVector3D(-307.562,39.3714,-4.06135),
+		CVector3D(146.13,130.083,27.6723),
 	};
 	Ex_pos3D = Goal_pos[PublicNum::Stage_Num];
 	//2D画像の表示。

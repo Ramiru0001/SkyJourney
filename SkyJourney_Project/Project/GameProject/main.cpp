@@ -7,7 +7,7 @@ void MainLoop(void) {
 	//ゲーム中の動きはここに書く
 	//ゲーム中はこの関数_を1秒間に60回呼び出している
 	//--------------------------------------------------------------
-	Task::DeleteAll();
+	Task::DeleteChoiceTask();
 	Task::UpdateAll(); 
 	Task::CollisionAll();
 	//２．影の描画＋その他ポストエフェクト
@@ -113,7 +113,9 @@ void Init(void)
 	ADD_RESOURCE("Mant_DesignD", CImage::CreateImage("Character/MantFeatherBlack.png"));
 	ADD_RESOURCE("Whale", CModel::CreateModel("Character/whale/whale.a3m"));
 	ADD_RESOURCE("SkyBox", CModel::CreateModel("Field/SkyBox.obj"));
+	ADD_RESOURCE("SkyBoxSand", CModel::CreateModel("Field/SkyBoxSand.obj"));
 	ADD_RESOURCE("TitleImage", CImage::CreateImage("Title/Title.png"));
+	ADD_RESOURCE("EndingImage", CImage::CreateImage("Ending/ThanksForPlay.png"));
 	ADD_RESOURCE("ExclamationMark", CImage::CreateImage("UI/ExclamationMark.png"));
 	ADD_RESOURCE("Volcano", CModel::CreateModel("Field/volcano/volcano.obj",10, 5, 5));
 	Task::Add(new Progress());

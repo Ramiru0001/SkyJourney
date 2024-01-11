@@ -3,10 +3,11 @@
 class Progress :public Task{
 private:
 	enum ProgressNum {
-	Tytle,
-	SkyIsland,
-	Desert,
-	Volcano,
+		Tytle,
+		SkyIsland,
+		Desert,
+		Volcano,
+		Ending,
 	};
 	/// <summary>
 	/// 進捗を数字で管理。タイトル＝0。最初のステージ＝１

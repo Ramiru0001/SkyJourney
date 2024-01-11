@@ -20,6 +20,7 @@
 #include "Character/Whale.h"
 #include "Camera/Camera.h"
 #include "Title/Title.h"
+#include "Ending/Ending.h"
 #include "System/UI.h"
 #include "System/Effect.h"
 #define GRAVITY (0.01f)

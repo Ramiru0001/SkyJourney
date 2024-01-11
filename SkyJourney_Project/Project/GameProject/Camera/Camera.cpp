@@ -7,38 +7,51 @@ Camera::Camera() :Task(ETaskPrio::eCamera, EType::eCamera){
 }
 void Camera::Render() {
 	if (CShadow::GetInstance()->GetState() == CShadow::eShadow)return;
-	switch(PublicNum::c_mode) {
-	case PublicNum::FixedPoint:
-		m_pos = CVector3D(-10, 10, 50);
-		m_at= m_pos + CVector3D(0, 1.5, 0);
-		//CCamera::GetCurrent()->LookAt(m_pos, m_at, CVector3D(0, 1, 0));
-		m_rot = CVector3D(DtoR(30), DtoR(180), 0);
+	if (PublicNum::Stage_Num == PublicNum::StageNum::Ending) {
+		m_pos= CVector3D(10, 3.8, 6);
+		m_rot = CVector3D(0, DtoR(270), 0);
+		m_at = m_pos + CVector3D(-10, -0, 0);
 		CCamera::GetCurrent()->SetTranseRot(m_pos, m_rot);
 		CCamera::GetCurrent()->Perspective(fov,
 			(float)SCREEN_WIDTH / (float)SCREEN_HEIGHT,
 			z_near,
 			z_far);
 		PublicNum::Camera_rot = m_rot;
-		break;
-	case PublicNum::WithPlayer:
-		//Task* p = Task::FindObject(EType::ePlayer);
-		//CVector3D p_pos = p->m_pos;//プレイヤーの座標
-		CVector3D p_pos = PublicNum::Player_pos + CVector3D(0, 1.8, 0);
-		mouse_vec = CInput::GetMouseVec();
-		m_rot += CVector3D(mouse_vec.y, -mouse_vec.x, 0) * m_speed;
-		//上下角制限
-		m_rot.x = min(DtoR(80), max(DtoR(-80), m_rot.x));
-		//180～-180に正規化
-		m_rot.y = Utility::NormalizeAngle(m_rot.y);
-		m_at = p_pos + CVector3D(0, 1.5, 0);
-		m_pos = m_at + CMatrix::MRotation(m_rot).GetFront() * -m_dist;
-		//注視点と座標の設定
-		CCamera::GetCurrent()->LookAt(m_pos, m_at, CVector3D(0, 1, 0)/*上方向ベクトル*/);
-		CCamera::GetCurrent()->SetTranseRot(m_pos, m_rot);
-		CCamera::GetCurrent()->Perspective(fov,
-			(float)SCREEN_WIDTH / (float)SCREEN_HEIGHT, z_near, z_far);
-		PublicNum::Camera_rot = m_rot;
-		break;
+	}
+	else {
+		switch (PublicNum::c_mode) {
+		case PublicNum::FixedPoint:
+			m_pos = CVector3D(-10, 10, 50);
+			m_at = m_pos + CVector3D(0, 1.5, 0);
+			//CCamera::GetCurrent()->LookAt(m_pos, m_at, CVector3D(0, 1, 0));
+			m_rot = CVector3D(DtoR(30), DtoR(180), 0);
+			CCamera::GetCurrent()->SetTranseRot(m_pos, m_rot);
+			CCamera::GetCurrent()->Perspective(fov,
+				(float)SCREEN_WIDTH / (float)SCREEN_HEIGHT,
+				z_near,
+				z_far);
+			PublicNum::Camera_rot = m_rot;
+			break;
+		case PublicNum::WithPlayer:
+			//Task* p = Task::FindObject(EType::ePlayer);
+			//CVector3D p_pos = p->m_pos;//プレイヤーの座標
+			CVector3D p_pos = PublicNum::Player_pos + CVector3D(0, 1.8, 0);
+			mouse_vec = CInput::GetMouseVec();
+			m_rot += CVector3D(mouse_vec.y, -mouse_vec.x, 0) * m_speed;
+			//上下角制限
+			m_rot.x = min(DtoR(80), max(DtoR(-80), m_rot.x));
+			//180～-180に正規化
+			m_rot.y = Utility::NormalizeAngle(m_rot.y);
+			m_at = p_pos + CVector3D(0, 1.5, 0);
+			m_pos = m_at + CMatrix::MRotation(m_rot).GetFront() * -m_dist;
+			//注視点と座標の設定
+			CCamera::GetCurrent()->LookAt(m_pos, m_at, CVector3D(0, 1, 0)/*上方向ベクトル*/);
+			CCamera::GetCurrent()->SetTranseRot(m_pos, m_rot);
+			CCamera::GetCurrent()->Perspective(fov,
+				(float)SCREEN_WIDTH / (float)SCREEN_HEIGHT, z_near, z_far);
+			PublicNum::Camera_rot = m_rot;
+			break;
+		}
 	}
 }
 void Camera::Collision(Task* a) {
