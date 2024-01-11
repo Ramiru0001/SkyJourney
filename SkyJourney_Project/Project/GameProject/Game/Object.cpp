@@ -84,3 +84,39 @@ void Candle::Collision(Task* a) {
 }
 Candle::~Candle() {
 }
+
+Signpost::Signpost(const CVector3D& pos) :Task(ETaskPrio::eObject, EType::eObject) {
+	Signpost_model = COPY_RESOURCE("Signpost", CModelObj);
+	m_pos = pos;
+	m_rad = 1.0f;
+	m_collision = true;
+	//m_rot.y = rotY;
+}
+void Signpost::Render() {
+	Signpost_model.SetPos(m_pos.x, m_pos.y + 0.35f, m_pos.z);
+	Signpost_model.SetRot(m_rot);
+	Signpost_model.SetScale(4.5f, 4.5f, 4.5f);
+	Signpost_model.Render();
+}
+void Signpost::Update() {
+	//m_rot.y += 0.015f;
+	m_rot.y = Utility::NormalizeAngle(m_rot.y);
+}
+bool Signpost::GetCollision() {
+	return m_collision;
+}
+void Signpost::Collision(Task* a) {
+	switch (a->GetType()) {
+	case EType::ePlayer:
+		if ((a->m_pos - m_pos).Length() < a->m_rad + m_rad + 0.5f && PublicNum::Feather_Count > PublicNum::LightFeather_Count) {
+			PublicNum::FeatherDetail_Count += PublicNum::FeatherDetail_CountMax / 60;
+			if (PublicNum::FeatherDetail_Count > PublicNum::FeatherDetail_CountMax && PublicNum::Feather_Count > PublicNum::LightFeather_Count) {
+				PublicNum::FeatherDetail_Count = 0;
+				PublicNum::LightFeather_Count++;
+			}
+		}
+		break;
+	}
+}
+Candle::~Candle() {
+}

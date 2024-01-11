@@ -5,7 +5,9 @@ UI::UI() :Task(ETaskPrio::eUI, EType::eUI) {
 	ExclamationMark_img = COPY_RESOURCE("ExclamationMark", CImage);
 }
 void UI::Render() {
-	FeatherRender();
+	if (PublicNum::Stage_Num != PublicNum::StageNum::Ending) {
+		FeatherRender();
+	}
 	if (HOLD(CInput::eMouseR)&&PublicNum::Stage_Num!= PublicNum::StageNum::Ending && PublicNum::Stage_Num != PublicNum::StageNum::Tytle) {
 		//画面にマークを表示
 		DestinationRender();

@@ -5,11 +5,17 @@ class SkyBox :
     enum {
         Normal,
         Sand,
-        night,
+        Purple,
+        Lightpurple,
+        Night,
     };
 private:
     int ColorNum=Normal;
-    CModelObj SkyBox_model;
+    CModelObj Normal_Model;
+    CModelObj Sand_Model;
+    CModelObj Purple_Model;
+    CModelObj LightPurple_Model;
+    CModelObj Night_Model;
 public:
     SkyBox(int);
     void Render();

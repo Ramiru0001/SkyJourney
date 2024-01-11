@@ -27,3 +27,14 @@ public:
 	bool GetCollision();
 	void Collision(Task* a);
 };
+class Signpost :public Task {
+public:
+	CModelObj Signpost_model;
+public:
+	Signpost(const CVector3D& pos);
+	~Signpost();
+	void Render();
+	void Update();
+	bool GetCollision();
+	void Collision(Task* a);
+};

@@ -112,8 +112,12 @@ void Init(void)
 	ADD_RESOURCE("Mant_DesignL", CImage::CreateImage("Character/MantFeather01.png"));
 	ADD_RESOURCE("Mant_DesignD", CImage::CreateImage("Character/MantFeatherBlack.png"));
 	ADD_RESOURCE("Whale", CModel::CreateModel("Character/whale/whale.a3m"));
-	ADD_RESOURCE("SkyBox", CModel::CreateModel("Field/SkyBox.obj"));
-	ADD_RESOURCE("SkyBoxSand", CModel::CreateModel("Field/SkyBoxSand.obj"));
+	ADD_RESOURCE("SkyBox", CModel::CreateModel("Field/SkyBox/SkyBox.obj"));
+	ADD_RESOURCE("SkyBoxSand", CModel::CreateModel("Field/SkyBox/SkyBoxSand.obj"));
+	ADD_RESOURCE("SkyBoxPurple", CModel::CreateModel("Field/SkyBox/SkyBoxPurple.obj"));
+	ADD_RESOURCE("SkyBoxLightPurple", CModel::CreateModel("Field/SkyBox/SkyBoxLightPurple.obj"));
+	ADD_RESOURCE("SkyBoxNight", CModel::CreateModel("Field/SkyBox/SkyBoxNight.obj"));
+	ADD_RESOURCE("Signpost", CModel::CreateModel("Field/Signpost.obj"));
 	ADD_RESOURCE("TitleImage", CImage::CreateImage("Title/Title.png"));
 	ADD_RESOURCE("EndingImage", CImage::CreateImage("Ending/ThanksForPlay.png"));
 	ADD_RESOURCE("ExclamationMark", CImage::CreateImage("UI/ExclamationMark.png"));
